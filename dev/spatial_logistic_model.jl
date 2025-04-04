@@ -1,5 +1,4 @@
 module S
-using Revise
 using Distributions
 using GLMakie
 using StaticArrays
