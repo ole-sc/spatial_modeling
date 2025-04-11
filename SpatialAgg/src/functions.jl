@@ -30,39 +30,53 @@ function set_diffusion_kernel(par, td)
     return D!
 end
 
-"update particle positions based on the diffusion rate"
+"calculates the distance between two points on a torus."
+function torusdist(p1::T, p2::T, lower::T, upper::T) where T<:AbstractVector
+    # T should be either SVector or Vector. 
+    # I only use SVectors, but I wanted to test how this functionality works.
+    da = abs.(p1 .- p2)                 # absolute difference
+    dt = min.(da, upper .- lower .- da) # Wrap around bounds
+    return sqrt(dt[1]^2 + dt[2]^2)
+end
+
+"update particle positions based on the diffusion rate."
 function move!(r, d, lower, upper)
     for i in eachindex(r)
         p1 = mod(r[i][1] + randn()*d[i] - lower[1], upper[1]-lower[1]) + lower[1]
         p2 = mod(r[i][2] + randn()*d[i] - lower[2], upper[2]-lower[2]) + lower[2]
-
-        # nicer, but 5x more allocations
-        # newpos = r[i] + @SVector [randn()*d[i], randn()*d[i]]
-        # r[i] = mod.(newpos .-lower, upper.-lower).+lower
-        
         r[i] = @SVector [p1, p2]
     end
 end
 
+"Initialize the plotting environment."
 function makeplot(r)
-    f = Figure(size = (1000, 600))
+    f = Figure(size = (1400, 900))
     ax = f[1,1] = Axis(f) # for plotting the points
     axr = f[1,2] = Axis(f) # for showing the spatial correlation
 
     or = Observable(r) 
     scatter!(ax, or, color = :blue,markersize = 5)
+
+    # add sliders to change params interactively
+    sg = SliderGrid(
+        f[2, 1],
+        (label = "p", range = 0:0.1:10, format = "{:.1f}", startvalue = 5, update_while_dragging=false),
+        (label = "D0", range = 0:0.0001:0.01, format = "{:.4f}", startvalue = 0.001, update_while_dragging=false),
+        (label = "R", range = 0:0.002:1, format = "{:.3f}", startvalue = 0.1, update_while_dragging=false),
+        )
+    oslider = [s.value for s in sg.sliders]
+    # here I would need to create a new parameter object and update the kernel function
+    lift(oslider...) do slvalues...
+        println("slider changes")
+    end
+
     display(f)
     return f, ax, axr, or
 end
 
+"Update the observables, which will update the plot, plt should be a tule returned by `makeplot()`."
 function update_obs!(plt, r)
     plt[4][] = r
 
 end
 
-"calculates the distance between two points on a torus."
-function torusdist(p1::SVector, p2::SVector, lower, upper)
-    da = abs.(p1 .- p2) # absolute difference
-    dt = min.(da, upper .- lower .- da)  # Wrap around bounds
-    return sqrt(dt[1]^2 + dt[2]^2)
-end
