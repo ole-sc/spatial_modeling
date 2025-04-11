@@ -3,18 +3,19 @@ using .S
 
 # two species parameters
 p2spec = (bounds =(x₋ = 0, x₊ = 1, y₋ = 0, y₊ = 1),
-        nsteps = 5000, # simulation steps
+        nsteps = 10000, # simulation steps
         N₀ = [20, 20], # initial number of individuals
         b = [0.4, 0.4], # birth rate
         d₀ = [0.2, 0.2], # death rate 
-        g = [[0.001, 0.001] [0.001,0.001]], # death weight of neighbors -> make this a matrix
-        σb = [0.12, 0.12], # spatial scale birth
-        σd = [[0.12, 0.12] [0.12,0.12]], # death scale matrix
+        g = [[0.002, 0.001] [0.001,0.002]], # death weight of neighbors -> make this a matrix
+        σb = [0.1, 0.1], # spatial scale birth
+        σd = [[0.1, 0.03] [0.03,0.1]], # death scale matrix
 
         dt = 0.02,
 
         # plotting settings
         sleeptime = 0.01,
+        pltint = 10,
         plotlive = true
 )
 
@@ -98,8 +99,8 @@ end
 
 function simulate2spec(par)
         # generate intitial points
-        s1 = S.genpointsopt(par.N₀[1], par.bounds)
-        s2 = S.genpointsopt(par.N₀[2], par.bounds)
+        s₁ = S.genpointsopt(par.N₀[1], par.bounds)
+        s₂ = S.genpointsopt(par.N₀[2], par.bounds)
 
         t = 0
 
@@ -111,22 +112,57 @@ function simulate2spec(par)
         kb1 = S.setkernelopt(par.σb[1], par.bounds)
         kb2 = S.setkernelopt(par.σb[2], par.bounds)
 
+        ot = Observable(t)
+        f, ax, axr = S.createlayout(ot)
+        
+        if par.plotlive
+                os₁ = Observable(s₁)
+                os₂ = Observable(s₂)
+                # ocount = Observable(size(points)[2])
+                ott = Observable(histt[1,:])
+                on₁ = Observable(histt[2,:])
+                on₂ = Observable(histt[3,:])
+        
+                # plot the points
+                scatter!(ax, os₁, color=:red)
+                scatter!(ax, os₂, color=:blue)
+
+                lines!(axr, ott, on₁)
+                lines!(axr, ott, on₂)
+
+                limits!(axr, 0, par.nsteps*par.dt, 0, 500)
+                display(f)
+            end
+        
+
         # simulation loop
         for i in 2:par.nsteps
                 t += par.dt
 
-                step2spec!(s1, s2, kb1, kb2, par)
+                step2spec!(s₁, s₂, kb1, kb2, par)
 
-                histt[:,i] = @SVector [t, length(s1), length(s2)]
+                histt[:,i] = @SVector [t, length(s₁), length(s₂)]
+
+                if (mod(i, par.pltint) == 0) && par.plotlive
+                        isopen(f.scene) || break
+                        os₁[] = s₁
+                        os₂[] = s₂
+                        # ocount[] = hist[end]
+                        ott[] = histt[1,:]
+                        on₁[] = histt[2,:]
+                        on₂[] = histt[3,:]
+                        sleep(par.sleeptime)   
+                    end     
                 # end if too many individuals
-                if (length(s1) > 1000) ||(length(s2) > 1000)
+                if (length(s₁) > 1000) ||(length(s₂) > 1000)
                         break
                 end
         end
-        f, ax, axright = S.createlayout(S.Observable(t))
 
-        S.lines!(ax, histt[1,:], histt[2,:])
-        S.lines!(ax, histt[1,:], histt[3,:])
-        display(f)
+        if !par.plotlive
+                S.lines!(axr, histt[1,:], histt[2,:])
+                S.lines!(axr, histt[1,:], histt[3,:])
+                display(f)
+        end
         return histt
 end

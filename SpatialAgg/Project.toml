@@ -1,0 +1,4 @@
+name = "SpatialAgg"
+uuid = "f89e3e3b-be81-4c6c-a463-9114606be264"
+authors = ["Ole Schügl <ole.schuegl@yahoo.de>"]
+version = "0.1.0"

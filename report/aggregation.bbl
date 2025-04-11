@@ -1,0 +1,150 @@
+% $ biblatex auxiliary file $
+% $ biblatex bbl format version 3.3 $
+% Do not modify the above lines!
+%
+% This is an auxiliary file used by the 'biblatex' package.
+% This file may safely be deleted. It will be recreated by
+% biber as required.
+%
+\begingroup
+\makeatletter
+\@ifundefined{ver@biblatex.sty}
+  {\@latex@error
+     {Missing 'biblatex' package}
+     {The bibliography requires the 'biblatex' package.}
+      \aftergroup\endinput}
+  {}
+\endgroup
+
+
+\refsection{0}
+  \datalist[entry]{nyt/global//global/global/global}
+    \entry{durrettImportanceBeingDiscrete1994}{article}{}{}
+      \name{author}{2}{}{%
+        {{un=0,uniquepart=base,hash=03a107fab36174e7da5974a64ad1812d}{%
+           family={Durrett},
+           familyi={D\bibinitperiod},
+           given={R.},
+           giveni={R\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=edbf783f5b59ad72ae19bbeeaa21fd3f}{%
+           family={Levin},
+           familyi={L\bibinitperiod},
+           given={S.},
+           giveni={S\bibinitperiod},
+           givenun=0}}%
+      }
+      \strng{namehash}{c66ea041ec29778d084f9764106c8366}
+      \strng{fullhash}{c66ea041ec29778d084f9764106c8366}
+      \strng{fullhashraw}{c66ea041ec29778d084f9764106c8366}
+      \strng{bibnamehash}{c66ea041ec29778d084f9764106c8366}
+      \strng{authorbibnamehash}{c66ea041ec29778d084f9764106c8366}
+      \strng{authornamehash}{c66ea041ec29778d084f9764106c8366}
+      \strng{authorfullhash}{c66ea041ec29778d084f9764106c8366}
+      \strng{authorfullhashraw}{c66ea041ec29778d084f9764106c8366}
+      \field{sortinit}{D}
+      \field{sortinithash}{6f385f66841fb5e82009dc833c761848}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{abstract}{We consider and compare four approaches to modeling the dynamics of spatially distributed systems: mean field approaches (described by ordinary differential equations) in which every individual is considered to have equal probability of interacting with every other individual; patch models that group discrete individuals into patches without additional spatial structure; reaction-diffusion equations, in which infinitesimal individuals are distributed in space; and interacting particle systems, in which individuals are discrete and space is treated explicitly. We apply these four approaches to three examples of species interactions in spatially distributed populations and compare their predictions. Each represents different assumptions about the biology and hence a comparison among them has biological as well as modeling implications. In the first case all four approaches agree, in the second the spatial models disagree with the nonspatial ones, while in the third the stochastic models with discrete individuals disagree with the ones based on differential equations. We show further that the limiting reaction-diffusion equations associated with particle systems can have different qualitative behavior from those obtained by simply adding diffusion terms to mean field equations.}
+      \field{issn}{0040-5809}
+      \field{journaltitle}{Theoretical Population Biology}
+      \field{month}{12}
+      \field{number}{3}
+      \field{title}{The {{Importance}} of {{Being Discrete}} (and {{Spatial}})}
+      \field{urlday}{31}
+      \field{urlmonth}{3}
+      \field{urlyear}{2025}
+      \field{volume}{46}
+      \field{year}{1994}
+      \field{urldateera}{ce}
+      \field{pages}{363\bibrangedash 394}
+      \range{pages}{32}
+      \verb{doi}
+      \verb 10.1006/tpbi.1994.1032
+      \endverb
+      \verb{file}
+      \verb C\:\\Users\\olesc\\Zotero\\storage\\CZ65Z7GQ\\Durrett und Levin - 1994 - The Importance of Being Discrete (and Spatial).pdf;C\:\\Users\\olesc\\Zotero\\storage\\7ES68V5Q\\S004058098471032X.html
+      \endverb
+    \endentry
+    \entry{liuPhaseSeparationDriven2016}{article}{}{}
+      \name{author}{6}{}{%
+        {{un=0,uniquepart=base,hash=dff1196c99fcfa6d20a7f9193882a272}{%
+           family={Liu},
+           familyi={L\bibinitperiod},
+           given={Quan-Xing},
+           giveni={Q\bibinithyphendelim X\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=af88854af2808d409b54c917b495f554}{%
+           family={Rietkerk},
+           familyi={R\bibinitperiod},
+           given={Max},
+           giveni={M\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=fce36f9e30304f365e597309924b4406}{%
+           family={Herman},
+           familyi={H\bibinitperiod},
+           given={Peter\bibnamedelima M.J.},
+           giveni={P\bibinitperiod\bibinitdelim M\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=7c87a27432cafe24923573497ba98cb6}{%
+           family={Piersma},
+           familyi={P\bibinitperiod},
+           given={Theunis},
+           giveni={T\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=e5df0bebd6a49880b8532e01744ab27e}{%
+           family={Fryxell},
+           familyi={F\bibinitperiod},
+           given={John\bibnamedelima M.},
+           giveni={J\bibinitperiod\bibinitdelim M\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=351b05f28892f6bdcdebcf982048b30a}{%
+           family={Van\bibnamedelimb De\bibnamedelima Koppel},
+           familyi={V\bibinitperiod\bibinitdelim D\bibinitperiod\bibinitdelim K\bibinitperiod},
+           given={Johan},
+           giveni={J\bibinitperiod},
+           givenun=0}}%
+      }
+      \strng{namehash}{7a2bae5a16faf80a89d40afde646b191}
+      \strng{fullhash}{5f253b8785f749647092bea12ecad7e4}
+      \strng{fullhashraw}{5f253b8785f749647092bea12ecad7e4}
+      \strng{bibnamehash}{7a2bae5a16faf80a89d40afde646b191}
+      \strng{authorbibnamehash}{7a2bae5a16faf80a89d40afde646b191}
+      \strng{authornamehash}{7a2bae5a16faf80a89d40afde646b191}
+      \strng{authorfullhash}{5f253b8785f749647092bea12ecad7e4}
+      \strng{authorfullhashraw}{5f253b8785f749647092bea12ecad7e4}
+      \field{sortinit}{L}
+      \field{sortinithash}{7c47d417cecb1f4bd38d1825c427a61a}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{shorttitle}
+      \field{abstract}{Many ecosystems develop strikingly regular spatial patterns because of small-scale interactions between organisms, a process generally referred to as spatial self-organization. Self-organized spatial patterns are important determinants of the functioning of ecosystems, promoting the growth and survival of the involved organisms, and affecting the capacity of the organisms to cope with changing environmental conditions. The predominant explanation for self-organized pattern formation is spatial heterogeneity in establishment, growth and mortality, resulting from the self-organization processes. A number of recent studies, however, have revealed that movement of organisms can be an important driving process creating extensive spatial patterning in many ecosystems. Here, we review studies that detail movement-based pattern formation in contrasting ecological settings. Our review highlights that a common principle, where movement of organisms is density-dependent, explains observed spatial regular patterns in all of these studies. This principle, well known to physics as the Cahn--Hilliard principle of phase separation, has so-far remained unrecognized as a general mechanism for self-organized complexity in ecology. Using the examples presented in this paper, we explain how this movement principle can be discerned in ecological settings, and clarify how to test this mechanism experimentally. Our study highlights that animal movement, both in isolation and in unison with other processes, is an important mechanism for regular pattern formation in ecosystems.}
+      \field{issn}{15710645}
+      \field{journaltitle}{Physics of Life Reviews}
+      \field{langid}{english}
+      \field{month}{12}
+      \field{shorttitle}{Phase Separation Driven by Density-Dependent Movement}
+      \field{title}{Phase Separation Driven by Density-Dependent Movement: {{A}} Novel Mechanism for Ecological Patterns}
+      \field{urlday}{4}
+      \field{urlmonth}{4}
+      \field{urlyear}{2025}
+      \field{volume}{19}
+      \field{year}{2016}
+      \field{urldateera}{ce}
+      \field{pages}{107\bibrangedash 121}
+      \range{pages}{15}
+      \verb{doi}
+      \verb 10.1016/j.plrev.2016.07.009
+      \endverb
+      \verb{file}
+      \verb C:\Users\olesc\Zotero\storage\7YJEZBSJ\Liu et al. - 2016 - Phase separation driven by density-dependent movement A novel mechanism for ecological patterns.pdf
+      \endverb
+    \endentry
+  \enddatalist
+\endrefsection
+\endinput
+

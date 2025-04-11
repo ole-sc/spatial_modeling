@@ -1,0 +1,85 @@
+\documentclass{article}
+% load packages
+\usepackage{amsmath}
+\usepackage{amssymb}
+\usepackage{hyperref}
+% setup bibliography
+\usepackage[style=authoryear,backend=biber]{biblatex}
+\addbibresource{aggregation.bib}
+% ----------------------------- %
+\title{Aggregation by Movement}
+\author{Ole Schügl}
+% ----------------------------- %
+\begin{document}
+\maketitle
+
+\section{Introduction}
+When creating realistic models, it is important to be explicit about the assumptions and why they are justified.
+An implicit assumption when describing populations in terms of ODEs is often the uniform distribution of indiviuals in space. (Lotka-Volterra, Logistic, ...)
+\autocite{durrettImportanceBeingDiscrete1994} showed that local effects can have qualitative impacts on the dynamics of a system, for instance allowing the coexistence of two species where ODEs predict a single species to survive.
+
+Since then, a large number of studies have shown how spatial patterns can improve the stability of ecosystems and mechanisms for how these patterns can form.
+Many of these explain spatial patterns in terms of spatial variation in births and deaths of individuals \autocite{liuPhaseSeparationDriven2016} (not primary source) and are based on the activation-inhibition principle developed by Turing and Meinhardt (cite).
+A different process enabling pattern formation is based on movement based on a principle called phase-separation. 
+
+Spatial patterns form because of density-dependent movement while the population stays constant. 
+This phenomenon has been observed in mussel-beds, ants, slime moulds and bacteria \autocite{liuPhaseSeparationDriven2016}.
+In this report, I will present a simple model that exhibits self-organized spatial patterns based on density-dependent movement.
+
+\section{Preliminary Calculations: A Single Organism}
+Before adding spatial interactions, a single organism diffusing in space will be analysed.
+This will act as a baseline and can be compared to the more complicated case.
+
+To do this, we consider a simple environment with only a single organism and a constant diffusion term. 
+Additionally, it will be assumed that the environment is infinite. 
+The simulations will be run on a torus later, but that would make an analytical derivation more complicated.\\
+The walker position will change according to the following equations:
+\begin{align}
+    & x(t + dt) = x(t) + \sqrt{2D dt} u_x \label{single_x}\\
+    & y(t + dt) = y(t) + \sqrt{2D dt} u_y
+\end{align}
+where $u_x, u_y$ are independent random numbers $\sim \mathcal{N}(0,1)$.\\
+Let's consider the increments $dx(t+dt) = x(t + dt) - x(t)$.
+Then 
+\begin{equation*}
+    x(t) = \sum_{\tau = 0}^{t/dt} dx(\tau) + x(0),
+\end{equation*}
+that is, the position of $x$ at time $t$ can be described by adding up the increments.
+From \ref{single_x}, we can see that the increments are normally distributed with variance $2D dt$.
+The distribution of the displacements $x(t) - x(0)$ is therefore a sum of normally distributed random variables, thus being again normally distributed with the variance being the sum of the variances 
+\begin{equation*}
+    x(t) - x(0) \sim \mathcal{N}(0,\sum 2D dt) =  \mathcal{N}(0,2Dt).
+\end{equation*}
+To make the following equations clearer, we will use $\tilde{x}(t) = x(t)-x(0)$ and $\tilde{y}(t) = y(t)-y(0)$ .
+Using this, we calculate the mean squared displacement 
+\begin{equation*}
+    MSD(t) = \langle \tilde{x}^2(t) +\tilde{y}^2(t) \rangle = \langle \tilde{x}^2(t)\rangle + \langle\tilde{y}^2(t) \rangle.
+\end{equation*}
+Again we focus on the term involving $x$.
+\begin{align*}
+    \langle \tilde{x}^2(t)\rangle = \int_{-\infty}^{\infty} \tilde{x}^2 p(\tilde{x},t)d\tilde{x} = \int_{-\infty}^{\infty} \tilde{x}^2 \frac{1}{\sqrt{4\pi Dt}} e^{-\frac{\tilde{x}^2}{4Dt}}d\tilde{x}
+\end{align*}
+Solving this integral requires a few steps, that will be only briefly mentioned. 
+First, we do a variable transformation by setting $y = \frac{\tilde{x}}{\sqrt{4Dt}}$. 
+The integral then becomes
+\begin{equation*}
+    \frac{4Dt}{\sqrt{\pi}}\int_{-\infty}^{\infty} y^2  e^{-y^2}dy.
+\end{equation*}
+This integral can be solved by partial integration and is equal to $\sqrt{\pi}/2$.
+Thus, the final result is 
+\begin{equation*}
+    \langle \tilde{x}^2(t)\rangle = 2Dt.
+\end{equation*}
+For $\langle \tilde{y}^2(t)\rangle$, we get the exact same result, and the mean squared displacement is therefore
+\begin{equation*}
+    MSD(t) = \langle \tilde{x}^2(t)\rangle + \langle \tilde{y}^2(t)\rangle  = 4Dt.
+\end{equation*}
+The average absolute distance of the organism from the initial position therefore grows with the square root of time.
+
+\section{Aggregation}
+Now, we will add 
+\section{Results}
+
+\section{Discussion}
+\printbibliography
+\end{document}
