@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.26 (TeX Live 2024) (preloaded format=pdflatex 2024.10.9)  11 APR 2025 12:40
+This is pdfTeX, Version 3.141592653-2.6-1.40.26 (TeX Live 2024) (preloaded format=pdflatex 2024.10.9)  12 APR 2025 16:50
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -485,13 +485,18 @@ LaTeX Font Info:    Trying to load font information for U+msb on input line 15.
  (c:/texlive/2024/texmf-dist/tex/latex/amsfonts/umsb.fd
 File: umsb.fd 2013/01/14 v3.01 AMS symbols B
 )
+Overfull \hbox (11.13957pt too wide) in paragraph at lines 27--30
+[]\OT1/cmr/m/n/10 In this re-port, the spa-tial ag-gre-ga-tion of in-di-vid-u-als based on density-dependent
+ []
+
+
 
 [1
 
 {c:/texlive/2024/texmf-var/fonts/map/pdftex/updmap/pdftex.map}]
 
 [2]
-Overfull \hbox (12.40396pt too wide) in paragraph at lines 85--85
+Overfull \hbox (12.40396pt too wide) in paragraph at lines 102--102
 [][]\OT1/cmr/m/n/10 Liu, Quan-Xing et al. (Dec. 2016). ``Phase Sep-a-ra-tion Driven by Density-Dependent
  []
 
@@ -503,24 +508,24 @@ LaTeX2e <2024-06-01> patch level 2
 L3 programming layer <2024-09-10>
  ***********
 Package rerunfilecheck Info: File `aggregation.out' has not changed.
-(rerunfilecheck)             Checksum: A2978B2E4175398E685C820D0D1DB747;642.
+(rerunfilecheck)             Checksum: 036A73B4E8B192D9DF268050D3EF119A;714.
 Package logreq Info: Writing requests to 'aggregation.run.xml'.
 \openout1 = `aggregation.run.xml'.
 
  ) 
 Here is how much of TeX's memory you used:
- 16196 strings out of 475445
- 282172 string characters out of 5774555
- 1094977 words of memory out of 5000000
- 38717 multiletter control sequences out of 15000+600000
- 566132 words of font info for 68 fonts, out of 8000000 for 9000
+ 16213 strings out of 475445
+ 282831 string characters out of 5774555
+ 1097228 words of memory out of 5000000
+ 38729 multiletter control sequences out of 15000+600000
+ 566439 words of font info for 69 fonts, out of 8000000 for 9000
  36 hyphenation exceptions out of 8191
- 75i,11n,81p,1775b,1908s stack positions out of 10000i,1000n,20000p,200000b,200000s
+ 75i,11n,81p,2056b,2009s stack positions out of 10000i,1000n,20000p,200000b,200000s
 <c:/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx12.pfb><c:/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/cm/cmcsc10.pfb><c:/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/cm/cmex10.pfb><c:/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb><c:/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi5.pfb><c:/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi7.pfb><c:/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb><c:/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/cm/cmr12.pfb><c:/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/cm/cmr17.pfb><c:/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/cm/cmr5.pfb><c:/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/cm/cmr7.pfb><c:/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb><c:/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy7.pfb><c:/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/cm/cmti10.pfb><c:/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/cm/cmtt10.pfb>
-Output written on aggregation.pdf (3 pages, 172898 bytes).
+Output written on aggregation.pdf (3 pages, 178682 bytes).
 PDF statistics:
- 132 PDF objects out of 1000 (max. 8388607)
- 96 compressed objects within 1 object stream
- 14 named destinations out of 1000 (max. 500000)
- 41 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 147 PDF objects out of 1000 (max. 8388607)
+ 110 compressed objects within 2 object streams
+ 19 named destinations out of 1000 (max. 500000)
+ 49 words of extra memory for PDF output out of 10000 (max. 10000000)
 

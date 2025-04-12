@@ -1,18 +1,18 @@
 # Fdb version 4
-["biber aggregation"] 1744298663.82828 "aggregation.bcf" "aggregation.bbl" "aggregation" 1744368025.04227 0
-  "aggregation.bcf" 1744368024 108800 7763305b7f20189b47aa438fe8f7fa61 "pdflatex"
-  "aggregation.bib" 1744280466 7619 58c480314f51bd49c6ba437f4b7ad453 ""
+["biber aggregation"] 1744469128.68199 "aggregation.bcf" "aggregation.bbl" "aggregation" 1744469404.60183 0
+  "aggregation.bcf" 1744469404 108992 acbdf2d85d619647ac8ba76e883951aa "pdflatex"
+  "aggregation.bib" 1744467040 14152 a3c8ffd1083fe77eb19f251d39a5a33d ""
   (generated)
   "aggregation.bbl"
   "aggregation.blg"
   (rewritten before read)
-["pdflatex"] 1744368023.57754 "c:/Users/olesc/Nextcloud/Programme/julia/spatial_modeling/report/aggregation.tex" "aggregation.pdf" "aggregation" 1744368025.04414 0
-  "aggregation.aux" 1744368024 1532 ca29630ea40e324ef90051141114301c "pdflatex"
-  "aggregation.bbl" 1744298666 8897 e28864f3879eda343a7273c0d8cbf5e0 "biber aggregation"
-  "aggregation.out" 1744368024 642 a2978b2e4175398e685c820d0d1db747 "pdflatex"
-  "aggregation.run.xml" 1744368024 2361 89eae721d38d9c251860a763fa2ac57e "pdflatex"
-  "aggregation.tex" 1744368021 4825 4013666acf3a6379831d6b57954e045a ""
-  "c:/Users/olesc/Nextcloud/Programme/julia/spatial_modeling/report/aggregation.tex" 1744368021 4825 4013666acf3a6379831d6b57954e045a ""
+["pdflatex"] 1744469403.19897 "c:/Users/olesc/Nextcloud/Programme/julia/spatial_modeling/report/aggregation.tex" "aggregation.pdf" "aggregation" 1744469404.60351 0
+  "aggregation.aux" 1744469404 2178 da7acf41565b29448aff7b72f2fff0ee "pdflatex"
+  "aggregation.bbl" 1744469131 16710 71a15080cfddc6a6dfc52bb7b14142a2 "biber aggregation"
+  "aggregation.out" 1744469404 714 036a73b4e8b192d9df268050d3ef119a "pdflatex"
+  "aggregation.run.xml" 1744469404 2361 89eae721d38d9c251860a763fa2ac57e "pdflatex"
+  "aggregation.tex" 1744469400 6352 203246722e5738f22617f57cf9d11f9e ""
+  "c:/Users/olesc/Nextcloud/Programme/julia/spatial_modeling/report/aggregation.tex" 1744469400 6352 203246722e5738f22617f57cf9d11f9e ""
   "c:/texlive/2024/texmf-dist/fonts/tfm/public/amsfonts/cmextra/cmex7.tfm" 1728469327 1004 54797486969f23fa377b128694d548df ""
   "c:/texlive/2024/texmf-dist/fonts/tfm/public/amsfonts/cmextra/cmex8.tfm" 1728469327 988 bdf658c3bfc2d96d3c8b02cfc1c94c20 ""
   "c:/texlive/2024/texmf-dist/fonts/tfm/public/amsfonts/symbols/msam10.tfm" 1728469327 916 f87d7c45f9c908e672703b83b72241a3 ""
