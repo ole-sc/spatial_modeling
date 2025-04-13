@@ -4,7 +4,7 @@
 \usepackage{amssymb}
 \usepackage{hyperref}
 % setup bibliography
-\usepackage[style=authoryear,backend=biber]{biblatex}
+\usepackage[style=numeric,backend=biber]{biblatex}
 \addbibresource{aggregation.bib}
 % ----------------------------- %
 \title{Aggregation by Movement}
@@ -17,21 +17,27 @@
 Spatial pattern formation is a fascinating phenomenon that can be observed in a wide range of ecosystems, such as mussel beds and arid bushlands \autocite{liuPhaseSeparationDriven2016,rietkerkSelfOrganizationVegetationArid}. 
 There is evidence that the stability of these ecosystems is improved by spatial patterns, for example in mussel beds through improved nutrient availability while reducing the impact of disturbances due to water flow \autocite{vandekoppelExperimentalEvidenceSpatial2008}.
 
+When modeling ecological systems, explicitly incorporating space can have qualitative impacts on the stability. 
+This was shown in ref. \cite{durrettImportanceBeingDiscrete1994}, where four different approaches for modeling the same system, two spatial models, and two non-spatial models, under three parameter choices were analysed and it was shown that no two models agree for all three parameter choices.
+This highlights the importance of selecting the right level of detail for modeling. 
+Ordinary differential equations make the implicit assumption that the system is well-mixed. 
+For the systems mentioned in the first paragraph, this assumption does not hold and it is necessary to model space explicitly.  
+
+
 To explain the formation of the observed patterns, usually one of two mechanisms is put forward.
 The first mechanism is based on the activation-inhibition principle described by Alan Turing \autocite{turingChemicalBasisMorphogenesis1952}.
-One of the ways this principle can be applied is by 
+
 
 The second mechanism is based on the lesser known phase-separation priniciple developed by Cahn and Hilliard. 
 In ecological settings, this corresponds to density-dependent movement leading to pattern formation, as opposed to birth and death processes. A number of organisms whose spatial distribution can be explained by density-dependent movement is presented in \autocite{liuPhaseSeparationDriven2016}.
 
 In this report, the spatial aggregation of individuals based on density-dependent movement in continuous space will be explored.
-The simplest way to do this, is to update the position of all organisms at discrete time steps and update their position by drawing from a normal distribution with a density dependent variance.
-Mathematically, the change of position of individual $i$ can be described by
-\begin{align}
-    & x_i(t + dt) = x_i(t) + \sqrt{2D(\rho_R(\vec{r}_i, t)) dt} u_{i,x} \\
-    & y_i(t + dt) = y_i(t) + \sqrt{2D(\rho_R(\vec{r}_i, t)) dt} u_{i,y}
-\end{align}
-where ...
+Specifically, we will look at a very simple but counter-intuitive mechanism that leads to aggregation, in which particles move faster when the local density is higher.
+
+
+
+
+
 
 % When creating realistic models, it is important to be explicit about the assumptions and why they are justified.
 % An implicit assumption when describing populations in terms of ODEs is often the uniform distribution of indiviuals in space. (Lotka-Volterra, Logistic, ...)
@@ -43,11 +49,28 @@ where ...
 % This phenomenon has been observed in mussel-beds, ants, slime moulds and bacteria \autocite{liuPhaseSeparationDriven2016}.
 % In this report, I will present a simple model that exhibits self-organized spatial patterns based on density-dependent movement.
 \section{Methods}
-\subsection{Practice Calculation: A Single Organism}
-Before adding spatial interactions, a single organism diffusing in space will be analysed.
+Mathematically, the change of the position $\vec{r}_i = (x_i, y_i)$ of individual $i$ can be described by
+\begin{align}
+    & x_i(t + dt) = x_i(t) + \sqrt{2D(N_R(\vec{r}_i, t)) dt} u_{i,x} \\
+    & y_i(t + dt) = y_i(t) + \sqrt{2D(N_R(\vec{r}_i, t)) dt} u_{i,y}
+\end{align}
+where $u_{i,x}$ and $u_{i,y}$ are independent, normally distributed random numbers $\sim \mathcal{N}(0,1)$ and $D(N_R(\vec{r}_i, t))$ is a density-dependent diffusion rate.
+The argument $N_R(\vec{r}_i, t)$ is the number of other organisms within a radius $R$ around the particle. 
+For the diffusion rate function, we will use
+\begin{equation}
+    D(N_R(\vec{r}_i, t)) = D_0\left( \frac{N_R(\vec{r}_i, t)}{N\pi R^2} \right)^p.
+\end{equation}
+For a fixed interaction radius $R=0.1$, there are three parameters that influence the diffusion rate: $p, N$ and $D_0$.
+In Fig. (TODO), the variance of the increments as a function of the number of neighbours $\sigma(N_r) = \sqrt{2D(N_R) dt}$ is shown for a couple of different parameter values.
+It can be seen, that the diffusion rate increases with the number of organisms in the neighbourhood.
+
+
+\subsection{A Single Organism}
+Before moving on to the case where interactions are included, the diffusion of a single organism in space will be analysed.
 This will act as a baseline and can be compared to the more complicated case.
 
 To do this, we consider a simple environment with only a single organism and a constant diffusion term. 
+This can be reovered from the density-dependent diffusion rate by setting $p=0$.
 Additionally, it will be assumed that the environment is infinite. 
 The simulations will be run on a torus later, but that would make an analytical derivation more complicated.\\
 The walker position will change according to the following equations:
@@ -77,10 +100,10 @@ Again we focus on the term involving $x$.
     \langle \tilde{x}^2(t)\rangle = \int_{-\infty}^{\infty} \tilde{x}^2 p(\tilde{x},t)d\tilde{x} = \int_{-\infty}^{\infty} \tilde{x}^2 \frac{1}{\sqrt{4\pi Dt}} e^{-\frac{\tilde{x}^2}{4Dt}}d\tilde{x}
 \end{align*}
 Solving this integral requires a few steps, that will be only briefly mentioned. 
-First, we do a variable transformation by setting $y = \frac{\tilde{x}}{\sqrt{4Dt}}$. 
+First, we do a variable transformation by setting $u = \frac{\tilde{x}}{\sqrt{4Dt}}$. 
 The integral then becomes
 \begin{equation*}
-    \frac{4Dt}{\sqrt{\pi}}\int_{-\infty}^{\infty} y^2  e^{-y^2}dy.
+    \frac{4Dt}{\sqrt{\pi}}\int_{-\infty}^{\infty} u^2  e^{-u^2}du.
 \end{equation*}
 This integral can be solved by partial integration and is equal to $\sqrt{\pi}/2$.
 Thus, the final result is 
@@ -93,9 +116,23 @@ For $\langle \tilde{y}^2(t)\rangle$, we get the exact same result, and the mean 
 \end{equation*}
 The average absolute distance of the organism from the initial position therefore grows with the square root of time.
 
-\section{Aggregation}
-Now, we will add  
+\subsection{Simulation}
+Numerical simulations of the system with density-dependent diffusion rates were implemented in the programming language julia.
+To initialize the population, $N$ randomly chosen positions in a square of sidelength $1$ were chosen.
+The simulation then consists of calculating the number of organisms at distance $\leq R$ for each organism and then updating all positions by drawing from a normal distribution with variance determined by $D(N_R(\vec{r}_i, t))$.
+Additionally, the pairwise correlation function is plotted by calculating a histogram of the pairwise distances of particles.
+
+Seeing how the particles evolve over time helps to get an intuitive understanding of the processes.
+That is why there is an option to view the simulation in real-time.
+
+To keep things managable, we will look at three different population sizes: $N_1=100, N_2 = 1000, N_3 = 5000$. 
+For each of these, combinations of $D_0$ and $p$ are determined for which there is aggregation and for which there is no aggregation.
+
+Experiment 1: $N=100$, 
 \section{Results}
+Goal: Understand how parameters determine the spatial distribution.
+Expectation: high $D_0$ decreases aggregation, higher $p$ will increase aggregation, higher $N$ will decrease aggregation.
+
 
 \section{Discussion}
 \printbibliography

@@ -3,12 +3,6 @@ using SpatialAgg
 using StaticArrays
 using GLMakie
 
-# ideas:
-# - color by velocity
-# - implement slider actions
-# - calculate radial correlation function
-
-
 par = merge(SpatialAgg.par, 
             (
             plotlive = true, 
@@ -25,10 +19,20 @@ par = merge(SpatialAgg.par,
             R = 0.1, # interaction distance 
             shift = 0, # shift of the parabola  
             ))
+"Create a plot for different choices of D(Nr)."
+function viskernel()
+    f = Figure(size = (1200, 400))
+    axl = f[1,1] = Axis(f, xlabel = "Nr", ylabel = "sigma(N_R)", title="Diffusion Rate vs Local Density") #
 
-            # # # visualize the density kernel
+    axm = f[1,2] = Axis(f, xlabel = "Nr", ylabel = "D(Nr)", title="Diffusion Rate vs Local Density") # 
+    axr = f[1,3] = Axis(f, xlabel = "Nr", ylabel = "D(Nr)", title="Diffusion Rate vs Local Density") # 
 
-# Experiment 1
-par1 = merge(par, (N=100,))
-# @time SpatialAgg.simulation(par)
+    s = par.N*pi*par.R^2
+    D(Nr) = sqrt.(2 .* par.dt .* par.D₀.*(Nr./s .-par.shift).^par.p)
+    res = D(1:200)
 
+    lines!(axl, res)
+    display(f)
+end
+
+viskernel()

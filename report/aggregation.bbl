@@ -18,45 +18,85 @@
 
 
 \refsection{0}
-  \datalist[entry]{nyt/global//global/global/global}
+  \datalist[entry]{nty/global//global/global/global}
+    \entry{durrettImportanceBeingDiscrete1994}{article}{}{}
+      \name{author}{2}{}{%
+        {{hash=03a107fab36174e7da5974a64ad1812d}{%
+           family={Durrett},
+           familyi={D\bibinitperiod},
+           given={R.},
+           giveni={R\bibinitperiod}}}%
+        {{hash=edbf783f5b59ad72ae19bbeeaa21fd3f}{%
+           family={Levin},
+           familyi={L\bibinitperiod},
+           given={S.},
+           giveni={S\bibinitperiod}}}%
+      }
+      \strng{namehash}{c66ea041ec29778d084f9764106c8366}
+      \strng{fullhash}{c66ea041ec29778d084f9764106c8366}
+      \strng{fullhashraw}{c66ea041ec29778d084f9764106c8366}
+      \strng{bibnamehash}{c66ea041ec29778d084f9764106c8366}
+      \strng{authorbibnamehash}{c66ea041ec29778d084f9764106c8366}
+      \strng{authornamehash}{c66ea041ec29778d084f9764106c8366}
+      \strng{authorfullhash}{c66ea041ec29778d084f9764106c8366}
+      \strng{authorfullhashraw}{c66ea041ec29778d084f9764106c8366}
+      \field{sortinit}{D}
+      \field{sortinithash}{6f385f66841fb5e82009dc833c761848}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{abstract}{We consider and compare four approaches to modeling the dynamics of spatially distributed systems: mean field approaches (described by ordinary differential equations) in which every individual is considered to have equal probability of interacting with every other individual; patch models that group discrete individuals into patches without additional spatial structure; reaction-diffusion equations, in which infinitesimal individuals are distributed in space; and interacting particle systems, in which individuals are discrete and space is treated explicitly. We apply these four approaches to three examples of species interactions in spatially distributed populations and compare their predictions. Each represents different assumptions about the biology and hence a comparison among them has biological as well as modeling implications. In the first case all four approaches agree, in the second the spatial models disagree with the nonspatial ones, while in the third the stochastic models with discrete individuals disagree with the ones based on differential equations. We show further that the limiting reaction-diffusion equations associated with particle systems can have different qualitative behavior from those obtained by simply adding diffusion terms to mean field equations.}
+      \field{issn}{0040-5809}
+      \field{journaltitle}{Theoretical Population Biology}
+      \field{month}{12}
+      \field{number}{3}
+      \field{title}{The {{Importance}} of {{Being Discrete}} (and {{Spatial}})}
+      \field{urlday}{31}
+      \field{urlmonth}{3}
+      \field{urlyear}{2025}
+      \field{volume}{46}
+      \field{year}{1994}
+      \field{urldateera}{ce}
+      \field{pages}{363\bibrangedash 394}
+      \range{pages}{32}
+      \verb{doi}
+      \verb 10.1006/tpbi.1994.1032
+      \endverb
+      \verb{file}
+      \verb C\:\\Users\\olesc\\Zotero\\storage\\CZ65Z7GQ\\Durrett und Levin - 1994 - The Importance of Being Discrete (and Spatial).pdf;C\:\\Users\\olesc\\Zotero\\storage\\7ES68V5Q\\S004058098471032X.html
+      \endverb
+    \endentry
     \entry{liuPhaseSeparationDriven2016}{article}{}{}
       \name{author}{6}{}{%
-        {{un=0,uniquepart=base,hash=dff1196c99fcfa6d20a7f9193882a272}{%
+        {{hash=dff1196c99fcfa6d20a7f9193882a272}{%
            family={Liu},
            familyi={L\bibinitperiod},
            given={Quan-Xing},
-           giveni={Q\bibinithyphendelim X\bibinitperiod},
-           givenun=0}}%
-        {{un=0,uniquepart=base,hash=af88854af2808d409b54c917b495f554}{%
+           giveni={Q\bibinithyphendelim X\bibinitperiod}}}%
+        {{hash=af88854af2808d409b54c917b495f554}{%
            family={Rietkerk},
            familyi={R\bibinitperiod},
            given={Max},
-           giveni={M\bibinitperiod},
-           givenun=0}}%
-        {{un=0,uniquepart=base,hash=fce36f9e30304f365e597309924b4406}{%
+           giveni={M\bibinitperiod}}}%
+        {{hash=fce36f9e30304f365e597309924b4406}{%
            family={Herman},
            familyi={H\bibinitperiod},
            given={Peter\bibnamedelima M.J.},
-           giveni={P\bibinitperiod\bibinitdelim M\bibinitperiod},
-           givenun=0}}%
-        {{un=0,uniquepart=base,hash=7c87a27432cafe24923573497ba98cb6}{%
+           giveni={P\bibinitperiod\bibinitdelim M\bibinitperiod}}}%
+        {{hash=7c87a27432cafe24923573497ba98cb6}{%
            family={Piersma},
            familyi={P\bibinitperiod},
            given={Theunis},
-           giveni={T\bibinitperiod},
-           givenun=0}}%
-        {{un=0,uniquepart=base,hash=e5df0bebd6a49880b8532e01744ab27e}{%
+           giveni={T\bibinitperiod}}}%
+        {{hash=e5df0bebd6a49880b8532e01744ab27e}{%
            family={Fryxell},
            familyi={F\bibinitperiod},
            given={John\bibnamedelima M.},
-           giveni={J\bibinitperiod\bibinitdelim M\bibinitperiod},
-           givenun=0}}%
-        {{un=0,uniquepart=base,hash=351b05f28892f6bdcdebcf982048b30a}{%
+           giveni={J\bibinitperiod\bibinitdelim M\bibinitperiod}}}%
+        {{hash=351b05f28892f6bdcdebcf982048b30a}{%
            family={Van\bibnamedelimb De\bibnamedelima Koppel},
            familyi={V\bibinitperiod\bibinitdelim D\bibinitperiod\bibinitdelim K\bibinitperiod},
            given={Johan},
-           giveni={J\bibinitperiod},
-           givenun=0}}%
+           giveni={J\bibinitperiod}}}%
       }
       \strng{namehash}{7a2bae5a16faf80a89d40afde646b191}
       \strng{fullhash}{5f253b8785f749647092bea12ecad7e4}
@@ -68,8 +108,6 @@
       \strng{authorfullhashraw}{5f253b8785f749647092bea12ecad7e4}
       \field{sortinit}{L}
       \field{sortinithash}{7c47d417cecb1f4bd38d1825c427a61a}
-      \field{extradatescope}{labelyear}
-      \field{labeldatesource}{}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{shorttitle}
       \field{abstract}{Many ecosystems develop strikingly regular spatial patterns because of small-scale interactions between organisms, a process generally referred to as spatial self-organization. Self-organized spatial patterns are important determinants of the functioning of ecosystems, promoting the growth and survival of the involved organisms, and affecting the capacity of the organisms to cope with changing environmental conditions. The predominant explanation for self-organized pattern formation is spatial heterogeneity in establishment, growth and mortality, resulting from the self-organization processes. A number of recent studies, however, have revealed that movement of organisms can be an important driving process creating extensive spatial patterning in many ecosystems. Here, we review studies that detail movement-based pattern formation in contrasting ecological settings. Our review highlights that a common principle, where movement of organisms is density-dependent, explains observed spatial regular patterns in all of these studies. This principle, well known to physics as the Cahn--Hilliard principle of phase separation, has so-far remained unrecognized as a general mechanism for self-organized complexity in ecology. Using the examples presented in this paper, we explain how this movement principle can be discerned in ecological settings, and clarify how to test this mechanism experimentally. Our study highlights that animal movement, both in isolation and in unison with other processes, is an important mechanism for regular pattern formation in ecosystems.}
@@ -96,57 +134,49 @@
     \endentry
     \entry{rietkerkSelfOrganizationVegetationArid}{article}{}{}
       \name{author}{9}{}{%
-        {{un=0,uniquepart=base,hash=af88854af2808d409b54c917b495f554}{%
+        {{hash=af88854af2808d409b54c917b495f554}{%
            family={Rietkerk},
            familyi={R\bibinitperiod},
            given={Max},
-           giveni={M\bibinitperiod},
-           givenun=0}}%
-        {{un=0,uniquepart=base,hash=269f83eea8687bd39c94fa0f8c5081ba}{%
+           giveni={M\bibinitperiod}}}%
+        {{hash=269f83eea8687bd39c94fa0f8c5081ba}{%
            family={Boerlijst},
            familyi={B\bibinitperiod},
            given={Maarten\bibnamedelima C},
-           giveni={M\bibinitperiod\bibinitdelim C\bibinitperiod},
-           givenun=0}}%
-        {{un=0,uniquepart=base,hash=d80f7570d905859939f97fc33c4cdbba}{%
+           giveni={M\bibinitperiod\bibinitdelim C\bibinitperiod}}}%
+        {{hash=d80f7570d905859939f97fc33c4cdbba}{%
            family={{van Langevelde}},
            familyi={v\bibinitperiod},
            given={Frank},
-           giveni={F\bibinitperiod},
-           givenun=0}}%
-        {{un=0,uniquepart=base,hash=bfd9515097091c0a13db21329e7c6eba}{%
+           giveni={F\bibinitperiod}}}%
+        {{hash=bfd9515097091c0a13db21329e7c6eba}{%
            family={HilleRisLambers},
            familyi={H\bibinitperiod},
            given={Reinier},
-           giveni={R\bibinitperiod},
-           givenun=0}}%
-        {{un=0,uniquepart=base,hash=076793d86e9e89188ab466df7df258e9}{%
+           giveni={R\bibinitperiod}}}%
+        {{hash=076793d86e9e89188ab466df7df258e9}{%
            family={{van}},
            familyi={v\bibinitperiod},
            given={Johan},
-           giveni={J\bibinitperiod},
-           givenun=0}}%
-        {{un=0,uniquepart=base,hash=72390c44118aaf7a51ee8652740ac419}{%
+           giveni={J\bibinitperiod}}}%
+        {{hash=72390c44118aaf7a51ee8652740ac419}{%
            family={{de Koppel}},
            familyi={d\bibinitperiod}}}%
-        {{un=0,uniquepart=base,hash=3bce7a972ececf27f844cd95c0f7cec1}{%
+        {{hash=3bce7a972ececf27f844cd95c0f7cec1}{%
            family={Kumar},
            familyi={K\bibinitperiod},
            given={Lalit},
-           giveni={L\bibinitperiod},
-           givenun=0}}%
-        {{un=0,uniquepart=base,hash=6db417316ac8efcdeee373f86db31d45}{%
+           giveni={L\bibinitperiod}}}%
+        {{hash=6db417316ac8efcdeee373f86db31d45}{%
            family={Prins},
            familyi={P\bibinitperiod},
            given={Herbert\bibnamedelimb H\bibnamedelima T},
-           giveni={H\bibinitperiod\bibinitdelim H\bibinitperiod\bibinitdelim T\bibinitperiod},
-           givenun=0}}%
-        {{un=0,uniquepart=base,hash=7992f5cdfb975c64749ea4d0d3c2b427}{%
+           giveni={H\bibinitperiod\bibinitdelim H\bibinitperiod\bibinitdelim T\bibinitperiod}}}%
+        {{hash=7992f5cdfb975c64749ea4d0d3c2b427}{%
            family={{de Roos}},
            familyi={d\bibinitperiod},
            given={Andre\bibnamedelima M},
-           giveni={A\bibinitperiod\bibinitdelim M\bibinitperiod},
-           givenun=0}}%
+           giveni={A\bibinitperiod\bibinitdelim M\bibinitperiod}}}%
       }
       \strng{namehash}{91d3ccdb58f2d5fcb4725514d94ac4e5}
       \strng{fullhash}{1c3b0fbfdcb89541c20e84485eeb6fc2}
@@ -158,7 +188,6 @@
       \strng{authorfullhashraw}{1c3b0fbfdcb89541c20e84485eeb6fc2}
       \field{sortinit}{R}
       \field{sortinithash}{5e1c39a9d46ffb6bebd8f801023a9486}
-      \field{labeldatesource}{nodate}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
       \field{langid}{english}
@@ -169,12 +198,11 @@
     \endentry
     \entry{turingChemicalBasisMorphogenesis1952}{article}{}{}
       \name{author}{1}{}{%
-        {{un=0,uniquepart=base,hash=d6d9f41ce7ab57b0d45edbe153331923}{%
+        {{hash=d6d9f41ce7ab57b0d45edbe153331923}{%
            family={Turing},
            familyi={T\bibinitperiod},
            given={Alan},
-           giveni={A\bibinitperiod},
-           givenun=0}}%
+           giveni={A\bibinitperiod}}}%
       }
       \strng{namehash}{d6d9f41ce7ab57b0d45edbe153331923}
       \strng{fullhash}{d6d9f41ce7ab57b0d45edbe153331923}
@@ -186,8 +214,6 @@
       \strng{authorfullhashraw}{d6d9f41ce7ab57b0d45edbe153331923}
       \field{sortinit}{T}
       \field{sortinithash}{9af77f0292593c26bde9a56e688eaee9}
-      \field{extradatescope}{labelyear}
-      \field{labeldatesource}{}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
       \field{abstract}{It is suggested that a system of chemical substances, called morphogens, reacting together and diffusing through a tissue, is adequate to account for the main phenomena of morphogenesis. Such a system, although it may originally be quite homogeneous, may later develop a pattern or structure due to an instability of the homogeneous equilibrium, which is triggered off by random disturbances. Such reaction-diffusion systems are considered in some detail in the case of an isolated ring of cells, a mathematically convenient, though biologically unusual system. The investigation is chiefly concerned with the onset of instability. It is found that there are six essentially different forms which this may take. In the most interesting form stationary waves appear on the ring. It is suggested that this might account, for instance, for the tentacle patterns on Hydra and for whorled leaves. A system of reactions and diffusion on a sphere is also considered. Such a system appears to account for gastrulation. Another reaction system in two dimensions gives rise to patterns reminiscent of dappling. It is also suggested that stationary waves in two dimensions could account for the phenomena of phyllotaxis. The purpose of this paper is to discuss a possible mechanism by which the genes of a zygote may determine the anatomical structure of the resulting organism. The theory does not make any new hypotheses; it merely suggests that certain well-known physical laws are sufficient to account for many of the facts. The full understanding of the paper requires a good knowledge of mathematics, some biology, and some elementary chemistry. Since readers cannot be expected to be experts in all of these subjects, a number of elementary facts are explained, which can be found in text-books, but whose omission would make the paper difficult reading.}
@@ -214,42 +240,36 @@
     \endentry
     \entry{vandekoppelExperimentalEvidenceSpatial2008}{article}{}{}
       \name{author}{6}{}{%
-        {{un=0,uniquepart=base,hash=351b05f28892f6bdcdebcf982048b30a}{%
+        {{hash=351b05f28892f6bdcdebcf982048b30a}{%
            family={Van\bibnamedelimb De\bibnamedelima Koppel},
            familyi={V\bibinitperiod\bibinitdelim D\bibinitperiod\bibinitdelim K\bibinitperiod},
            given={Johan},
-           giveni={J\bibinitperiod},
-           givenun=0}}%
-        {{un=0,uniquepart=base,hash=434d70bdd4c9ec917d44a164da3e28f7}{%
+           giveni={J\bibinitperiod}}}%
+        {{hash=434d70bdd4c9ec917d44a164da3e28f7}{%
            family={Gascoigne},
            familyi={G\bibinitperiod},
            given={Joanna\bibnamedelima C.},
-           giveni={J\bibinitperiod\bibinitdelim C\bibinitperiod},
-           givenun=0}}%
-        {{un=0,uniquepart=base,hash=2fe09cc48ac5727d27ed7a40b18259b9}{%
+           giveni={J\bibinitperiod\bibinitdelim C\bibinitperiod}}}%
+        {{hash=2fe09cc48ac5727d27ed7a40b18259b9}{%
            family={Theraulaz},
            familyi={T\bibinitperiod},
            given={Guy},
-           giveni={G\bibinitperiod},
-           givenun=0}}%
-        {{un=0,uniquepart=base,hash=af88854af2808d409b54c917b495f554}{%
+           giveni={G\bibinitperiod}}}%
+        {{hash=af88854af2808d409b54c917b495f554}{%
            family={Rietkerk},
            familyi={R\bibinitperiod},
            given={Max},
-           giveni={M\bibinitperiod},
-           givenun=0}}%
-        {{un=0,uniquepart=base,hash=527da857b1ac68cbb67350c679072cd9}{%
+           giveni={M\bibinitperiod}}}%
+        {{hash=527da857b1ac68cbb67350c679072cd9}{%
            family={Mooij},
            familyi={M\bibinitperiod},
            given={Wolf\bibnamedelima M.},
-           giveni={W\bibinitperiod\bibinitdelim M\bibinitperiod},
-           givenun=0}}%
-        {{un=0,uniquepart=base,hash=fce36f9e30304f365e597309924b4406}{%
+           giveni={W\bibinitperiod\bibinitdelim M\bibinitperiod}}}%
+        {{hash=fce36f9e30304f365e597309924b4406}{%
            family={Herman},
            familyi={H\bibinitperiod},
            given={Peter\bibnamedelimb M.\bibnamedelimi J.},
-           giveni={P\bibinitperiod\bibinitdelim M\bibinitperiod\bibinitdelim J\bibinitperiod},
-           givenun=0}}%
+           giveni={P\bibinitperiod\bibinitdelim M\bibinitperiod\bibinitdelim J\bibinitperiod}}}%
       }
       \strng{namehash}{f7e434651cae9dd0a5dbd43865df4ddf}
       \strng{fullhash}{dd99ee49c4bafa4f51ada75d06307a04}
@@ -261,8 +281,6 @@
       \strng{authorfullhashraw}{dd99ee49c4bafa4f51ada75d06307a04}
       \field{sortinit}{V}
       \field{sortinithash}{afb52128e5b4dc4b843768c0113d673b}
-      \field{extradatescope}{labelyear}
-      \field{labeldatesource}{}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
       \field{abstract}{Spatial self-organization is the main theoretical explanation for the global occurrence of regular or otherwise coherent spatial patterns in ecosystems. Using mussel beds as a model ecosystem, we provide an experimental demonstration of spatial self-organization. Under homogeneous laboratory conditions, mussels developed regular patterns, similar to those in the field. An individual-based model derived from our experiments showed that interactions between individuals explained the observed patterns. Furthermore, a field study showed that pattern formation affected ecosystem-level processes in terms of improved growth and resistance to wave action. Our results imply that spatial self-organization is an important determinant of the structure and functioning of ecosystems, and it needs to be considered in their conservation.}
