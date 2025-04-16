@@ -3,6 +3,7 @@
 \usepackage{amsmath}
 \usepackage{amssymb}
 \usepackage{hyperref}
+\usepackage{graphicx}
 % setup bibliography
 \usepackage[style=numeric,backend=biber]{biblatex}
 \addbibresource{aggregation.bib}
@@ -17,38 +18,32 @@
 Spatial pattern formation is a fascinating phenomenon that can be observed in a wide range of ecosystems, such as mussel beds and arid bushlands \autocite{liuPhaseSeparationDriven2016,rietkerkSelfOrganizationVegetationArid}. 
 There is evidence that the stability of these ecosystems is improved by spatial patterns, for example in mussel beds through improved nutrient availability while reducing the impact of disturbances due to water flow \autocite{vandekoppelExperimentalEvidenceSpatial2008}.
 
-When modeling ecological systems, explicitly incorporating space can have qualitative impacts on the stability. 
+When modeling ecological systems, explicitly incorporating space can have qualitative impacts on the behaviour of the system. 
 This was shown in ref. \cite{durrettImportanceBeingDiscrete1994}, where four different approaches for modeling the same system, two spatial models, and two non-spatial models, under three parameter choices were analysed and it was shown that no two models agree for all three parameter choices.
-This highlights the importance of selecting the right level of detail for modeling. 
-Ordinary differential equations make the implicit assumption that the system is well-mixed. 
+These results highlight the importance of selecting the right level of detail for modeling and being explicit about the assumptions, as well as understanding the conditions under which these assumptions hold.
+Ordinary differential equations, for instance,  make the implicit assumption that the system under consideration is well-mixed. 
 For the systems mentioned in the first paragraph, this assumption does not hold and it is necessary to model space explicitly.  
-
 
 To explain the formation of the observed patterns, usually one of two mechanisms is put forward.
 The first mechanism is based on the activation-inhibition principle described by Alan Turing \autocite{turingChemicalBasisMorphogenesis1952}.
 
-
 The second mechanism is based on the lesser known phase-separation priniciple developed by Cahn and Hilliard. 
-In ecological settings, this corresponds to density-dependent movement leading to pattern formation, as opposed to birth and death processes. A number of organisms whose spatial distribution can be explained by density-dependent movement is presented in \autocite{liuPhaseSeparationDriven2016}.
+In ecological settings, this corresponds to density-dependent movement leading to pattern formation, as opposed to birth and death processes. A number of organisms, among them certain species of mussels, slime moulds and ants, whose spatial distribution can be explained by density-dependent movement is presented in \autocite{liuPhaseSeparationDriven2016}.
 
 In this report, the spatial aggregation of individuals based on density-dependent movement in continuous space will be explored.
-Specifically, we will look at a very simple but counter-intuitive mechanism that leads to aggregation, in which particles move faster when the local density is higher.
+More specifically, we will look at a very simple but counter-intuitive mechanism that leads to aggregation, in which particles move faster when the local density is higher. 
 
 
-
-
-
-
-% When creating realistic models, it is important to be explicit about the assumptions and why they are justified.
-% An implicit assumption when describing populations in terms of ODEs is often the uniform distribution of indiviuals in space. (Lotka-Volterra, Logistic, ...)
-% \autocite{durrettImportanceBeingDiscrete1994} showed that local effects can have qualitative impacts on the dynamics of a system, for instance allowing the coexistence of two species where ODEs predict a single species to survive.
-
-% Since then, a large number of studies have shown how spatial patterns can improve the stability of ecosystems and mechanisms for how these patterns can form.
-% Many of these explain spatial patterns in terms of spatial variation in births and deaths of individuals \autocite{liuPhaseSeparationDriven2016} (not primary source) 
-
-% This phenomenon has been observed in mussel-beds, ants, slime moulds and bacteria \autocite{liuPhaseSeparationDriven2016}.
-% In this report, I will present a simple model that exhibits self-organized spatial patterns based on density-dependent movement.
 \section{Methods}
+In this section, the model for the movement of organisms will be presented. 
+The organisms will be simulated on a square with sidelength $1$ and periodic boundary conditions, which effectively means that organisms exist on a torus.
+This is important to ensure that they are contained to a small region and makes it easier to visualize.
+
+
+
+Since the focus is on movement, the number of organisms, $N$, is constant.
+Initially, the organisms are distributed randomly in the environment. 
+The position of all organisms is then updated at discrete time-steps by drawing a displacement from a normal distribution.
 Mathematically, the change of the position $\vec{r}_i = (x_i, y_i)$ of individual $i$ can be described by
 \begin{align}
     & x_i(t + dt) = x_i(t) + \sqrt{2D(N_R(\vec{r}_i, t)) dt} u_{i,x} \\
@@ -61,19 +56,26 @@ For the diffusion rate function, we will use
     D(N_R(\vec{r}_i, t)) = D_0\left( \frac{N_R(\vec{r}_i, t)}{N\pi R^2} \right)^p.
 \end{equation}
 For a fixed interaction radius $R=0.1$, there are three parameters that influence the diffusion rate: $p, N$ and $D_0$.
-In Fig. (TODO), the variance of the increments as a function of the number of neighbours $\sigma(N_r) = \sqrt{2D(N_R) dt}$ is shown for a couple of different parameter values.
+In Fig. \ref{diffusion_rates}, the standard deviation of the increments as a function of the number of neighbours $\sigma(N_r) = \sqrt{2D(N_R) dt}$ is shown for a couple of different parameter values.
 It can be seen, that the diffusion rate increases with the number of organisms in the neighbourhood.
+Depending on the parameter $p$, this increase can be linear ($p=2$) or grow polynomially ($\mathcal{O}(n^{p/2})$). 
+The parameter $D_0$ shifts the curves up or down, and could be understood as a baseline diffusion rate.
 
+In simulations, the effects of these parameters on the spatial distribution will be analysed, but before that, a simpler setting will be discussed for comparison.
+\begin{figure}
+    \label{diffusion_rates} 
+    \centering
+    \includegraphics[width=1.0\linewidth]{img/diffusion_rates.png}
+    \caption{Diffusion rate of an organism based on the number of organisms within distance $R$ for $N=100$, $N=1000$, $N=5000$ and $p=0.25$, $p=4$, $p=10$ and $D_0 = 0.001$. Note that while the shape of the curves is the same, the number of organisms that can be within the radius to reach a certain diffusion rate increases with the total number of organisms.}
+\end{figure}
 
 \subsection{A Single Organism}
-Before moving on to the case where interactions are included, the diffusion of a single organism in space will be analysed.
-This will act as a baseline and can be compared to the more complicated case.
+Before moving on to the simulations, the diffusion of a single organism in space will be analysed.
 
 To do this, we consider a simple environment with only a single organism and a constant diffusion term. 
-This can be reovered from the density-dependent diffusion rate by setting $p=0$.
-Additionally, it will be assumed that the environment is infinite. 
-The simulations will be run on a torus later, but that would make an analytical derivation more complicated.\\
-The walker position will change according to the following equations:
+This can be recovered from the density-dependent diffusion rate by setting $p=0$.
+For simplicity, it will be assumed that the environment is infinite, as opposed to the torus used in the simulations.\\
+The walker position will change similiarly to before, but with a constant diffusion term
 \begin{align}
     & x(t + dt) = x(t) + \sqrt{2D dt} u_x \label{single_x}\\
     & y(t + dt) = y(t) + \sqrt{2D dt} u_y
@@ -118,22 +120,39 @@ The average absolute distance of the organism from the initial position therefor
 
 \subsection{Simulation}
 Numerical simulations of the system with density-dependent diffusion rates were implemented in the programming language julia.
-To initialize the population, $N$ randomly chosen positions in a square of sidelength $1$ were chosen.
-The simulation then consists of calculating the number of organisms at distance $\leq R$ for each organism and then updating all positions by drawing from a normal distribution with variance determined by $D(N_R(\vec{r}_i, t))$.
-Additionally, the pairwise correlation function is plotted by calculating a histogram of the pairwise distances of particles.
+To keep things managable, three population sizes are simulated, $N_1=100, N_2 = 1000, N_3 = 5000$.
+For each population size, the simulation will be run for a number of values of the parameters $p$ and $D_0$.
+After some experimentation, I settled on checking $p \in {0.5, 2, 4, 6, 8, 10}$ and $D_0 \in {0.1, 0.01, 0.001, 0.0001}$. 
+To allow patterns to form, the simulation will be run for $n=1000$ steps and at the end, an image of the organism position is displayed alongside the radial correlation function.
 
-Seeing how the particles evolve over time helps to get an intuitive understanding of the processes.
-That is why there is an option to view the simulation in real-time.
 
-To keep things managable, we will look at three different population sizes: $N_1=100, N_2 = 1000, N_3 = 5000$. 
-For each of these, combinations of $D_0$ and $p$ are determined for which there is aggregation and for which there is no aggregation.
+\subsection{Radial Correlation Function}
+The radial correlation function indicates the distribution of particles. 
 
-Experiment 1: $N=100$, 
+
 \section{Results}
-Goal: Understand how parameters determine the spatial distribution.
-Expectation: high $D_0$ decreases aggregation, higher $p$ will increase aggregation, higher $N$ will decrease aggregation.
+The results of the simulations for the three different population sizes will be presented here.
+For each population size, 24 parameter combinations were tested.
 
+\subsection{Large Population}
+The results for $N=5000$ will be presented first, because they contain the least amount of noise.
+For given parameters, the spatial distribution generally falls in one of two categories, either being slightly overdispersed or clumped. 
 
+Clumped patterns form when the baseline diffusion rate $D_0$ is small and the exponent $p$ in the diffusion kernel is high. 
+In the simulations, clumped patterns could be observed for $D_0 \in \{0.01, 0.001, 0.0001\}$ and $p\in\{8, 10\}$.
+One of the least noisy examples of clumped spatial patterns can be seen in Fig. \ref{rp68}.
+
+If the baseline diffusion rate $D_0$ is high, then no clumped patterns form for all tested values of $p$. 
+% resultplot 51 - 74 
+\begin{figure}
+    \label{rp68}
+    \includegraphics[width=1.0\linewidth]{img/rp68_N5000_D01_p8.png}
+    \caption{Results of the simulation with $N=5000$, $p=8$, $D_0=0.01$.}
+\end{figure}
+
+\subsection{Medium Population}
+
+For $N=1000$, the shift seems to occur around $p=6$, where some clumped patterns can be seen 
 \section{Discussion}
 \printbibliography
 \end{document}

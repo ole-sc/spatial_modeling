@@ -11,8 +11,7 @@ If `par.plotlive` is `true`, also visualize the simulation along with the pairwi
 function simulation(par)
     r = genpoints(par.N, par.lower, par.upper)              # init organism positions
     d = zeros(par.N)                                        # init difffusion rates
-    hist = zeros(par.bins)
-    pd = zeros(par.N*par.N)                                # pairwise distances for radial correlation function
+    pd = zeros(par.N*par.N)                                 # pairwise distances for radial correlation function
 
     td(p1, p2) = torusdist(p1, p2, par.lower, par.upper)    # define torus distance function
     D! = set_diffusion_kernel(par, td)                      # set diffusion kernel
@@ -31,12 +30,25 @@ function simulation(par)
         move!(r, d, par.lower, par.upper)
 
         if par.plotlive
+            bins, weights = calc_corrfunc(pd, par)
             # update plot
-            update_obs!(plt, r, pd)
+            update_obs!(plt, r, weights)
 
             isopen(plt[1].scene) || break # stop the simulation if the plotting window is closed
             sleep(par.sleeptime)
         end
+    end
+    # always create a result image and save it
+    bins, weights = calc_corrfunc(pd, par)
+    update_obs!(plt, r, weights)
+
+    # save results
+    plotname = "data/resultplot"
+    parname = "data/params"
+    expcounter = genfilename(plotname)
+    save("$(plotname)$(expcounter).png", plt[1])
+    open("$(parname)$(expcounter).json", "w") do file
+        JSON.print(file, par)
     end
 end
 

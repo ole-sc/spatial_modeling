@@ -1,3 +1,5 @@
+"This file is for testing the correctness of the program."
+
 using Revise
 using SpatialAgg
 using StaticArrays
@@ -7,7 +9,6 @@ using GLMakie
 # - color by velocity
 # - implement slider actions
 # - calculate radial correlation function
-
 
 par = merge(SpatialAgg.par, 
             (
@@ -26,9 +27,21 @@ par = merge(SpatialAgg.par,
             shift = 0, # shift of the parabola  
             ))
 
-            # # # visualize the density kernel
+par1 = merge(par, (N=1000, nsteps=1000, plotlive=false))
+@time SpatialAgg.simulation(par1)
 
-# Experiment 1
-par1 = merge(par, (N=100,))
-# @time SpatialAgg.simulation(par)
+# test correlation function
+function testcorr(par)
+    r = SpatialAgg.genpoints(par.N, par.lower, par.upper)              # init organism positions
+    d = zeros(par.N)                                                   # init difffusion rates
+    pd = zeros(par.N*par.N)  
+    td(p1, p2) = SpatialAgg.torusdist(p1, p2, par.lower, par.upper)    # define torus distance function
+    D! =  SpatialAgg.set_diffusion_kernel(par, td)                     # set diffusion kernel
+
+    # calculate distances
+    D!(d, pd, r)         
+    bins, weights = SpatialAgg.calc_corrfunc(pd, par)    
+    plot(bins, weights)
+end
+# testcorr(par1)
 

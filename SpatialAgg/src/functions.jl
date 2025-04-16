@@ -68,9 +68,15 @@ function move!(r, d, lower, upper)
 end
 
 "Calculate the radial correlation function"
-function calc_corrfunc(pd)
-
-end
+function calc_corrfunc(pd, par)
+    # calculate histogram of pairwise distances
+    bins = LinRange(0, 0.5, par.bins)
+    h = fit(Histogram, pd[pd.>0], bins)
+    # normalize 
+    binwidth = bins[2]-bins[1] # use that bins are evenly spaced
+    weights_normalized = map((x,y) -> y/(2pi*x*binwidth*par.N), bins[2:end], h.weights/par.N)
+    return bins[2:end], weights_normalized
+end 
 
 """
     makeplot(r, pd)
@@ -81,37 +87,49 @@ function makeplot(r, pd, par)
     f = Figure(size = (1400, 900))
     ax = f[1,1] = Axis(f, title = "Particle Simulation (N = $(length(r)))") # for plotting the points
 
-    axr = f[1,2] = Axis(f, title = "Pairwise Correlation Function") # for showing the spatial correlation
+    axr = f[1,2] = Axis(f, xticks= 0:0.05:0.5, title = "Pairwise Correlation Function") # for showing the spatial correlation
 
     or = Observable(r) 
     scatter!(ax, or, color = :blue,markersize = 5)
 
-    opd = Observable(pd[pd.>0])
-    hist!(axr, opd, bins = 0:1/par.bins:1, normalization = :pdf)
-    ylims!(axr, 0, 5)
-    xlims!(axr, 0, 1)
+    bins, weights = calc_corrfunc(pd, par)
+    ow = Observable(weights)
+    lines!(axr, bins, ow)
+    # hist!(axr, opd, bins = 0:1/par.bins:1, normalization = :pdf)
+    ylims!(axr, 0, 3)
     
-    # add sliders to change params interactively
-    sg = SliderGrid(
-        f[2, 1],
-        (label = "p", range = 0:0.1:10, format = "{:.1f}", startvalue = 5, update_while_dragging=false),
-        (label = "D0", range = 0:0.0001:0.01, format = "{:.4f}", startvalue = 0.001, update_while_dragging=false),
-        (label = "R", range = 0:0.002:1, format = "{:.3f}", startvalue = 0.1, update_while_dragging=false),
-        )
-    oslider = [s.value for s in sg.sliders]
-    # here I would need to create a new parameter object and update the kernel function
-    lift(oslider...) do slvalues...
-        println("slider changes")
-    end
+    # # add sliders to change params interactively
+    # sg = SliderGrid(
+    #     f[2, 1],
+    #     (label = "p", range = 0:0.1:10, format = "{:.1f}", startvalue = 5, update_while_dragging=false),
+    #     (label = "D0", range = 0:0.0001:0.01, format = "{:.4f}", startvalue = 0.001, update_while_dragging=false),
+    #     (label = "R", range = 0:0.002:1, format = "{:.3f}", startvalue = 0.1, update_while_dragging=false),
+    #     )
+    # oslider = [s.value for s in sg.sliders]
+    # # here I would need to create a new parameter object and update the kernel function
+    # lift(oslider...) do slvalues...
+    #     println("slider changes")
+    # end
 
     display(f)
-    return f, ax, axr, or, opd
+    return f, ax, axr, or, ow
 end
 
 "Update the observables, which will update the plot.
 `plt` should be a tuple returned by `makeplot()`."
-function update_obs!(plt, r, pd)
+function update_obs!(plt, r, weights)
     plt[4][] = r
-    plt[5][] = pd[pd.>0]
+    plt[5][] = weights
+    autolimits!(plt[3])
+end
+
+function genfilename(base_name)
+    counter = 1
+    filename ="$(base_name)$(counter).png"
+    while isfile(filename)
+        counter += 1
+        filename = "$(base_name)$(counter).png"
+    end
+    return counter
 end
 
