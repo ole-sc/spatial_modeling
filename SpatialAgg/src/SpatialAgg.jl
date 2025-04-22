@@ -16,7 +16,9 @@ const par = (
     dt = 0.01,
 
     sleeptime = 0.01,
-    plotlive = true,
+    plotlive = true,    # update plot every step
+    saveresult = true,  
+    hideplots = false,  # don't plot at all
 
     bins = 100, # number of bins in histogram
 

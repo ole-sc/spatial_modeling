@@ -132,6 +132,47 @@
       \verb C:\Users\olesc\Zotero\storage\7YJEZBSJ\Liu et al. - 2016 - Phase separation driven by density-dependent movement A novel mechanism for ecological patterns.pdf
       \endverb
     \endentry
+    \entry{lopezMacroscopicDescriptionParticle2006}{article}{}{}
+      \name{author}{1}{}{%
+        {{hash=d335987adc23332ab63911fd505fabd7}{%
+           family={López},
+           familyi={L\bibinitperiod},
+           given={Cristóbal},
+           giveni={C\bibinitperiod}}}%
+      }
+      \strng{namehash}{d335987adc23332ab63911fd505fabd7}
+      \strng{fullhash}{d335987adc23332ab63911fd505fabd7}
+      \strng{fullhashraw}{d335987adc23332ab63911fd505fabd7}
+      \strng{bibnamehash}{d335987adc23332ab63911fd505fabd7}
+      \strng{authorbibnamehash}{d335987adc23332ab63911fd505fabd7}
+      \strng{authornamehash}{d335987adc23332ab63911fd505fabd7}
+      \strng{authorfullhash}{d335987adc23332ab63911fd505fabd7}
+      \strng{authorfullhashraw}{d335987adc23332ab63911fd505fabd7}
+      \field{sortinit}{L}
+      \field{sortinithash}{7c47d417cecb1f4bd38d1825c427a61a}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{issn}{1539-3755, 1550-2376}
+      \field{journaltitle}{Physical Review E}
+      \field{langid}{english}
+      \field{month}{7}
+      \field{number}{1}
+      \field{title}{Macroscopic Description of Particle Systems with Nonlocal Density-Dependent Diffusivity}
+      \field{urlday}{16}
+      \field{urlmonth}{4}
+      \field{urlyear}{2025}
+      \field{volume}{74}
+      \field{year}{2006}
+      \field{urldateera}{ce}
+      \field{pages}{012102}
+      \range{pages}{1}
+      \verb{doi}
+      \verb 10.1103/PhysRevE.74.012102
+      \endverb
+      \verb{file}
+      \verb C:\Users\olesc\Zotero\storage\79QNRWN7\López - 2006 - Macroscopic description of particle systems with nonlocal density-dependent diffusivity.pdf
+      \endverb
+    \endentry
     \entry{rietkerkSelfOrganizationVegetationArid}{article}{}{}
       \name{author}{9}{}{%
         {{hash=af88854af2808d409b54c917b495f554}{%

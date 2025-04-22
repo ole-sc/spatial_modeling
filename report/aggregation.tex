@@ -7,6 +7,9 @@
 % setup bibliography
 \usepackage[style=numeric,backend=biber]{biblatex}
 \addbibresource{aggregation.bib}
+
+\renewcommand{\vec}[1]{\boldsymbol{#1}}
+
 % ----------------------------- %
 \title{Aggregation by Movement}
 \author{Ole Schügl}
@@ -30,16 +33,16 @@ The first mechanism is based on the activation-inhibition principle described by
 The second mechanism is based on the lesser known phase-separation priniciple developed by Cahn and Hilliard. 
 In ecological settings, this corresponds to density-dependent movement leading to pattern formation, as opposed to birth and death processes. A number of organisms, among them certain species of mussels, slime moulds and ants, whose spatial distribution can be explained by density-dependent movement is presented in \autocite{liuPhaseSeparationDriven2016}.
 
+
 In this report, the spatial aggregation of individuals based on density-dependent movement in continuous space will be explored.
 More specifically, we will look at a very simple but counter-intuitive mechanism that leads to aggregation, in which particles move faster when the local density is higher. 
 
 
-\section{Methods}
-In this section, the model for the movement of organisms will be presented. 
+\section{The Model}
+First, a model for the density-dependent movement of organisms will be presented. 
+The model 
 The organisms will be simulated on a square with sidelength $1$ and periodic boundary conditions, which effectively means that organisms exist on a torus.
 This is important to ensure that they are contained to a small region and makes it easier to visualize.
-
-
 
 Since the focus is on movement, the number of organisms, $N$, is constant.
 Initially, the organisms are distributed randomly in the environment. 
@@ -118,24 +121,76 @@ For $\langle \tilde{y}^2(t)\rangle$, we get the exact same result, and the mean 
 \end{equation*}
 The average absolute distance of the organism from the initial position therefore grows with the square root of time.
 
-\subsection{Simulation}
-Numerical simulations of the system with density-dependent diffusion rates were implemented in the programming language julia.
-To keep things managable, three population sizes are simulated, $N_1=100, N_2 = 1000, N_3 = 5000$.
-For each population size, the simulation will be run for a number of values of the parameters $p$ and $D_0$.
-After some experimentation, I settled on checking $p \in {0.5, 2, 4, 6, 8, 10}$ and $D_0 \in {0.1, 0.01, 0.001, 0.0001}$. 
-To allow patterns to form, the simulation will be run for $n=1000$ steps and at the end, an image of the organism position is displayed alongside the radial correlation function.
 
+
+\subsection{Stability Analysis}
+Assuming that the population is large enough, we can approximate the dynamics with a continuous density equation given by
+\begin{equation}
+    \frac{\partial\rho(\vec{r},t)}{\partial t} = \nabla^2[D(\rho_R)\rho(\vec{r},t)],
+\end{equation}
+where $\rho(\vec{r},t)$ now describes the particle density at point $\vec{r}$ and time $t$ and
+\begin{equation}
+    D(\rho_R) = D_0 \left(\frac{\int_{R} \rho(\vec{r}',t)d\vec{r}'}{\pi R^2 \tilde{\rho}}\right)^p.
+\end{equation}
+The integral is taken over a disk of radius $R$ centered at $\vec{r}$. 
+We will write the argument $\rho_R = \frac{\int_{R} \rho(\vec{r}',t)d\vec{r}'}{\pi R^2}$, which will make the subsequent analysis easier, because the function $D(\rho)=D_0 (\rho/\tilde{\rho})^p$ is simpler.
+
+Following \cite{lopezMacroscopicDescriptionParticle2006}, we do a linear stability analysis to find under which conditions a uniform density is stable. 
+A small perturbation of the uniform density $\rho_0$ will be written as $\rho_0 + \epsilon \Psi$, giving
+\begin{align}
+    \frac{\partial[\rho_0 + \epsilon \Psi](\vec{r},t)}{\partial t} &= \nabla^2\left[D\left(\frac{\int_{R} [\rho_0+\epsilon \Psi](\vec{r}',t)d\vec{r}'}{\pi R^2}\right)[\rho_0+\epsilon \Psi](\vec{r},t)\right]\\
+    &= \nabla^2\left[D\left(\rho_0+\frac{\epsilon\int_{R} \Psi(\vec{r}',t)d\vec{r}'}{\pi R^2}\right)[\rho_0+\epsilon \Psi](\vec{r},t)\right] \label{stability1}
+\end{align}
+Expanding $D$ in $\rho_0$, we get 
+\begin{equation}
+    D(\rho_0+\epsilon \Psi_R) = D(\rho_0) + \epsilon \Psi_R D'(\rho_0) + \mathcal{O}(\epsilon^2),
+\end{equation}
+which we plug into Eq. (\ref{stability1}) to get
+
+\begin{equation}
+\nabla^2\left[\rho_0 D(\rho_0) + \rho_0\epsilon \Psi_R D'(\rho_0)+ D(\rho_0)\epsilon \Psi + \epsilon^2 \rho_0 \Psi_R D'(\rho_0) \Psi\right].
+\end{equation}
+The first term is $0$, since the density is uniform and we discard the last term because it is in $\mathcal{O}(\epsilon^2)$, leaving us with
+\begin{equation}
+    \frac{\partial \Psi(\vec{r},t)}{\partial t} = \nabla^2\left[ \rho_0  D'(\rho_0)\Psi_R(\vec{r},t)+ D(\rho_0) \Psi(\vec{r},t) \right].
+\end{equation}
+Assuming a harmonic perturbation $\Psi(\vec{r}, t) = \Psi_0 e^{(\lambda t + i \vec{k} \cdot \vec{x})}$ and using Fourier analysis, $\lambda$ can be derived.
+Depending on the sign of $\lambda$, the perturbations will either grow or decay over time.
+From \cite{lopezMacroscopicDescriptionParticle2006}, we find that 
+\begin{equation}
+    \lambda(\vec{k}) = -D_0 k^2\left(1 + \frac{2pJ_1(kR)}{kR}\right),
+\end{equation}
+where $J_1$ is the first-order Bessel function.
+The paper also states a critical value of $p\sim 7.6$, for which $\lambda $ becomes positive, though there is no discussion about the value of $k$ for which this is attained. 
+That means that the onset of pattern formation occurs around $p_c \sim 7.6$ and independent of $D_0$.
 
 \subsection{Radial Correlation Function}
 The radial correlation function indicates the distribution of particles. 
 
 
-\section{Results}
+\subsection{Simulation}
+Numerical simulations of the system with density-dependent diffusion rates were implemented in the programming language julia.
+To keep things managable, three population sizes are simulated, $N_1=100, N_2 = 1000, N_3 = 5000$.
+For each population size, the simulation was run for a number of values of the parameters $p$ and $D_0$.
+Based on the stability analysis, for $N_1$ and $N_2$, $40$ evenly spaced values between $5$ and $10$ were simulated for the parameter $p$ and $10$ values were used for the largest population $N_3$.
+The parameter $D_0$ was simulated across a broader range, from $10^{-1}$ to $10^{-4}$ and for $N_1$ and $N_2$, $40$ logarithmically evenly spaced values were used, while for $N_3$ $10$ values were simulated as well.
+For $N_3$, a smaller number of parameters was simulated because the computation time would be too high to simulate the same number of particles as in the other cases.
+The initial positions of the particles was drawn from a uniform distribution on a square of sidelength 1.
+
+To allow patterns to form, the simulation was be run for $n=2000$ steps. 
+At the end of the simulation, the radial calculation is calculated and its mean deviation from $1$ recorded. 
+The MSD between the radial distribution function and $g(r) \equiv 1$ was recorded at the end of each simuation and recorded on a heatmap.
+
+\section{Results} 
 The results of the simulations for the three different population sizes will be presented here.
 For each population size, 24 parameter combinations were tested.
 
-\subsection{Large Population}
-The results for $N=5000$ will be presented first, because they contain the least amount of noise.
+
+
+
+
+\subsection{Medium Population}
+The results for $N=1000$ will be presented first, because they contain the least amount of noise.
 For given parameters, the spatial distribution generally falls in one of two categories, either being slightly overdispersed or clumped. 
 
 Clumped patterns form when the baseline diffusion rate $D_0$ is small and the exponent $p$ in the diffusion kernel is high. 

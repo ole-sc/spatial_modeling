@@ -4,6 +4,7 @@ using Revise
 using SpatialAgg
 using StaticArrays
 using GLMakie
+using JSON
 
 
 par = merge(SpatialAgg.par, 
@@ -63,5 +64,43 @@ end
 # par1 = merge(par, (N=5000, nsteps=5000, p=8, D₀=0.0001))
 
 # redo rp68 -> resultplot147
-par1 = merge(par, (N=5000, nsteps=1000, p=8, D₀=0.01))
-@time SpatialAgg.simulation(par1)
+# par1 = merge(par, (N=5000, nsteps=1000, p=8, D₀=0.01))
+# @time SpatialAgg.simulation(par1)
+
+
+"Create a heatmap indicating the MSD of the radial correlation function from 1."
+function exp_heatmap(NN)
+    par1 = merge(par, (N=NN, nsteps=2000, saveresult=false, hideplots = true))
+    pp = LinRange(5, 10, 40)
+    DD₀ = 10 .^ LinRange(-1, -3, 40)
+    msd = zeros(length(pp),length(DD₀)) # store msds
+
+    # use multithreading for speed
+    Threads.@threads for idx in CartesianIndices((length(pp), length(DD₀)))
+        i, j = Tuple(idx)
+        # println("Thread $(Threads.threadid()): $(idx) starting simulation for p=$(pp[i]), D₀ = $(DD₀[j])")
+        # run simulation
+        par = merge(par1, (p = pp[i], D₀ = DD₀[j],))
+        r, pd = SpatialAgg.simulation(par)
+        bins, weights = SpatialAgg.calc_corrfunc(pd, par)
+        # calculate msd
+        msd[i,j] = sum((weights .- 1).^2)
+    end
+    # display heatmap
+    f = Figure(size = (1000, 1000))
+    ax = f[1,1] = Axis(f, title = "Heatmap")
+    heatmap!(ax, pp, log10.(DD₀), msd)
+    display(f)
+
+    # save image
+    plotname = "data/heatmaps/plot"
+    matname = "data/heatmaps/matrix"
+    expcounter = SpatialAgg.genfilename(plotname)
+    save("$(plotname)$(expcounter).png", f)
+    open("$(matname)$(expcounter).json", "w") do file
+        JSON.print(file, msd)
+    end
+    return msd
+end
+
+@time exp_heatmap(250)

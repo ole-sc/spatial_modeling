@@ -2378,6 +2378,8 @@
     <bcf:citekey order="3" intorder="1">durrettImportanceBeingDiscrete1994</bcf:citekey>
     <bcf:citekey order="4" intorder="1">turingChemicalBasisMorphogenesis1952</bcf:citekey>
     <bcf:citekey order="5" intorder="1">liuPhaseSeparationDriven2016</bcf:citekey>
+    <bcf:citekey order="6" intorder="1">lopezMacroscopicDescriptionParticle2006</bcf:citekey>
+    <bcf:citekey order="7" intorder="1">lopezMacroscopicDescriptionParticle2006</bcf:citekey>
   </bcf:section>
   <!-- SORTING TEMPLATES -->
   <bcf:sortingtemplate name="nty">
