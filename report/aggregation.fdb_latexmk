@@ -1,18 +1,18 @@
 # Fdb version 4
-["biber aggregation"] 1745325329.33891 "aggregation.bcf" "aggregation.bbl" "aggregation" 1745340659.00141 0
-  "aggregation.bcf" 1745340658 109215 a81c1c83805f40a43980c54acb47c08f "pdflatex"
+["biber aggregation"] 1745325329.33891 "aggregation.bcf" "aggregation.bbl" "aggregation" 1745407881.21227 0
+  "aggregation.bcf" 1745407880 109215 a81c1c83805f40a43980c54acb47c08f "pdflatex"
   "aggregation.bib" 1745307073 24319 204f0584665044e98005647bb3c5864f ""
   (generated)
   "aggregation.bbl"
   "aggregation.blg"
   (rewritten before read)
-["pdflatex"] 1745340656.69617 "c:/Users/olesc/Nextcloud/Programme/julia/spatial_modeling/report/aggregation.tex" "aggregation.pdf" "aggregation" 1745340659.00312 0
-  "aggregation.aux" 1745340658 3844 cdebb24cd2ca9a7b4f8e5b1d2504e438 "pdflatex"
+["pdflatex"] 1745407878.36926 "c:/Users/olesc/Nextcloud/Programme/julia/spatial_modeling/report/aggregation.tex" "aggregation.pdf" "aggregation" 1745407881.21418 0
+  "aggregation.aux" 1745407880 4442 32d5419d67cdb785ce103c8da6d2c37c "pdflatex"
   "aggregation.bbl" 1745325331 20480 7eaf6350922ce51b9d909c9132dc9c4e "biber aggregation"
-  "aggregation.out" 1745340658 1259 d33bfa120facfba79bdbf939c21ad5e0 "pdflatex"
-  "aggregation.run.xml" 1745340658 2355 501675a8036b563386441301c948e2cd "pdflatex"
-  "aggregation.tex" 1745340656 14176 e70f89724d1f289d739f1f9f3e180c62 ""
-  "c:/Users/olesc/Nextcloud/Programme/julia/spatial_modeling/report/aggregation.tex" 1745340656 14176 e70f89724d1f289d739f1f9f3e180c62 ""
+  "aggregation.out" 1745407880 1026 2e55f7f0c5d3bfdddd10895914377fa8 "pdflatex"
+  "aggregation.run.xml" 1745407880 2355 501675a8036b563386441301c948e2cd "pdflatex"
+  "aggregation.tex" 1745407874 20183 727c2147e9768beff84717d53be4e03f ""
+  "c:/Users/olesc/Nextcloud/Programme/julia/spatial_modeling/report/aggregation.tex" 1745407874 20183 727c2147e9768beff84717d53be4e03f ""
   "c:/texlive/2024/texmf-dist/fonts/tfm/public/amsfonts/cmextra/cmbsy5.tfm" 1728469327 1120 1e8878807317373affa7f7bba4cf2f6a ""
   "c:/texlive/2024/texmf-dist/fonts/tfm/public/amsfonts/cmextra/cmbsy7.tfm" 1728469327 1120 7f9f170e8aa57527ad6c49feafd45d54 ""
   "c:/texlive/2024/texmf-dist/fonts/tfm/public/amsfonts/cmextra/cmex7.tfm" 1728469327 1004 54797486969f23fa377b128694d548df ""
@@ -133,6 +133,8 @@
   "c:/texlive/2024/texmf-var/web2c/pdftex/pdflatex.fmt" 1728469518 2427739 26936d55acba5bffb4989e04f8572a68 ""
   "c:/texlive/2024/texmf.cnf" 1728469441 713 e69b156964470283e0530f5060668171 ""
   "img/diffusion_rates.png" 1744707889 134691 aaa520461f5b35b599058c84ebf9f638 ""
+  "img/heatmap1000.png" 1745336825 23928 fffb5471dfe98cc1345f413f383ee8bc ""
+  "img/rp151_N5000_D01_p4.png" 1745398678 517208 9b4d4a0a66f315a8b46b24bd12f839bc ""
   "img/rp68_N5000_D01_p8.png" 1744795564 289817 184ce500a588e813dd0fcbe91c967f9f ""
   (generated)
   "aggregation.aux"

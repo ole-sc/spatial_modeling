@@ -5,6 +5,7 @@ using SpatialAgg
 using StaticArrays
 using GLMakie
 using JSON
+using ProgressMeter
 
 
 par = merge(SpatialAgg.par, 
@@ -21,7 +22,6 @@ par = merge(SpatialAgg.par,
             D₀ = 0.001,  # baseline diffusion rate
             p = 10,   # interaction exponent
             R = 0.1, # interaction distance 
-            shift = 0, # shift of the parabola  
             ))
 
             # # # visualize the density kernel
@@ -37,6 +37,7 @@ function exp(NN)
         SpatialAgg.simulation(par1)
     end
 end
+
 # @time exp(100)
 # @time exp(1000)
 # @time exp(5000)
@@ -53,9 +54,10 @@ function exp_focused(NN)
         SpatialAgg.simulation(par1)
     end
 end
+
 # @time exp_focused(1000)
 
-# Testing single parameter values
+##### Testing single parameter values #####
 
 # high p with high D₀ -> resultplot144
 # par1 = merge(par, (N=5000, nsteps=5000, p=15, D₀=0.1))
@@ -67,13 +69,26 @@ end
 # par1 = merge(par, (N=5000, nsteps=1000, p=8, D₀=0.01))
 # @time SpatialAgg.simulation(par1)
 
+# transition region
+par1 = merge(par, (N=1000, nsteps=2000, p=7.4, D₀=0.005, plotlive=true))
+@time SpatialAgg.simulation(par1)
+
+# small population -> rp150
+# par1 = merge(par, (N=200, nsteps=2000, p=10, D₀=0.01))
+# @time SpatialAgg.simulation(par1)
+
+# # no clumped pattern -> rp151
+# par1 = merge(par, (N=5000, nsteps=2000, p=5, D₀=0.001))
+# @time SpatialAgg.simulation(par1)
 
 "Create a heatmap indicating the MSD of the radial correlation function from 1."
-function exp_heatmap(NN)
+function exp_heatmap(NN, pp, DD₀)
     par1 = merge(par, (N=NN, nsteps=2000, saveresult=false, hideplots = true))
-    pp = LinRange(5, 10, 40)
-    DD₀ = 10 .^ LinRange(-1, -3, 40)
     msd = zeros(length(pp),length(DD₀)) # store msds
+
+    # progress bar
+    total_tasks = length(pp) * length(DD₀)
+    progress = Progress(total_tasks, desc="Running simulations")
 
     # use multithreading for speed
     Threads.@threads for idx in CartesianIndices((length(pp), length(DD₀)))
@@ -85,6 +100,8 @@ function exp_heatmap(NN)
         bins, weights = SpatialAgg.calc_corrfunc(pd, par)
         # calculate msd
         msd[i,j] = sum((weights .- 1).^2)
+
+        ProgressMeter.next!(progress)
     end
     # display heatmap
     f = Figure(size = (1000, 1000))
@@ -92,15 +109,35 @@ function exp_heatmap(NN)
     heatmap!(ax, pp, log10.(DD₀), msd)
     display(f)
 
+    result = (pp = pp, DD₀ = log10.(DD₀), matrix = msd)
+
     # save image
     plotname = "data/heatmaps/plot"
     matname = "data/heatmaps/matrix"
     expcounter = SpatialAgg.genfilename(plotname)
     save("$(plotname)$(expcounter).png", f)
     open("$(matname)$(expcounter).json", "w") do file
-        JSON.print(file, msd)
+        JSON.print(file,result)
     end
     return msd
 end
 
-@time exp_heatmap(250)
+##### testing a grid of parameters #####
+# pp = LinRange(5, 10, 40)
+# DD₀ = 10 .^ LinRange(-1, -4, 40)
+# # 1000 individuals
+# @time exp_heatmap(1000, pp, DD₀)
+
+# # 100 individuals
+# @time exp_heatmap(100, pp, DD₀)
+
+#  5000 individuals ( fewer parameters) 
+# pp = LinRange(5, 10, 10)
+# DD₀ = 10 .^ LinRange(-1, -4, 10)
+# @time exp_heatmap(5000, pp, DD₀)
+
+##### Other parameter ranges #####
+# pp = LinRange(10, 20, 40)
+# DD₀ = 10 .^ LinRange(-1, -4, 40)
+# # 1000 individuals
+# @time exp_heatmap(1000, pp, DD₀)

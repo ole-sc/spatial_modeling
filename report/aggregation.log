@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.26 (TeX Live 2024) (preloaded format=pdflatex 2024.10.9)  22 APR 2025 18:50
+This is pdfTeX, Version 3.141592653-2.6-1.40.26 (TeX Live 2024) (preloaded format=pdflatex 2024.10.9)  23 APR 2025 13:31
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -532,7 +532,7 @@ Overfull \hbox (11.13957pt too wide) in paragraph at lines 37--39
 [1
 
 {c:/texlive/2024/texmf-var/fonts/map/pdftex/updmap/pdftex.map}]
-<img/diffusion_rates.png, id=65, 1355.0625pt x 451.6875pt>
+<img/diffusion_rates.png, id=57, 1355.0625pt x 451.6875pt>
 File: img/diffusion_rates.png Graphic file (type png)
 <use img/diffusion_rates.png>
 Package pdftex.def Info: img/diffusion_rates.png  used on input line 71.
@@ -544,41 +544,58 @@ Package pdftex.def Info: img/diffusion_rates.png  used on input line 71.
 [3 <./img/diffusion_rates.png>]
 
 [4]
-
-[5]
-<img/rp68_N5000_D01_p8.png, id=114, 1445.4pt x 823.57687pt>
+<img/rp151_N5000_D01_p4.png, id=99, 1445.4pt x 823.57687pt>
+File: img/rp151_N5000_D01_p4.png Graphic file (type png)
+<use img/rp151_N5000_D01_p4.png>
+Package pdftex.def Info: img/rp151_N5000_D01_p4.png  used on input line 193.
+(pdftex.def)             Requested size: 345.0pt x 196.56917pt.
+<img/rp68_N5000_D01_p8.png, id=101, 1445.4pt x 823.57687pt>
 File: img/rp68_N5000_D01_p8.png Graphic file (type png)
 <use img/rp68_N5000_D01_p8.png>
-Package pdftex.def Info: img/rp68_N5000_D01_p8.png  used on input line 204.
+Package pdftex.def Info: img/rp68_N5000_D01_p8.png  used on input line 205.
 (pdftex.def)             Requested size: 345.0pt x 196.56917pt.
 
 
-[6 <./img/rp68_N5000_D01_p8.png>]
+[5]
+<img/heatmap1000.png, id=110, 677.53125pt x 508.14844pt>
+File: img/heatmap1000.png Graphic file (type png)
+<use img/heatmap1000.png>
+Package pdftex.def Info: img/heatmap1000.png  used on input line 217.
+(pdftex.def)             Requested size: 310.4979pt x 232.88269pt.
 
-[7] (./aggregation.aux)
+
+[6 <./img/rp151_N5000_D01_p4.png>]
+
+[7 <./img/rp68_N5000_D01_p8.png>]
+
+[8 <./img/heatmap1000.png>]
+
+[9]
+
+[10] (./aggregation.aux)
  ***********
 LaTeX2e <2024-06-01> patch level 2
 L3 programming layer <2024-09-10>
  ***********
 Package rerunfilecheck Info: File `aggregation.out' has not changed.
-(rerunfilecheck)             Checksum: D33BFA120FACFBA79BDBF939C21AD5E0;1259.
+(rerunfilecheck)             Checksum: 2E55F7F0C5D3BFDDDD10895914377FA8;1026.
 Package logreq Info: Writing requests to 'aggregation.run.xml'.
 \openout1 = `aggregation.run.xml'.
 
  ) 
 Here is how much of TeX's memory you used:
- 17089 strings out of 475445
- 296248 string characters out of 5774555
- 1108242 words of memory out of 5000000
- 39546 multiletter control sequences out of 15000+600000
+ 17106 strings out of 475445
+ 296658 string characters out of 5774555
+ 1109315 words of memory out of 5000000
+ 39560 multiletter control sequences out of 15000+600000
  569196 words of font info for 78 fonts, out of 8000000 for 9000
  36 hyphenation exceptions out of 8191
  75i,15n,81p,2056b,1723s stack positions out of 10000i,1000n,20000p,200000b,200000s
 <c:/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx12.pfb><c:/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/cm/cmcsc10.pfb><c:/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/cm/cmex10.pfb><c:/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/cmextra/cmex7.pfb><c:/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb><c:/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi5.pfb><c:/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi7.pfb><c:/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/cm/cmmib10.pfb><c:/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/cmextra/cmmib7.pfb><c:/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb><c:/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/cm/cmr12.pfb><c:/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/cm/cmr17.pfb><c:/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/cm/cmr5.pfb><c:/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/cm/cmr7.pfb><c:/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb><c:/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy5.pfb><c:/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy7.pfb><c:/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/cm/cmti10.pfb><c:/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/cm/cmtt10.pfb>
-Output written on aggregation.pdf (7 pages, 595184 bytes).
+Output written on aggregation.pdf (10 pages, 1019987 bytes).
 PDF statistics:
- 229 PDF objects out of 1000 (max. 8388607)
- 178 compressed objects within 2 object streams
- 40 named destinations out of 1000 (max. 500000)
- 91 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 240 PDF objects out of 1000 (max. 8388607)
+ 184 compressed objects within 2 object streams
+ 43 named destinations out of 1000 (max. 500000)
+ 85 words of extra memory for PDF output out of 10000 (max. 10000000)
 

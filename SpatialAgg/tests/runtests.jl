@@ -10,7 +10,7 @@ using GLMakie
 # - implement slider actions
 # - calculate radial correlation function
 
-par = merge(SpatialAgg.par, 
+par2 = merge(SpatialAgg.par, 
             (
             plotlive = true, 
             bins = 200, # number of bins in the correlation function
@@ -21,14 +21,14 @@ par = merge(SpatialAgg.par,
             upper = @SVector[1.0, 1.0], # upper env bounds
             
             N = 1000, # number of organisms
-            D₀ = 0.001,  # baseline diffusion rate
-            p = 10,   # interaction exponent
+            D₀ = 0.01,  # baseline diffusion rate
+            p = 8,   # interaction exponent
             R = 0.1, # interaction distance 
             shift = 0, # shift of the parabola  
             ))
 
-par1 = merge(par, (N=1000, nsteps=1000, plotlive=false))
-@time SpatialAgg.simulation(par1)
+# par1 = merge(par, (N=1000, nsteps=1000, plotlive=false))
+# @time SpatialAgg.simulation(par1)
 
 # test correlation function
 function testcorr(par)
@@ -45,3 +45,5 @@ function testcorr(par)
 end
 # testcorr(par1)
 
+par1 = merge(par2, (N=1000, nsteps=5000, plotlive=true))
+@time SpatialAgg.simulation(par1)

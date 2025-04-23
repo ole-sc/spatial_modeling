@@ -12,7 +12,7 @@ include("functions.jl")   # helpful functions
 
 # use these params to run simulations 
 const par = (
-    nsteps = 100,
+    nsteps = 5000,
     dt = 0.01,
 
     sleeptime = 0.01,
@@ -26,8 +26,8 @@ const par = (
     upper = @SVector[1.0, 1.0], # upper env bounds
 
     N = 1000, # number of organisms
-    D₀ = 0.001,  # baseline diffusion rate
-    p = 2,   # interaction exponent
+    D₀ = 0.01,  # baseline diffusion rate
+    p = 8,   # interaction exponent
     R = 0.1, # interaction distance    
 )
 

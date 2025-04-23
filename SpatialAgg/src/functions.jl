@@ -42,7 +42,7 @@ function set_diffusion_kernel(par, td)
                 pd[i*(length(r)-1)+j] = dist
             end
             # set the diffusion rate
-            d[i] = sqrt(2 * par.dt * par.D₀*(Nr/s-par.shift)^par.p)
+            d[i] = sqrt(2 * par.dt * par.D₀*(Nr/s)^par.p)
         end
         return nothing
     end
