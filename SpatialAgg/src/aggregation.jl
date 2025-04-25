@@ -3,7 +3,7 @@
 Simulate spatial aggregation by movement.
 
 # Arguments
-- `par` is a NamedTuple object that contains the parameters for the simulation.
+- `par` is a NamedTuple object that contains the parameters for the simulation. See fields in main file of the module.
 
 # Description 
 See the report for details on the particle movement.
@@ -35,7 +35,7 @@ function simulation(par)
         if par.plotlive
             bins, weights = calc_corrfunc(pd, par)
             # update plot
-            update_obs!(plt, r, weights)
+            update_obs!(plt, r, weights,i)
 
             isopen(plt[1].scene) || break # stop the simulation if the plotting window is closed
             sleep(par.sleeptime)
@@ -60,3 +60,36 @@ function simulation(par)
     return r, pd
 end
 
+"Simulate non-interacting random walks and calculate the MSD."
+function diffusion(par)
+    # start from (0,0) on the infinite plane (not torus)
+    r = [@SVector [0.0,0.0] for i=1:par.N]
+    d = zeros(par.nsteps) # save msd at every time-step
+
+    # plotting 
+    f, ax, axr, or, od = makediffplot(r, d, par)
+
+    for i=1:par.nsteps
+        # update particle positions
+        move!(r, √(2par.D*par.dt))
+
+        # calculate msd
+        d[i] = msd(r)
+
+        # update plot when plotting live
+        if par.plotlive
+            or[] = r
+            od[] = d
+            sleep(par.dt)
+        end
+    end
+    # always update plot at the end
+    or[] = r
+    od[] = d
+    autolimits!(axr)
+
+    plotname = "data/diffusion/sim"
+    expcounter = genfilename(plotname)
+    save("$(plotname)$(expcounter).png", f)
+    return r, d
+end

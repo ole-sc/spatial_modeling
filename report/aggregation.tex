@@ -2,8 +2,9 @@
 % load packages
 \usepackage{amsmath}
 \usepackage{amssymb}
-\usepackage{hyperref}
+\usepackage[hidelinks]{hyperref}
 \usepackage{graphicx}
+\usepackage[labelfont=bf]{caption}
 % setup bibliography
 \usepackage[style=numeric,backend=biber]{biblatex}
 \addbibresource{aggregation.bib}
@@ -18,64 +19,72 @@
 \maketitle
 
 \section{Introduction}
-Spatial pattern formation is a fascinating phenomenon that can be observed in a wide range of ecosystems, such as mussel beds and arid bushlands \autocite{liuPhaseSeparationDriven2016,rietkerkSelfOrganizationVegetationArid}. 
-There is evidence that the stability of these ecosystems is improved by spatial patterns, for example in mussel beds through improved nutrient availability while reducing the impact of disturbances due to water flow \autocite{vandekoppelExperimentalEvidenceSpatial2008}.
+Spatial pattern formation is a fascinating phenomenon that can be observed in a wide range of ecosystems, such as mussel beds, arid bushlands and ... \autocite{liuPhaseSeparationDriven2016,rietkerkSelfOrganizationVegetationArid}.
+Non-spatial modeling approaches can not capture the potential effects of spatial patterns on the system behaviour and it is therefore necessary to model space explicitly, when spatial structure is relevant for system functioning \cite{durrettImportanceBeingDiscrete1994}.
+Besides being able to model the spatial arrangement of organisms in ecosystems, spatial modeling approaches have been able to show that pattern formation can have a positive impact on the stability of ecosystems \cite{durrettImportanceBeingDiscrete1994, vandekoppelExperimentalEvidenceSpatial2008,rietkerkEvasionTippingComplex2021,liuPatternFormationMultiple2014}. 
+In mussel beds, for example, spatial patterns enable a combination of high growth and high survival which can not be achieved in homogeneous beds \autocite{vandekoppelExperimentalEvidenceSpatial2008}.
 
-When modeling ecological systems, explicitly incorporating space can have qualitative impacts on the behaviour of the system. 
-This was shown in ref. \cite{durrettImportanceBeingDiscrete1994}, where four different approaches for modeling the same system, two spatial models, and two non-spatial models, under three parameter choices were analysed and it was shown that no two models agree for all three parameter choices.
-These results highlight the importance of selecting the right level of detail for modeling and being explicit about the assumptions, as well as understanding the conditions under which these assumptions hold.
-Ordinary differential equations, for instance,  make the implicit assumption that the system under consideration is well-mixed. 
-For the systems mentioned in the first paragraph, this assumption does not hold and it is necessary to model space explicitly.  
+Although incorporating space is sometimes necessary, it introduces higher mathematical complexity and should not always be done.
+To make this decision, it is important to understand when spatial structure impacts system functioning and to be explicit about the modeling assumptions and their justifications.
+These considerations are explored in ref. \cite{durrettImportanceBeingDiscrete1994}, where four different approaches, two spatial models and two non-spatial models, for modeling the same system were analysed under three parameter choices and it was shown that no two models agree for all three parameter combinations.
+Their results highlight how modeling results depend on the choice of the model and that it is important to select the right level of detail, depending on the modeling goals.
 
-To explain the formation of the observed patterns, usually one of two mechanisms is put forward.
-The first mechanism is based on the activation-inhibition principle described by Alan Turing \autocite{turingChemicalBasisMorphogenesis1952}.
+When trying to understand the spatial arrangement of ecological systems, it is clearly necessary to model space explicitly.
+There are two main mechanisms that are usually put forward to explain the formation of patterns.
+The first mechanism is based on the activation-inhibition principle described by Alan Turing \autocite{turingChemicalBasisMorphogenesis1952}, which has been applied in ecological settings to explain the formation of similar patterns in a diverse range of ecosystems \autocite{rietkerkRegularPatternFormation2008}.
+The principle behind this mechanism can be summarized as local excitation (e.g. reproduction) and global inhibition (e.g. long range competition for resources).
 
-The second mechanism is based on the lesser known phase-separation priniciple developed by Cahn and Hilliard. 
-In ecological settings, this corresponds to density-dependent movement leading to pattern formation, as opposed to birth and death processes. A number of organisms, among them certain species of mussels, slime moulds and ants, whose spatial distribution can be explained by density-dependent movement is presented in \autocite{liuPhaseSeparationDriven2016}.
+The second mechanism is based on the lesser known phase-separation priniciple developed by John Cahn and John Hilliard \autocite{cahnFreeEnergyNonuniform1958}. 
+In ecological settings, this corresponds to density-dependent movement, where organisms switch between dispersive and aggregative movement as the density of neighbouring organisms of the same species increases \autocite{liuPhaseSeparationDriven2016}.
+There is a diverse cast of organisms, among them certain species of mussels, slime moulds and bird- and fish flocks, whose spatial distribution can be explained by density-dependent movement \autocite{liuPhaseSeparationDriven2016}.
 
-
-In this report, the spatial aggregation of individuals based on density-dependent movement in continuous space will be explored.
-More specifically, we will look at a very simple but counter-intuitive mechanism that leads to aggregation, in which particles move faster when the local density is higher. 
+In this report, mathematical and numerical approaches for the modeling of spatial systems are explored by studying a simple model that leads to pattern formation based on a discrete version of the phase-separation principle.
+Counter-intuitively, organisms form clusters only through diffusion and by moving faster when more organisms are around.
+The model is simulated numerically, and the results are compared to density-independent diffusion and to the analytical results of a stability analysis of a PDE, describing an approximation of the discrete system with point densities.
 
 
 \section{The Model}
 First, a model for the density-dependent movement of organisms will be presented. 
-The model 
-The organisms will be simulated on a square with sidelength $1$ and periodic boundary conditions, which effectively means that organisms exist on a torus.
-This is important to ensure that they are contained to a small region and makes it easier to visualize.
+The space in the model is a square with sidelength $1$ and periodic boundary conditions, which effectively means that organisms exist on a torus.
 
 Since the focus is on movement, the number of organisms, $N$, is constant.
 Initially, the organisms are distributed randomly in the environment. 
 The position of all organisms is then updated at discrete time-steps by drawing a displacement from a normal distribution.
 Mathematically, the change of the position $\vec{r}_i = (x_i, y_i)$ of individual $i$ can be described by
 \begin{align}
-    & x_i(t + dt) = x_i(t) + \sqrt{2D(N_R(\vec{r}_i, t)) dt} u_{i,x} \\
-    & y_i(t + dt) = y_i(t) + \sqrt{2D(N_R(\vec{r}_i, t)) dt} u_{i,y}
+    & x_i(t + dt) = x_i(t) + \sqrt{2D(N_R(\vec{r}_i, t)) dt} u_{i,x} \label{sysx}\\
+    & y_i(t + dt) = y_i(t) + \sqrt{2D(N_R(\vec{r}_i, t)) dt} u_{i,y} \label{sysy}
 \end{align}
 where $u_{i,x}$ and $u_{i,y}$ are independent, normally distributed random numbers $\sim \mathcal{N}(0,1)$ and $D(N_R(\vec{r}_i, t))$ is a density-dependent diffusion rate.
-The argument $N_R(\vec{r}_i, t)$ is the number of other organisms within a radius $R$ around the particle. 
+The argument $N_R(\vec{r}_i, t)$ is the number of other organisms within a radius $R$ around the organism. 
 For the diffusion rate function, we will use
 \begin{equation}
     D(N_R(\vec{r}_i, t)) = D_0\left( \frac{N_R(\vec{r}_i, t)}{N\pi R^2} \right)^p.
 \end{equation}
 For a fixed interaction radius $R=0.1$, there are three parameters that influence the diffusion rate: $p, N$ and $D_0$.
-In Fig. \ref{diffusion_rates}, the standard deviation of the increments as a function of the number of neighbours $\sigma(N_r) = \sqrt{2D(N_R) dt}$ is shown for a couple of different parameter values.
+
+In Fig. \ref{diffusion_rates}, the density-dependent diffusion rate as a function of the number of neighbours $\sqrt{2D(N_R) dt}$ is shown for a couple of different parameter values. 
+This corresponds to the variance of the increments of the organism positions.
 It can be seen, that the diffusion rate increases with the number of organisms in the neighbourhood.
 Depending on the parameter $p$, this increase can be linear ($p=2$) or grow polynomially ($\mathcal{O}(n^{p/2})$). 
+For larger values of $p$, the diffusion rate grows very fast, which will be important later.
 The parameter $D_0$ shifts the curves up or down, and could be understood as a baseline diffusion rate.
 
-In simulations, the effects of these parameters on the spatial distribution will be analysed, but before that, a simpler setting will be discussed for comparison.
+In simulations, the impact of these parameters on pattern formation will be studied.
+
 \begin{figure}
-    \label{diffusion_rates} 
     \centering
     \includegraphics[width=1.0\linewidth]{img/diffusion_rates.png}
     \caption{Diffusion rate of an organism based on the number of other organisms within distance $R$ for $N=100$, $N=1000$, $N=5000$ and $p=0.25$, $p=4$, $p=10$ and $D_0 = 0.001$. Note that while the shape of the curves is the same, the number of organisms that can be within the radius to reach a certain diffusion rate increases with the total number of organisms.}
+    \label{diffusion_rates} 
 \end{figure}
 
 \subsection{A Single Organism}
-Before moving on to the simulations, the diffusion of a single organism in space will be analysed.
+Before moving on to the simulations, the diffusion of independent organisms in space will be analysed.
+As will be shown below, regular diffusion leads to organisms spreading out in space.
+In general, diffusion is a process in which propability density evens out and it is therefore not obvious at all that clustering can be achieved through diffusive processes alone.
 
-To do this, we consider a simple environment with only a single organism and a constant diffusion term. 
+To see how orgnaisms disperse under regular diffusion, consider a simple environment with only a single organism and a constant diffusion term. 
 This can be recovered from the density-dependent diffusion rate by setting $p=0$.
 For simplicity, it will be assumed that the environment is infinite, as opposed to the torus used in the simulations.\\
 The walker position will change similiarly to before, but with a constant diffusion term
@@ -119,21 +128,29 @@ For $\langle \tilde{y}^2(t)\rangle$, we get the exact same result, and the mean 
 \begin{equation*}
     MSD(t) = \langle \tilde{x}^2(t)\rangle + \langle \tilde{y}^2(t)\rangle  = 4Dt.
 \end{equation*}
-The average absolute distance of the organism from the initial position therefore grows with the square root of time.
+These theoretical results are confirmed by simulations, where $1000$ independent organisms are initialized at the origin and the mean squared displacement is calculated over time.
+The results can be seen in Figure \ref{regular_diffusion} and the MSD is in very good agreement with the theoretical prediction. 
+
+\begin{figure}
+    \includegraphics[width=1.0\linewidth]{img/diffusion36.png}
+    \caption{MSD of organisms diffusing in space for a constant diffusion rate of $D=1$. The left panel shows the final distribution ($t=10$) of organisms and the right panel shows the MSD calculated at each point in time.}
+    \label{regular_diffusion}
+\end{figure}
 
 
 
 \subsection{Stability Analysis}
-Assuming that the population is large enough, we can approximate the dynamics with a continuous density equation given by
-\begin{equation}
+Assuming that the population is large enough, we can approximate the dynamical system described by Eq. (\ref{sysx}), (\ref{sysy}) with a continuous density equation given by
+\begin{equation} \label{pde}
     \frac{\partial\rho(\vec{r},t)}{\partial t} = \nabla^2[D(\rho_R)\rho(\vec{r},t)],
 \end{equation}
-where $\rho(\vec{r},t)$ now describes the particle density at point $\vec{r}$ and time $t$ and
+where $\rho(\vec{r},t)$ now describes the point density at position $\vec{r}$ and time $t$ and
 \begin{equation}
     D(\rho_R) = D_0 \left(\frac{\int_{R} \rho(\vec{r}',t)d\vec{r}'}{\pi R^2 \tilde{\rho}}\right)^p.
 \end{equation}
+The derivation of these equation from the discrete description are presented in \autocite{lopezMacroscopicDescriptionParticle2006}.
 The integral is taken over a disk of radius $R$ centered at $\vec{r}$. 
-We will write the argument $\rho_R = \frac{\int_{R} \rho(\vec{r}',t)d\vec{r}'}{\pi R^2}$, which will make the subsequent analysis easier, because the function $D(\rho)=D_0 (\rho/\tilde{\rho})^p$ is simpler.
+We will write the argument $\rho_R = \frac{\int_{R} \rho(\vec{r}',t)d\vec{r}'}{\pi R^2}$, which will make the subsequent analysis easier, because the function $D(\rho)=D_0 (\rho/\tilde{\rho})^p$ is simpler and does not contain non-local terms.
 
 Following ref. \cite{lopezMacroscopicDescriptionParticle2006}, we do a linear stability analysis to understand under which conditions a uniform density is stable. 
 This result will be used to find a suitable parameter range for simulations and is compared with the simulation results.
@@ -163,59 +180,74 @@ From \cite{lopezMacroscopicDescriptionParticle2006}, we find that
 \end{equation}
 where $J_1$ is the first-order Bessel function.
 The paper also states a critical value of $p\sim 7.6$, for which $\lambda $ becomes positive, though there is no discussion about the value of $k$ for which this is attained. 
-That means that the onset of pattern formation occurs around $p_c \sim 7.6$ and independent of $D_0$.
+This means that the onset of pattern formation for the PDE occurs around $p_c \sim 7.6$ and independent of $D_0$.
 
-\subsection{Radial Correlation Function}
-The radial correlation function indicates the distribution of particles. 
+\subsection{Pairwise Correlation Function}
+The pairwise correlation function (PCF) and the closely related Ripley's K function are popular tools for quantifying the characteristics of point patterns \autocite{wiegandRingsCirclesNullmodels2004}. 
+They are based on the pairwise distances between all points and provide information about the spatial scales of the patterns as well.
+The PCF, denoted by $g(d)$, measures the average number of points at a distance $d$ from a randomly selected point.
+Because there is a finite number of points, we look at rings of finite width and calculate the PCF based on the number of points within a small ring, instead of using exact distances.
+The PCF is normalized such that a completely random distribution of points corresponds to $g(d) \equiv 1$.
 
-\subsection{Simulation}
+To calculate $g(d)$, the pairwise distances between all points is calculated and results are binned into a histogram, in our case with $200$ evenly spaced bins, which corresponds to the rings mentioned above.
+The normalization is then 
+\begin{equation}
+    g(d) = \frac{W(d)}{2\pi d  N^2 \delta d},
+\end{equation}
+where $W(d)$ is the average number of points at a distance between $d$ and $d + \delta d$ from a randomly chosen point \cite{52PairCorrelation}.
+Because the simulation is on a torus, no edge effects occur for $d < 0.5$.
+
+The PCF will be calculated for the final distribution of points in the simulations (see below), and used as an indicator to classify the observed pattern.
+While I have not found any source for this and the statistical significance of this approach is not clear, the MSD between the PCF and $f(d) \equiv 1$ seems to be a good measure of how different a pattern is from a completely random distribution and will be denoted by $MSD(g)$. 
+Since no clear regular patterns were noted in the simulations, a high value of $MSD(g)$ will be interpreted as an indication of cluster formation, while a low value of $MSD(g)$ will be interpreted as an indication of random distribution.
+
+\subsection{Simulations}
 Numerical simulations of the system with density-dependent diffusion rates were implemented in the programming language julia.
-To keep things managable, three population sizes were simulated, $N_1=250, N_2 = 1000, N_3 = 5000$.
+To keep things managable, three population sizes were simulated, $N_1=200, N_2 = 1000, N_3 = 5000$.
 For each population size, the simulation was run for a number of values of the parameters $p$ and $D_0$.
 Based on the stability analysis, for population sizes $N_1$ and $N_2$, $40$ evenly spaced values between $5$ and $10$ were simulated for the parameter $p$ and $10$ values were used for the largest population size $N_3$.
-The parameter $D_0$ was simulated across a broader range, from $10^{-1}$ to $10^{-4}$ and for population sizes $N_1$ and $N_2$, $40$ logarithmically evenly spaced values were used, while for population size $N_3$, $10$ values were used.
-A smaller number of parameters was simulated for population size $N_3$, because the computation time would be too high to simulate the same number of particles as in the other cases.
-The initial positions of the particles was drawn from a uniform distribution on a square of sidelength 1.
+The parameter $D_0$ was simulated across a broader range, from $10^{-1}$ to $10^{-4}$ and for population sizes $N_1$ and $N_2$, $40$ logarithmically evenly spaced values were used, while for population size $N_3$, $10$ values were used again.
+A smaller number of parameters was simulated for population size $N_3$, because of the much higher computation time.
+The initial positions of the organisms was drawn from a uniform distribution on a square of sidelength 1.
 
-To allow patterns to form, the simulation was be run for $n=2000$ steps. 
-At the end of the simulation, the radial calculation is calculated and its mean deviation from $1$ recorded. 
-The MSD between the PCF and $g(d) \equiv 1$ was recorded at the end of each simuation and recorded on a heatmap.
+To allow patterns to form, the simulation was run for $n=2000$ steps. 
+At the end of the simulation, the PCF is calculated and $MSD(g)$ is recorded as a measure to indicate pattern formation and plotted as a heatmap for all parameter values (see section \ref{secres}, \ref{heatmap1000}).
 
 Because it is very insightful to watch the simulation play out live, the code provided alongside the report has the option to see the simulation play out in real-time.
-\section{Simulation Results} 
+
+\section{Simulation Results} \label{secres}
 Depending on the simulation parameters, the system ends up in one of two possible configurations: clumped or randomly distributed.
 % first describe random pattern.
 A random configuration is shown in Figure \ref{random}, alongside the PCF for the largest population size $N_3=5000$. 
 No clear pattern is visible and the PCF is close to the line $y=1$.
 For distances below the interaction range $R=0.1$, the PCF lies a little bit below $1$, which could indicate a slightly overdispersed pattern, though I am not sure if this is significant.
 \begin{figure}
-    \label{random}
-    \includegraphics[width=1.0\linewidth]{img/rp151_N5000_D01_p4.png}
+    \includegraphics[width=0.9\linewidth]{img/rp156_N5000_D01_p4.png}
     \caption{Results of the simulation with $N=5000$, $p=4$, $D_0=0.01$. The left panel shows the final distribution of the organisms and the right panel shows the PCF of this configuration.}
+    \label{random}
 \end{figure}
 % clumped pattern
 In Figure \ref{clumped}, a clumped configuration of organisms and the PCF can be seen, as before.
 The clumps are very evenly spaced, forming a grid-like pattern. 
 The PCF has clearly distinguished peaks and valleys, from which characteristic lengths in the system can be determined.
-The first time the PCF drops below $1$ is for a distance slightly below $0.05$ and the PCF rises above $1$ for distances lightly above $0.1$, which is also the interaction range, $R$, of the organisms.
-While for $N_2=1000$ a similar structure can be seen, just with fewer individuals per clump, for $N_1=200$ cluster sizes are so small (at most $3$ organisms), that no real patterns can be observed and the PCF is very noisy.
+The first time the PCF drops below $1$ is for a distance slightly below $0.05$ and the PCF rises above $1$ for distances slightly above $0.1$, which is also the interaction range, $R$, of the organisms.
+While for $N_2=1000$ a similar structure can be seen just with fewer individuals per clump, for $N_1=200$ cluster sizes are so small (at most $3$ organisms), that no real patterns can be observed and the PCF is very noisy.
 % resultplot 51 - 74 
 \begin{figure}
-    \label{clumped}
-    \includegraphics[width=1.0\linewidth]{img/rp68_N5000_D01_p8.png}
+    \includegraphics[width=0.9\linewidth]{img/rp159_N5000_D01_p8.png}
     \caption{Results of the simulation with $N=5000$, $p=8$, $D_0=0.01$. The left panel shows the final distribution of the organisms and the right panel shows the PCF of this configuration.}
+    \label{clumped}
 \end{figure}
 
-Using the property that the PCF is close to $1$ when the pattern is random and oscillates above and below $1$ when it is clumped, the MSD between the PCF and the line $g(d)\equiv 1$ is used as an indicator for how clumped the pattern is.
-To find the range of parameters where clumped patterns occur, this indicator is calculated for a large number of parameters and plotted as a heatmap in Figure \ref{heatmap1000}. 
-A slightly noisy transition occurs around $p=7$ from random to clumped but in contrast to what the stability analysis density-based approximation of this system predicts, there is clearly a dependence on the parameter $D_0$ as well. 
+To find the range of parameters where clumped patterns occur, the indicator $MSD(g)$ is calculated for a large number of parameters and plotted as a heatmap in Figure \ref{heatmap1000}. 
+A slightly noisy transition occurs around $p=7$ from small values of $MSD(g)$ to large values of $MSD(g)$, but in contrast to what the stability analysis of the density-based approximation of this system predicts, there is clearly a dependence on the parameter $D_0$ as well. 
 For large value of $D_0$, no clumped patterns occur anymore.
 Additionally, very small values of $D_0$ also seem to lead to random patterns, however, this is an artifact of not running the simulation for long enough. 
-In this case, the particle move very slowly and take much longer to settle into clumped patterns.
+In this scenario, the organisms move very slowly and take much longer to settle into clumped patterns.
 \begin{figure}
+    \includegraphics[width=0.9\linewidth]{img/hm1.png}
+    \caption{Value of $MSD(g)$ for a grid of parameter choices. Brighter values indicate clustering while dark purple indicates random distributions. } 
     \label{heatmap1000}
-    \includegraphics[width=0.9\linewidth]{img/heatmap1000.png}
-    \caption{Value of the MSD between the PCF and $g(d) \equiv 1$ for a grid of parameter choices. Brighter values indicate clustering while dark purple means the final distribution of organisms was random.} 
 \end{figure}
 
 \section{Discussion}
@@ -226,7 +258,7 @@ It boils down to a combination of a low baseline diffusion rate and a strong inc
 
 A low baseline diffusion rate ensures that the clumps don't just diffuse away because the organisms move only slowly within clusters.
 As we have seen in an earlier section, the mean displacement of an organism due to a constant diffusion rate grows like $2\sqrt{Dt}$. 
-Thus an organism inside a cluster with an approximatly constant number of particles would leave the cluster after some amount of time, but this could take long time provided $D$ is small enough.
+Thus an organism inside a cluster with an approximatly constant number of organisms would leave the cluster after some amount of time, but this could take long time provided $D$ is small enough.
 
 The second aspect allowing pattern formation is a rapid increase in the diffusion rate with an increasing number of organisms within the interaction range. 
 As we have noted, clumps are slightly further apart than the interaction range, meaning that organisms within a cluster only interact within that cluster.
@@ -234,18 +266,23 @@ However, an organism that leaves the cluster through diffusion suddenly is withi
 Because the diffusion rate grows rapidly with an increase in neighbours, the organism moves very fast until it jumps into a cluster again where the diffusion rate becomes much lower again, because interaction occurs only within that cluster.
 Since organisms take much longer to diffuse out of a cluster, than it takes them to be captured again, the clusters are stable.
 
+% Transition?!
+
+While this model is unlikely to be a realistic description of any real ecosystem, the continuous description (Eq. \ref{pde}) used in the stability analysis, and which is derived from the model studied in this report, has been modified and applied in ecological 
+settings to mussel beds and bacteria \autocite{liuPhaseSeparationDriven2016,liuPhaseSeparationExplains2013}.
+
 % Additionally, the stability analysis indicates for which parameter values the initial uniform distribution becomes unstable, which allows clusters to form in the first place. 
 % The onset of pattern formation already occurs for slightly smaller values of $p$ than the predicted value of $p_c =7.6$ where a transition region exists. 
 % In this region, for example for $p=7.4$ and $D=0.01$, clusters start to form but dissolve again quickly and no stable pattern emerges.
 
-While not being the focus of this report, a short discussion about the number of clusters and their distances is presented.
-Without exactly measuring the size of clusters, they seem to have a diameter of around $0.04-0.05$ and the distance between clusters is around $0.12$, which indicates that clusters are spaced such that the organisms on the outer parts of a cluster already are within range of organisms of the next cluster. 
-The clusters seem to be arranged along prallel lines and there are three directions of lines. 
-Approximately $60-90$ clusters should be possible, meaning that for $1000$ organisms, the average cluster size is around $10-20$ organisms.
-Importantly, the number of clusters and their distances does not seem to depend on the number of organisms.
-Parameter choices that lead to clustering should have low diffusion rates while an organism is within the interaction range of a number of organisms that is around the average cluster size and then increase rapidly as the number of organisms within the interaction range grows to 2 times the average cluster size. 
+% While not being the focus of this report, a short discussion about the number of clusters and their distances is presented.
+% Without exactly measuring the size of clusters, they seem to have a diameter of around $0.04-0.05$ and the distance between clusters is around $0.12$, which indicates that clusters are spaced such that the organisms on the outer parts of a cluster already are within range of organisms of the next cluster. 
+% The clusters seem to be arranged along prallel lines and there are three directions of lines. 
+% Approximately $60-90$ clusters should be possible, meaning that for $1000$ organisms, the average cluster size is around $10-20$ organisms.
+% Importantly, the number of clusters and their distances does not seem to depend on the number of organisms.
+% Parameter choices that lead to clustering should have low diffusion rates while an organism is within the interaction range of a number of organisms that is around the average cluster size and then increase rapidly as the number of organisms within the interaction range grows to 2 times the average cluster size. 
 
-This raises the question whether the same interaction range can lead to differently spaced and sized clusters or whether the interaction range forces a certain length scale on the system, and therefore also a certain average cluster population.
+% This raises the question whether the same interaction range can lead to differently spaced and sized clusters or whether the interaction range forces a certain length scale on the system, and therefore also a certain average cluster population.
 
 \printbibliography
 \end{document}

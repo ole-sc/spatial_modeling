@@ -65,5 +65,20 @@ function viskernel()
     display(f)
     save("test.png", f)
 end
+# viskernel()
 
-viskernel()
+"load the results from parameter tests and create a heatmap."
+function makeheatmap(filepath)
+    data = JSON.parsefile(filepath)
+    mat = reduce(hcat, data["matrix"]) |> Matrix
+    f = Figure()
+    ax = Axis(f[1, 1], xlabel="p", ylabel="D₀", xticks=5:1:10, yscale=log10, title="MSD(g)")
+
+    hm = heatmap!(ax, Array(data["pp"]), 10 .^Array(data["DD₀"]), mat, colorscale=sqrt, colormap=:acton)
+    Colorbar(f[1,2], hm)
+    print(hm)
+    display(f)
+
+    save("data/heatmaps/hm1.png", f)
+end
+makeheatmap("data/heatmaps/matrix10.json")
