@@ -148,13 +148,13 @@ end
 
 ##### testing a grid of parameters #####
 # ...takes some time...
-# pp = LinRange(5, 10, 40)
-# DD₀ = 10 .^ LinRange(-1, -4, 40)
+pp = LinRange(5, 10, 40)
+DD₀ = 10 .^ LinRange(-1, -4, 40)
 # # 1000 individuals
 # @time exp_heatmap(1000, pp, DD₀)
 
-# # 100 individuals
-# @time exp_heatmap(100, pp, DD₀)
+# 200 individuals
+# @time exp_heatmap(200, pp, DD₀)
 
 #  5000 individuals ( fewer parameters) 
 # pp = LinRange(5, 10, 10)

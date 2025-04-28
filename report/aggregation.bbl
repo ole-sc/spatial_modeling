@@ -18,190 +18,7 @@
 
 
 \refsection{0}
-  \datalist[entry]{nty/global//global/global/global}
-    \entry{52PairCorrelation}{misc}{}{}
-      \field{sortinit}{5}
-      \field{sortinithash}{20e9b4b0b173788c5dace24730f47d8c}
-      \field{labeltitlesource}{title}
-      \field{howpublished}{https://homepage.univie.ac.at/franz.vesely/simsp/dx/node22.html}
-      \field{title}{5.2 {{Pair Correlation Function}}}
-      \field{urlday}{25}
-      \field{urlmonth}{4}
-      \field{urlyear}{2025}
-      \field{urldateera}{ce}
-      \verb{file}
-      \verb C:\Users\olesc\Zotero\storage\B42Z7R6X\node22.html
-      \endverb
-    \endentry
-    \entry{cahnFreeEnergyNonuniform1958}{article}{}{}
-      \name{author}{2}{}{%
-        {{hash=52dbce452736c579ce3afd0bc41401e2}{%
-           family={Cahn},
-           familyi={C\bibinitperiod},
-           given={John\bibnamedelima W.},
-           giveni={J\bibinitperiod\bibinitdelim W\bibinitperiod}}}%
-        {{hash=615753f3c0be7941ef6c9f7de03513e4}{%
-           family={Hilliard},
-           familyi={H\bibinitperiod},
-           given={John\bibnamedelima E.},
-           giveni={J\bibinitperiod\bibinitdelim E\bibinitperiod}}}%
-      }
-      \strng{namehash}{803d7022f245ce9165424789e4bba28f}
-      \strng{fullhash}{803d7022f245ce9165424789e4bba28f}
-      \strng{fullhashraw}{803d7022f245ce9165424789e4bba28f}
-      \strng{bibnamehash}{803d7022f245ce9165424789e4bba28f}
-      \strng{authorbibnamehash}{803d7022f245ce9165424789e4bba28f}
-      \strng{authornamehash}{803d7022f245ce9165424789e4bba28f}
-      \strng{authorfullhash}{803d7022f245ce9165424789e4bba28f}
-      \strng{authorfullhashraw}{803d7022f245ce9165424789e4bba28f}
-      \field{sortinit}{C}
-      \field{sortinithash}{4d103a86280481745c9c897c925753c0}
-      \field{labelnamesource}{author}
-      \field{labeltitlesource}{title}
-      \field{abstract}{It is shown that the free energy of a volume V of an isotropic system of nonuniform composition or density is given by : NV{$\int$}V [f0(c)+{$\kappa$}(▿c)2]dV, where NV is the number of molecules per unit volume, ▿c the composition or density gradient, f0 the free energy per molecule of a homogeneous system, and {$\kappa$} a parameter which, in general, may be dependent on c and temperature, but for a regular solution is a constant which can be evaluated. This expression is used to determine the properties of a flat interface between two coexisting phases. In particular, we find that the thickness of the interface increases with increasing temperature and becomes infinite at the critical temperature Tc, and that at a temperature T just below Tc the interfacial free energy {$\sigma$} is proportional to (Tc-T)32.The predicted interfacial free energy and its temperature dependence are found to be in agreement with existing experimental data. The possibility of using optical measurements of the interface thickness to provide an additional check of our treatment is briefly discussed.}
-      \field{issn}{0021-9606}
-      \field{journaltitle}{The Journal of Chemical Physics}
-      \field{month}{2}
-      \field{number}{2}
-      \field{title}{Free {{Energy}} of a {{Nonuniform System}}. {{I}}. {{Interfacial Free Energy}}}
-      \field{urlday}{25}
-      \field{urlmonth}{4}
-      \field{urlyear}{2025}
-      \field{volume}{28}
-      \field{year}{1958}
-      \field{urldateera}{ce}
-      \field{pages}{258\bibrangedash 267}
-      \range{pages}{10}
-      \verb{doi}
-      \verb 10.1063/1.1744102
-      \endverb
-      \verb{file}
-      \verb C\:\\Users\\olesc\\Zotero\\storage\\QYMFWMZA\\Cahn und Hilliard - 1958 - Free Energy of a Nonuniform System. I. Interfacial Free Energy.pdf;C\:\\Users\\olesc\\Zotero\\storage\\V5RIHE4J\\Free-Energy-of-a-Nonuniform-System-I-Interfacial.html
-      \endverb
-    \endentry
-    \entry{durrettImportanceBeingDiscrete1994}{article}{}{}
-      \name{author}{2}{}{%
-        {{hash=03a107fab36174e7da5974a64ad1812d}{%
-           family={Durrett},
-           familyi={D\bibinitperiod},
-           given={R.},
-           giveni={R\bibinitperiod}}}%
-        {{hash=edbf783f5b59ad72ae19bbeeaa21fd3f}{%
-           family={Levin},
-           familyi={L\bibinitperiod},
-           given={S.},
-           giveni={S\bibinitperiod}}}%
-      }
-      \strng{namehash}{c66ea041ec29778d084f9764106c8366}
-      \strng{fullhash}{c66ea041ec29778d084f9764106c8366}
-      \strng{fullhashraw}{c66ea041ec29778d084f9764106c8366}
-      \strng{bibnamehash}{c66ea041ec29778d084f9764106c8366}
-      \strng{authorbibnamehash}{c66ea041ec29778d084f9764106c8366}
-      \strng{authornamehash}{c66ea041ec29778d084f9764106c8366}
-      \strng{authorfullhash}{c66ea041ec29778d084f9764106c8366}
-      \strng{authorfullhashraw}{c66ea041ec29778d084f9764106c8366}
-      \field{sortinit}{D}
-      \field{sortinithash}{6f385f66841fb5e82009dc833c761848}
-      \field{labelnamesource}{author}
-      \field{labeltitlesource}{title}
-      \field{abstract}{We consider and compare four approaches to modeling the dynamics of spatially distributed systems: mean field approaches (described by ordinary differential equations) in which every individual is considered to have equal probability of interacting with every other individual; patch models that group discrete individuals into patches without additional spatial structure; reaction-diffusion equations, in which infinitesimal individuals are distributed in space; and interacting particle systems, in which individuals are discrete and space is treated explicitly. We apply these four approaches to three examples of species interactions in spatially distributed populations and compare their predictions. Each represents different assumptions about the biology and hence a comparison among them has biological as well as modeling implications. In the first case all four approaches agree, in the second the spatial models disagree with the nonspatial ones, while in the third the stochastic models with discrete individuals disagree with the ones based on differential equations. We show further that the limiting reaction-diffusion equations associated with particle systems can have different qualitative behavior from those obtained by simply adding diffusion terms to mean field equations.}
-      \field{issn}{0040-5809}
-      \field{journaltitle}{Theoretical Population Biology}
-      \field{month}{12}
-      \field{number}{3}
-      \field{title}{The {{Importance}} of {{Being Discrete}} (and {{Spatial}})}
-      \field{urlday}{31}
-      \field{urlmonth}{3}
-      \field{urlyear}{2025}
-      \field{volume}{46}
-      \field{year}{1994}
-      \field{urldateera}{ce}
-      \field{pages}{363\bibrangedash 394}
-      \range{pages}{32}
-      \verb{doi}
-      \verb 10.1006/tpbi.1994.1032
-      \endverb
-      \verb{file}
-      \verb C\:\\Users\\olesc\\Zotero\\storage\\CZ65Z7GQ\\Durrett und Levin - 1994 - The Importance of Being Discrete (and Spatial).pdf;C\:\\Users\\olesc\\Zotero\\storage\\7ES68V5Q\\S004058098471032X.html
-      \endverb
-    \endentry
-    \entry{liuPatternFormationMultiple2014}{article}{}{}
-      \name{author}{7}{}{%
-        {{hash=dff1196c99fcfa6d20a7f9193882a272}{%
-           family={Liu},
-           familyi={L\bibinitperiod},
-           given={Quan-Xing},
-           giveni={Q\bibinithyphendelim X\bibinitperiod}}}%
-        {{hash=fce36f9e30304f365e597309924b4406}{%
-           family={Herman},
-           familyi={H\bibinitperiod},
-           given={Peter\bibnamedelimb M.\bibnamedelimi J.},
-           giveni={P\bibinitperiod\bibinitdelim M\bibinitperiod\bibinitdelim J\bibinitperiod}}}%
-        {{hash=527da857b1ac68cbb67350c679072cd9}{%
-           family={Mooij},
-           familyi={M\bibinitperiod},
-           given={Wolf\bibnamedelima M.},
-           giveni={W\bibinitperiod\bibinitdelim M\bibinitperiod}}}%
-        {{hash=9bd6f44f2ca81e9aaaaf2e1c41498ab7}{%
-           family={Huisman},
-           familyi={H\bibinitperiod},
-           given={Jef},
-           giveni={J\bibinitperiod}}}%
-        {{hash=928c6696327fbb9942013ec7d598f6be}{%
-           family={Scheffer},
-           familyi={S\bibinitperiod},
-           given={Marten},
-           giveni={M\bibinitperiod}}}%
-        {{hash=e52a6183f4dba98d106c197d62eae631}{%
-           family={Olff},
-           familyi={O\bibinitperiod},
-           given={Han},
-           giveni={H\bibinitperiod}}}%
-        {{hash=fc9f3368588fe4fbeea0a1d9cebb60ba}{%
-           family={{van de Koppel}},
-           familyi={v\bibinitperiod},
-           given={Johan},
-           giveni={J\bibinitperiod}}}%
-      }
-      \list{publisher}{1}{%
-        {Nature Publishing Group}%
-      }
-      \strng{namehash}{7a2bae5a16faf80a89d40afde646b191}
-      \strng{fullhash}{e8283e3fdec0b9444386c632c46644b8}
-      \strng{fullhashraw}{e8283e3fdec0b9444386c632c46644b8}
-      \strng{bibnamehash}{7a2bae5a16faf80a89d40afde646b191}
-      \strng{authorbibnamehash}{7a2bae5a16faf80a89d40afde646b191}
-      \strng{authornamehash}{7a2bae5a16faf80a89d40afde646b191}
-      \strng{authorfullhash}{e8283e3fdec0b9444386c632c46644b8}
-      \strng{authorfullhashraw}{e8283e3fdec0b9444386c632c46644b8}
-      \field{extraname}{1}
-      \field{sortinit}{L}
-      \field{sortinithash}{7c47d417cecb1f4bd38d1825c427a61a}
-      \field{labelnamesource}{author}
-      \field{labeltitlesource}{title}
-      \field{abstract}{Self-organized complexity at multiple spatial scales is a distinctive characteristic of biological systems. Yet, little is known about how different self-organizing processes operating at different spatial scales interact to determine ecosystem functioning. Here we show that the interplay between self-organizing processes at individual and ecosystem level is a key determinant of the functioning and resilience of mussel beds. In mussel beds, self-organization generates spatial patterns at two characteristic spatial scales: small-scale net-shaped patterns due to behavioural aggregation of individuals, and large-scale banded patterns due to the interplay of between-mussel facilitation and resource depletion. Model analysis reveals that the interaction between these behavioural and ecosystem-level mechanisms increases mussel bed resilience, enables persistence under deteriorating conditions and makes them less prone to catastrophic collapse. Our analysis highlights that interactions between different forms of self-organization at multiple spatial scales may enhance the intrinsic ability of ecosystems to withstand both natural and human-induced disturbances.}
-      \field{issn}{2041-1723}
-      \field{journaltitle}{Nature Communications}
-      \field{langid}{english}
-      \field{month}{10}
-      \field{number}{1}
-      \field{title}{Pattern Formation at Multiple Spatial Scales Drives the Resilience of Mussel Bed Ecosystems}
-      \field{urlday}{6}
-      \field{urlmonth}{4}
-      \field{urlyear}{2025}
-      \field{volume}{5}
-      \field{year}{2014}
-      \field{urldateera}{ce}
-      \field{pages}{5234}
-      \range{pages}{1}
-      \verb{doi}
-      \verb 10.1038/ncomms6234
-      \endverb
-      \verb{file}
-      \verb C:\Users\olesc\Zotero\storage\PPMZBS3H\Liu et al. - 2014 - Pattern formation at multiple spatial scales drives the resilience of mussel bed ecosystems.pdf
-      \endverb
-      \keyw{Behavioural ecology}
-    \endentry
+  \datalist[entry]{none/global//global/global/global}
     \entry{liuPhaseSeparationDriven2016}{article}{}{}
       \name{author}{6}{}{%
         {{hash=dff1196c99fcfa6d20a7f9193882a272}{%
@@ -243,9 +60,9 @@
       \strng{authornamehash}{7a2bae5a16faf80a89d40afde646b191}
       \strng{authorfullhash}{5f253b8785f749647092bea12ecad7e4}
       \strng{authorfullhashraw}{5f253b8785f749647092bea12ecad7e4}
-      \field{extraname}{2}
-      \field{sortinit}{L}
-      \field{sortinithash}{7c47d417cecb1f4bd38d1825c427a61a}
+      \field{extraname}{1}
+      \field{sortinit}{1}
+      \field{sortinithash}{4f6aaa89bab872aa0999fec09ff8e98a}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{shorttitle}
       \field{abstract}{Many ecosystems develop strikingly regular spatial patterns because of small-scale interactions between organisms, a process generally referred to as spatial self-organization. Self-organized spatial patterns are important determinants of the functioning of ecosystems, promoting the growth and survival of the involved organisms, and affecting the capacity of the organisms to cope with changing environmental conditions. The predominant explanation for self-organized pattern formation is spatial heterogeneity in establishment, growth and mortality, resulting from the self-organization processes. A number of recent studies, however, have revealed that movement of organisms can be an important driving process creating extensive spatial patterning in many ecosystems. Here, we review studies that detail movement-based pattern formation in contrasting ecological settings. Our review highlights that a common principle, where movement of organisms is density-dependent, explains observed spatial regular patterns in all of these studies. This principle, well known to physics as the Cahn--Hilliard principle of phase separation, has so-far remained unrecognized as a general mechanism for self-organized complexity in ecology. Using the examples presented in this paper, we explain how this movement principle can be discerned in ecological settings, and clarify how to test this mechanism experimentally. Our study highlights that animal movement, both in isolation and in unison with other processes, is an important mechanism for regular pattern formation in ecosystems.}
@@ -268,234 +85,6 @@
       \endverb
       \verb{file}
       \verb C:\Users\olesc\Zotero\storage\7YJEZBSJ\Liu et al. - 2016 - Phase separation driven by density-dependent movement A novel mechanism for ecological patterns.pdf
-      \endverb
-    \endentry
-    \entry{liuPhaseSeparationExplains2013}{article}{}{}
-      \name{author}{7}{}{%
-        {{hash=dff1196c99fcfa6d20a7f9193882a272}{%
-           family={Liu},
-           familyi={L\bibinitperiod},
-           given={Quan-Xing},
-           giveni={Q\bibinithyphendelim X\bibinitperiod}}}%
-        {{hash=6caedbbe59e8f088d679cbfaafc6be70}{%
-           family={Doelman},
-           familyi={D\bibinitperiod},
-           given={Arjen},
-           giveni={A\bibinitperiod}}}%
-        {{hash=79a02ec88cbaaa0364f86339db195a06}{%
-           family={Rottschäfer},
-           familyi={R\bibinitperiod},
-           given={Vivi},
-           giveni={V\bibinitperiod}}}%
-        {{hash=e8dfca4988b13046b84667db95893272}{%
-           family={De\bibnamedelima Jager},
-           familyi={D\bibinitperiod\bibinitdelim J\bibinitperiod},
-           given={Monique},
-           giveni={M\bibinitperiod}}}%
-        {{hash=fce36f9e30304f365e597309924b4406}{%
-           family={Herman},
-           familyi={H\bibinitperiod},
-           given={Peter\bibnamedelimb M.\bibnamedelimi J.},
-           giveni={P\bibinitperiod\bibinitdelim M\bibinitperiod\bibinitdelim J\bibinitperiod}}}%
-        {{hash=af88854af2808d409b54c917b495f554}{%
-           family={Rietkerk},
-           familyi={R\bibinitperiod},
-           given={Max},
-           giveni={M\bibinitperiod}}}%
-        {{hash=351b05f28892f6bdcdebcf982048b30a}{%
-           family={Van\bibnamedelimb De\bibnamedelima Koppel},
-           familyi={V\bibinitperiod\bibinitdelim D\bibinitperiod\bibinitdelim K\bibinitperiod},
-           given={Johan},
-           giveni={J\bibinitperiod}}}%
-      }
-      \strng{namehash}{7a2bae5a16faf80a89d40afde646b191}
-      \strng{fullhash}{ac8634f72e9cfbbcf03833d136df2e50}
-      \strng{fullhashraw}{ac8634f72e9cfbbcf03833d136df2e50}
-      \strng{bibnamehash}{7a2bae5a16faf80a89d40afde646b191}
-      \strng{authorbibnamehash}{7a2bae5a16faf80a89d40afde646b191}
-      \strng{authornamehash}{7a2bae5a16faf80a89d40afde646b191}
-      \strng{authorfullhash}{ac8634f72e9cfbbcf03833d136df2e50}
-      \strng{authorfullhashraw}{ac8634f72e9cfbbcf03833d136df2e50}
-      \field{extraname}{3}
-      \field{sortinit}{L}
-      \field{sortinithash}{7c47d417cecb1f4bd38d1825c427a61a}
-      \field{labelnamesource}{author}
-      \field{labeltitlesource}{title}
-      \field{abstract}{The origin of regular spatial patterns in ecological systems has long fascinated researchers. Turing's activator--inhibitor principle is considered the central paradigm to explain such patterns. According to this principle, local activation combined with long-range inhibition of growth and survival is an essential prerequisite for pattern formation. Here, we show that the physical principle of phase separation, solely based on density-dependent movement by organisms, represents an alternative class of self-organized pattern formation in ecology. Using experiments with self-organizing mussel beds, we derive an empirical relation between the speed of animal movement and local animal density. By incorporating this relation in a partial differential equation, we demonstrate that this model corresponds mathematically to the well-known Cahn--Hilliard equation for phase separation in physics. Finally, we show that the predicted patterns match those found both in field observations and in our experiments. Our results reveal a principle for ecological self-organization, where phase separation rather than activation and inhibition processes drives spatial pattern formation.}
-      \field{issn}{0027-8424, 1091-6490}
-      \field{journaltitle}{Proceedings of the National Academy of Sciences}
-      \field{langid}{english}
-      \field{month}{7}
-      \field{number}{29}
-      \field{title}{Phase Separation Explains a New Class of Self-Organized Spatial Patterns in Ecological Systems}
-      \field{urlday}{12}
-      \field{urlmonth}{4}
-      \field{urlyear}{2025}
-      \field{volume}{110}
-      \field{year}{2013}
-      \field{urldateera}{ce}
-      \field{pages}{11905\bibrangedash 11910}
-      \range{pages}{6}
-      \verb{doi}
-      \verb 10.1073/pnas.1222339110
-      \endverb
-      \verb{file}
-      \verb C:\Users\olesc\Zotero\storage\QCMWUASI\Liu et al. - 2013 - Phase separation explains a new class of self-organized spatial patterns in ecological systems.pdf
-      \endverb
-    \endentry
-    \entry{lopezMacroscopicDescriptionParticle2006}{article}{}{}
-      \name{author}{1}{}{%
-        {{hash=d335987adc23332ab63911fd505fabd7}{%
-           family={López},
-           familyi={L\bibinitperiod},
-           given={Cristóbal},
-           giveni={C\bibinitperiod}}}%
-      }
-      \strng{namehash}{d335987adc23332ab63911fd505fabd7}
-      \strng{fullhash}{d335987adc23332ab63911fd505fabd7}
-      \strng{fullhashraw}{d335987adc23332ab63911fd505fabd7}
-      \strng{bibnamehash}{d335987adc23332ab63911fd505fabd7}
-      \strng{authorbibnamehash}{d335987adc23332ab63911fd505fabd7}
-      \strng{authornamehash}{d335987adc23332ab63911fd505fabd7}
-      \strng{authorfullhash}{d335987adc23332ab63911fd505fabd7}
-      \strng{authorfullhashraw}{d335987adc23332ab63911fd505fabd7}
-      \field{sortinit}{L}
-      \field{sortinithash}{7c47d417cecb1f4bd38d1825c427a61a}
-      \field{labelnamesource}{author}
-      \field{labeltitlesource}{title}
-      \field{issn}{1539-3755, 1550-2376}
-      \field{journaltitle}{Physical Review E}
-      \field{langid}{english}
-      \field{month}{7}
-      \field{number}{1}
-      \field{title}{Macroscopic Description of Particle Systems with Nonlocal Density-Dependent Diffusivity}
-      \field{urlday}{16}
-      \field{urlmonth}{4}
-      \field{urlyear}{2025}
-      \field{volume}{74}
-      \field{year}{2006}
-      \field{urldateera}{ce}
-      \field{pages}{012102}
-      \range{pages}{1}
-      \verb{doi}
-      \verb 10.1103/PhysRevE.74.012102
-      \endverb
-      \verb{file}
-      \verb C:\Users\olesc\Zotero\storage\79QNRWN7\López - 2006 - Macroscopic description of particle systems with nonlocal density-dependent diffusivity.pdf
-      \endverb
-    \endentry
-    \entry{rietkerkRegularPatternFormation2008}{article}{}{}
-      \name{author}{2}{}{%
-        {{hash=af88854af2808d409b54c917b495f554}{%
-           family={Rietkerk},
-           familyi={R\bibinitperiod},
-           given={Max},
-           giveni={M\bibinitperiod}}}%
-        {{hash=351b05f28892f6bdcdebcf982048b30a}{%
-           family={Van\bibnamedelimb De\bibnamedelima Koppel},
-           familyi={V\bibinitperiod\bibinitdelim D\bibinitperiod\bibinitdelim K\bibinitperiod},
-           given={Johan},
-           giveni={J\bibinitperiod}}}%
-      }
-      \strng{namehash}{0e6881928fc29e852918d49eabe8f9c6}
-      \strng{fullhash}{0e6881928fc29e852918d49eabe8f9c6}
-      \strng{fullhashraw}{0e6881928fc29e852918d49eabe8f9c6}
-      \strng{bibnamehash}{0e6881928fc29e852918d49eabe8f9c6}
-      \strng{authorbibnamehash}{0e6881928fc29e852918d49eabe8f9c6}
-      \strng{authornamehash}{0e6881928fc29e852918d49eabe8f9c6}
-      \strng{authorfullhash}{0e6881928fc29e852918d49eabe8f9c6}
-      \strng{authorfullhashraw}{0e6881928fc29e852918d49eabe8f9c6}
-      \field{sortinit}{R}
-      \field{sortinithash}{5e1c39a9d46ffb6bebd8f801023a9486}
-      \field{labelnamesource}{author}
-      \field{labeltitlesource}{title}
-      \field{issn}{01695347}
-      \field{journaltitle}{Trends in Ecology \& Evolution}
-      \field{langid}{english}
-      \field{month}{3}
-      \field{number}{3}
-      \field{title}{Regular Pattern Formation in Real Ecosystems}
-      \field{urlday}{25}
-      \field{urlmonth}{4}
-      \field{urlyear}{2025}
-      \field{volume}{23}
-      \field{year}{2008}
-      \field{urldateera}{ce}
-      \field{pages}{169\bibrangedash 175}
-      \range{pages}{7}
-      \verb{doi}
-      \verb 10.1016/j.tree.2007.10.013
-      \endverb
-      \verb{file}
-      \verb C:\Users\olesc\Zotero\storage\QLYFKBLG\Rietkerk und Van De Koppel - 2008 - Regular pattern formation in real ecosystems.pdf
-      \endverb
-    \endentry
-    \entry{rietkerkEvasionTippingComplex2021}{article}{}{}
-      \name{author}{6}{}{%
-        {{hash=af88854af2808d409b54c917b495f554}{%
-           family={Rietkerk},
-           familyi={R\bibinitperiod},
-           given={Max},
-           giveni={M\bibinitperiod}}}%
-        {{hash=497dc6efd223c17c095fd0ee4d9e0b27}{%
-           family={Bastiaansen},
-           familyi={B\bibinitperiod},
-           given={Robbin},
-           giveni={R\bibinitperiod}}}%
-        {{hash=c2ed1019f84d8c25527ca25a37226e4d}{%
-           family={Banerjee},
-           familyi={B\bibinitperiod},
-           given={Swarnendu},
-           giveni={S\bibinitperiod}}}%
-        {{hash=351b05f28892f6bdcdebcf982048b30a}{%
-           family={Van\bibnamedelimb De\bibnamedelima Koppel},
-           familyi={V\bibinitperiod\bibinitdelim D\bibinitperiod\bibinitdelim K\bibinitperiod},
-           given={Johan},
-           giveni={J\bibinitperiod}}}%
-        {{hash=c9de8fceb76d9e89b8ae92f26869f359}{%
-           family={Baudena},
-           familyi={B\bibinitperiod},
-           given={Mara},
-           giveni={M\bibinitperiod}}}%
-        {{hash=6caedbbe59e8f088d679cbfaafc6be70}{%
-           family={Doelman},
-           familyi={D\bibinitperiod},
-           given={Arjen},
-           giveni={A\bibinitperiod}}}%
-      }
-      \strng{namehash}{91d3ccdb58f2d5fcb4725514d94ac4e5}
-      \strng{fullhash}{c8fb0eae4daff7b4dca6189dbb86cc17}
-      \strng{fullhashraw}{c8fb0eae4daff7b4dca6189dbb86cc17}
-      \strng{bibnamehash}{91d3ccdb58f2d5fcb4725514d94ac4e5}
-      \strng{authorbibnamehash}{91d3ccdb58f2d5fcb4725514d94ac4e5}
-      \strng{authornamehash}{91d3ccdb58f2d5fcb4725514d94ac4e5}
-      \strng{authorfullhash}{c8fb0eae4daff7b4dca6189dbb86cc17}
-      \strng{authorfullhashraw}{c8fb0eae4daff7b4dca6189dbb86cc17}
-      \field{extraname}{1}
-      \field{sortinit}{R}
-      \field{sortinithash}{5e1c39a9d46ffb6bebd8f801023a9486}
-      \field{labelnamesource}{author}
-      \field{labeltitlesource}{title}
-      \field{abstract}{Resilience to tipping points in ecosystems Spatial pattern formation has been proposed as an early warning signal for dangerous tipping points and imminent critical transitions in complex systems, including ecosystems. Rietkerk et al . review how ecosystems and Earth system components can actually evade catastrophic tipping through various pathways of spatial pattern formation. With mathematical and real-world examples, they argue that evading tipping and enhancing resilience could be relevant for many ecosystems and Earth system components that until now were known as tipping prone. Many of these complex systems may be more resilient than currently thought because of overlooked spatial dynamics and multiple stable states, and may thus not undergo critical or catastrophic transitions with global change. ---AMS , A review explains that resilience to tipping points in ecological systems can be conferred by spatial pattern formation. , BACKGROUND In the Anthropocene, there is a need to better understand the catastrophic effects that climate and land-use change may have on ecosystems, Earth system components, and the whole Earth system. The concept of critical transitions, or tipping from one state to another, contributes to this understanding. Tipping occurs in a system when it is forced outside the basin of attraction of the original equilibrium, resulting in a critical transition to an alternative, often less-desirable, stable state. In this context, the search for early warning signals for such imminent critical transitions has become a focus of research. In particular, spatial self-organization in ecosystems, such as the spontaneous formation of regular vegetation patterns---so-called Turing patterns---has been suggested as a prominent early warning signal. ADVANCES However, recent findings indicate that such spatial self-organization should not necessarily be interpreted as an early warning signal for critical transitions. Instead, spatial self-organization can cause ecosystems to evade tipping points and can thereby be a signal of resilience. These findings are based on recent mathematical analyses of spatial models and on observations of real ecosystems. Both have revealed multistability, meaning that many different spatial patterns can co-occur under the same environmental conditions, and each of these patterns can stay stable for a wide range of conditions. This enables complex system states to persist beyond tipping points through spatial self-organization. Moreover, if a complex system with tipping properties experiences a perturbation, subsequent change of the system does not necessarily lead to tipping of the complete system. Instead, the change can stay localized because the system allows for alternative states to coexist in space---thus referred to as coexistence states. These spatial patterns can also persist beyond tipping points with worsening conditions through this alternative pathway. We refer to both Turing patterns and coexistence states as spatial pattern formation. Evasion of tipping through these various pathways of spatial pattern formation may be relevant for many ecosystems and Earth system components that were hitherto interpreted as prone to tipping, including for Earth as a whole. OUTLOOK To further study how complex systems evade tipping through spatial pattern formation, savanna ecosystems can be considered as a concrete archetypal example because of the alternative states and spatial patterns observed for them. Moreover, universal conditions for evading tipping points in both ecosystems and Earth system components can be derived by mathematical analyses. Scenarios can be revealed by which Turing patterns with small amplitudes can grow and form large-scale localized interacting structures, thereby aiding complex systems to evade tipping. The effects that global change has on the spatial boundaries between coexistence states should be studied, and the impacts of restrictions of spatial domain and localized and nonlocal homogenizing effects by humans should be revealed. This approach will advance our understanding and predictions of critical transitions in nature and reveal how these may be avoided or reversed. Evasion of tipping points. We illustrate the response of complex systems to changes in external conditions (i.e., a bifurcation diagram). Homogeneous dark gray squares depict high density of the system state variable, and homogeneous light gray squares illustrate low density. ( A ) Classic view. ( B ) Multistability of Turing patterns. Recent model analysis has revealed multistability of Turing patterns in Busse balloons, supported by satellite observations of real ecosystems. A Busse balloon is the region in parameter space in mathematical models where multistability of patterned equilibria occurs. ( C ) Multistability of coexistence states. Evading tipping can also be the result of multistability of coexistence states. These spatial patterns originate in the bistability region before the tipping point; the evolving spatial patterns can also persist beyond the tipping point with worsening external conditions, thereby constituting an alternative pathway to evade tipping points. , The concept of tipping points and critical transitions helps inform our understanding of the catastrophic effects that global change may have on ecosystems, Earth system components, and the whole Earth system. The search for early warning indicators is ongoing, and spatial self-organization has been interpreted as one such signal. Here, we review how spatial self-organization can aid complex systems to evade tipping points and can therefore be a signal of resilience instead. Evading tipping points through various pathways of spatial pattern formation may be relevant for many ecosystems and Earth system components that hitherto have been identified as tipping prone, including for the entire Earth system. We propose a systematic analysis that may reveal the broad range of conditions under which tipping is evaded and resilience emerges.}
-      \field{issn}{0036-8075, 1095-9203}
-      \field{journaltitle}{Science}
-      \field{langid}{english}
-      \field{month}{10}
-      \field{number}{6564}
-      \field{title}{Evasion of Tipping in Complex Systems through Spatial Pattern Formation}
-      \field{urlday}{25}
-      \field{urlmonth}{4}
-      \field{urlyear}{2025}
-      \field{volume}{374}
-      \field{year}{2021}
-      \field{urldateera}{ce}
-      \field{pages}{eabj0359}
-      \range{pages}{-1}
-      \verb{doi}
-      \verb 10.1126/science.abj0359
-      \endverb
-      \verb{file}
-      \verb C:\Users\olesc\Zotero\storage\WTXSSP9Z\Rietkerk et al. - 2021 - Evasion of tipping in complex systems through spatial pattern formation.pdf
       \endverb
     \endentry
     \entry{rietkerkSelfOrganizationVegetationArid}{article}{}{}
@@ -552,9 +141,9 @@
       \strng{authornamehash}{91d3ccdb58f2d5fcb4725514d94ac4e5}
       \strng{authorfullhash}{1c3b0fbfdcb89541c20e84485eeb6fc2}
       \strng{authorfullhashraw}{1c3b0fbfdcb89541c20e84485eeb6fc2}
-      \field{extraname}{2}
-      \field{sortinit}{R}
-      \field{sortinithash}{5e1c39a9d46ffb6bebd8f801023a9486}
+      \field{extraname}{1}
+      \field{sortinit}{1}
+      \field{sortinithash}{4f6aaa89bab872aa0999fec09ff8e98a}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
       \field{langid}{english}
@@ -563,46 +152,50 @@
       \verb C:\Users\olesc\Zotero\storage\7U5SEIB6\Rietkerk et al. - Self‐Organization of Vegetation in Arid Ecosystems..pdf
       \endverb
     \endentry
-    \entry{turingChemicalBasisMorphogenesis1952}{article}{}{}
-      \name{author}{1}{}{%
-        {{hash=d6d9f41ce7ab57b0d45edbe153331923}{%
-           family={Turing},
-           familyi={T\bibinitperiod},
-           given={Alan},
-           giveni={A\bibinitperiod}}}%
+    \entry{durrettImportanceBeingDiscrete1994}{article}{}{}
+      \name{author}{2}{}{%
+        {{hash=03a107fab36174e7da5974a64ad1812d}{%
+           family={Durrett},
+           familyi={D\bibinitperiod},
+           given={R.},
+           giveni={R\bibinitperiod}}}%
+        {{hash=edbf783f5b59ad72ae19bbeeaa21fd3f}{%
+           family={Levin},
+           familyi={L\bibinitperiod},
+           given={S.},
+           giveni={S\bibinitperiod}}}%
       }
-      \strng{namehash}{d6d9f41ce7ab57b0d45edbe153331923}
-      \strng{fullhash}{d6d9f41ce7ab57b0d45edbe153331923}
-      \strng{fullhashraw}{d6d9f41ce7ab57b0d45edbe153331923}
-      \strng{bibnamehash}{d6d9f41ce7ab57b0d45edbe153331923}
-      \strng{authorbibnamehash}{d6d9f41ce7ab57b0d45edbe153331923}
-      \strng{authornamehash}{d6d9f41ce7ab57b0d45edbe153331923}
-      \strng{authorfullhash}{d6d9f41ce7ab57b0d45edbe153331923}
-      \strng{authorfullhashraw}{d6d9f41ce7ab57b0d45edbe153331923}
-      \field{sortinit}{T}
-      \field{sortinithash}{9af77f0292593c26bde9a56e688eaee9}
+      \strng{namehash}{c66ea041ec29778d084f9764106c8366}
+      \strng{fullhash}{c66ea041ec29778d084f9764106c8366}
+      \strng{fullhashraw}{c66ea041ec29778d084f9764106c8366}
+      \strng{bibnamehash}{c66ea041ec29778d084f9764106c8366}
+      \strng{authorbibnamehash}{c66ea041ec29778d084f9764106c8366}
+      \strng{authornamehash}{c66ea041ec29778d084f9764106c8366}
+      \strng{authorfullhash}{c66ea041ec29778d084f9764106c8366}
+      \strng{authorfullhashraw}{c66ea041ec29778d084f9764106c8366}
+      \field{sortinit}{2}
+      \field{sortinithash}{8b555b3791beccb63322c22f3320aa9a}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
-      \field{abstract}{It is suggested that a system of chemical substances, called morphogens, reacting together and diffusing through a tissue, is adequate to account for the main phenomena of morphogenesis. Such a system, although it may originally be quite homogeneous, may later develop a pattern or structure due to an instability of the homogeneous equilibrium, which is triggered off by random disturbances. Such reaction-diffusion systems are considered in some detail in the case of an isolated ring of cells, a mathematically convenient, though biologically unusual system. The investigation is chiefly concerned with the onset of instability. It is found that there are six essentially different forms which this may take. In the most interesting form stationary waves appear on the ring. It is suggested that this might account, for instance, for the tentacle patterns on Hydra and for whorled leaves. A system of reactions and diffusion on a sphere is also considered. Such a system appears to account for gastrulation. Another reaction system in two dimensions gives rise to patterns reminiscent of dappling. It is also suggested that stationary waves in two dimensions could account for the phenomena of phyllotaxis. The purpose of this paper is to discuss a possible mechanism by which the genes of a zygote may determine the anatomical structure of the resulting organism. The theory does not make any new hypotheses; it merely suggests that certain well-known physical laws are sufficient to account for many of the facts. The full understanding of the paper requires a good knowledge of mathematics, some biology, and some elementary chemistry. Since readers cannot be expected to be experts in all of these subjects, a number of elementary facts are explained, which can be found in text-books, but whose omission would make the paper difficult reading.}
-      \field{issn}{2054-0280}
-      \field{journaltitle}{Philosophical Transactions of the Royal Society of London. Series B, Biological Sciences}
-      \field{langid}{english}
-      \field{month}{8}
-      \field{number}{641}
-      \field{title}{The Chemical Basis of Morphogenesis}
-      \field{urlday}{12}
-      \field{urlmonth}{4}
+      \field{abstract}{We consider and compare four approaches to modeling the dynamics of spatially distributed systems: mean field approaches (described by ordinary differential equations) in which every individual is considered to have equal probability of interacting with every other individual; patch models that group discrete individuals into patches without additional spatial structure; reaction-diffusion equations, in which infinitesimal individuals are distributed in space; and interacting particle systems, in which individuals are discrete and space is treated explicitly. We apply these four approaches to three examples of species interactions in spatially distributed populations and compare their predictions. Each represents different assumptions about the biology and hence a comparison among them has biological as well as modeling implications. In the first case all four approaches agree, in the second the spatial models disagree with the nonspatial ones, while in the third the stochastic models with discrete individuals disagree with the ones based on differential equations. We show further that the limiting reaction-diffusion equations associated with particle systems can have different qualitative behavior from those obtained by simply adding diffusion terms to mean field equations.}
+      \field{issn}{0040-5809}
+      \field{journaltitle}{Theoretical Population Biology}
+      \field{month}{12}
+      \field{number}{3}
+      \field{title}{The {{Importance}} of {{Being Discrete}} (and {{Spatial}})}
+      \field{urlday}{31}
+      \field{urlmonth}{3}
       \field{urlyear}{2025}
-      \field{volume}{237}
-      \field{year}{1952}
+      \field{volume}{46}
+      \field{year}{1994}
       \field{urldateera}{ce}
-      \field{pages}{37\bibrangedash 72}
-      \range{pages}{36}
+      \field{pages}{363\bibrangedash 394}
+      \range{pages}{32}
       \verb{doi}
-      \verb 10.1098/rstb.1952.0012
+      \verb 10.1006/tpbi.1994.1032
       \endverb
       \verb{file}
-      \verb C:\Users\olesc\Zotero\storage\S5XVZIJ6\1952 - The chemical basis of morphogenesis.pdf
+      \verb C\:\\Users\\olesc\\Zotero\\storage\\CZ65Z7GQ\\Durrett und Levin - 1994 - The Importance of Being Discrete (and Spatial).pdf;C\:\\Users\\olesc\\Zotero\\storage\\7ES68V5Q\\S004058098471032X.html
       \endverb
     \endentry
     \entry{vandekoppelExperimentalEvidenceSpatial2008}{article}{}{}
@@ -646,8 +239,8 @@
       \strng{authornamehash}{f7e434651cae9dd0a5dbd43865df4ddf}
       \strng{authorfullhash}{dd99ee49c4bafa4f51ada75d06307a04}
       \strng{authorfullhashraw}{dd99ee49c4bafa4f51ada75d06307a04}
-      \field{sortinit}{V}
-      \field{sortinithash}{afb52128e5b4dc4b843768c0113d673b}
+      \field{sortinit}{3}
+      \field{sortinithash}{ad6fe7482ffbd7b9f99c9e8b5dccd3d7}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
       \field{abstract}{Spatial self-organization is the main theoretical explanation for the global occurrence of regular or otherwise coherent spatial patterns in ecosystems. Using mussel beds as a model ecosystem, we provide an experimental demonstration of spatial self-organization. Under homogeneous laboratory conditions, mussels developed regular patterns, similar to those in the field. An individual-based model derived from our experiments showed that interactions between individuals explained the observed patterns. Furthermore, a field study showed that pattern formation affected ecosystem-level processes in terms of improved growth and resistance to wave action. Our results imply that spatial self-organization is an important determinant of the structure and functioning of ecosystems, and it needs to be considered in their conservation.}
@@ -672,6 +265,326 @@
       \verb C:\Users\olesc\Zotero\storage\8CCANA9P\Van De Koppel et al. - 2008 - Experimental Evidence for Spatial Self-Organization and Its Emergent Effects in Mussel Bed Ecosystem.pdf
       \endverb
     \endentry
+    \entry{rietkerkEvasionTippingComplex2021}{article}{}{}
+      \name{author}{6}{}{%
+        {{hash=af88854af2808d409b54c917b495f554}{%
+           family={Rietkerk},
+           familyi={R\bibinitperiod},
+           given={Max},
+           giveni={M\bibinitperiod}}}%
+        {{hash=497dc6efd223c17c095fd0ee4d9e0b27}{%
+           family={Bastiaansen},
+           familyi={B\bibinitperiod},
+           given={Robbin},
+           giveni={R\bibinitperiod}}}%
+        {{hash=c2ed1019f84d8c25527ca25a37226e4d}{%
+           family={Banerjee},
+           familyi={B\bibinitperiod},
+           given={Swarnendu},
+           giveni={S\bibinitperiod}}}%
+        {{hash=351b05f28892f6bdcdebcf982048b30a}{%
+           family={Van\bibnamedelimb De\bibnamedelima Koppel},
+           familyi={V\bibinitperiod\bibinitdelim D\bibinitperiod\bibinitdelim K\bibinitperiod},
+           given={Johan},
+           giveni={J\bibinitperiod}}}%
+        {{hash=c9de8fceb76d9e89b8ae92f26869f359}{%
+           family={Baudena},
+           familyi={B\bibinitperiod},
+           given={Mara},
+           giveni={M\bibinitperiod}}}%
+        {{hash=6caedbbe59e8f088d679cbfaafc6be70}{%
+           family={Doelman},
+           familyi={D\bibinitperiod},
+           given={Arjen},
+           giveni={A\bibinitperiod}}}%
+      }
+      \strng{namehash}{91d3ccdb58f2d5fcb4725514d94ac4e5}
+      \strng{fullhash}{c8fb0eae4daff7b4dca6189dbb86cc17}
+      \strng{fullhashraw}{c8fb0eae4daff7b4dca6189dbb86cc17}
+      \strng{bibnamehash}{91d3ccdb58f2d5fcb4725514d94ac4e5}
+      \strng{authorbibnamehash}{91d3ccdb58f2d5fcb4725514d94ac4e5}
+      \strng{authornamehash}{91d3ccdb58f2d5fcb4725514d94ac4e5}
+      \strng{authorfullhash}{c8fb0eae4daff7b4dca6189dbb86cc17}
+      \strng{authorfullhashraw}{c8fb0eae4daff7b4dca6189dbb86cc17}
+      \field{extraname}{2}
+      \field{sortinit}{3}
+      \field{sortinithash}{ad6fe7482ffbd7b9f99c9e8b5dccd3d7}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{abstract}{Resilience to tipping points in ecosystems Spatial pattern formation has been proposed as an early warning signal for dangerous tipping points and imminent critical transitions in complex systems, including ecosystems. Rietkerk et al . review how ecosystems and Earth system components can actually evade catastrophic tipping through various pathways of spatial pattern formation. With mathematical and real-world examples, they argue that evading tipping and enhancing resilience could be relevant for many ecosystems and Earth system components that until now were known as tipping prone. Many of these complex systems may be more resilient than currently thought because of overlooked spatial dynamics and multiple stable states, and may thus not undergo critical or catastrophic transitions with global change. ---AMS , A review explains that resilience to tipping points in ecological systems can be conferred by spatial pattern formation. , BACKGROUND In the Anthropocene, there is a need to better understand the catastrophic effects that climate and land-use change may have on ecosystems, Earth system components, and the whole Earth system. The concept of critical transitions, or tipping from one state to another, contributes to this understanding. Tipping occurs in a system when it is forced outside the basin of attraction of the original equilibrium, resulting in a critical transition to an alternative, often less-desirable, stable state. In this context, the search for early warning signals for such imminent critical transitions has become a focus of research. In particular, spatial self-organization in ecosystems, such as the spontaneous formation of regular vegetation patterns---so-called Turing patterns---has been suggested as a prominent early warning signal. ADVANCES However, recent findings indicate that such spatial self-organization should not necessarily be interpreted as an early warning signal for critical transitions. Instead, spatial self-organization can cause ecosystems to evade tipping points and can thereby be a signal of resilience. These findings are based on recent mathematical analyses of spatial models and on observations of real ecosystems. Both have revealed multistability, meaning that many different spatial patterns can co-occur under the same environmental conditions, and each of these patterns can stay stable for a wide range of conditions. This enables complex system states to persist beyond tipping points through spatial self-organization. Moreover, if a complex system with tipping properties experiences a perturbation, subsequent change of the system does not necessarily lead to tipping of the complete system. Instead, the change can stay localized because the system allows for alternative states to coexist in space---thus referred to as coexistence states. These spatial patterns can also persist beyond tipping points with worsening conditions through this alternative pathway. We refer to both Turing patterns and coexistence states as spatial pattern formation. Evasion of tipping through these various pathways of spatial pattern formation may be relevant for many ecosystems and Earth system components that were hitherto interpreted as prone to tipping, including for Earth as a whole. OUTLOOK To further study how complex systems evade tipping through spatial pattern formation, savanna ecosystems can be considered as a concrete archetypal example because of the alternative states and spatial patterns observed for them. Moreover, universal conditions for evading tipping points in both ecosystems and Earth system components can be derived by mathematical analyses. Scenarios can be revealed by which Turing patterns with small amplitudes can grow and form large-scale localized interacting structures, thereby aiding complex systems to evade tipping. The effects that global change has on the spatial boundaries between coexistence states should be studied, and the impacts of restrictions of spatial domain and localized and nonlocal homogenizing effects by humans should be revealed. This approach will advance our understanding and predictions of critical transitions in nature and reveal how these may be avoided or reversed. Evasion of tipping points. We illustrate the response of complex systems to changes in external conditions (i.e., a bifurcation diagram). Homogeneous dark gray squares depict high density of the system state variable, and homogeneous light gray squares illustrate low density. ( A ) Classic view. ( B ) Multistability of Turing patterns. Recent model analysis has revealed multistability of Turing patterns in Busse balloons, supported by satellite observations of real ecosystems. A Busse balloon is the region in parameter space in mathematical models where multistability of patterned equilibria occurs. ( C ) Multistability of coexistence states. Evading tipping can also be the result of multistability of coexistence states. These spatial patterns originate in the bistability region before the tipping point; the evolving spatial patterns can also persist beyond the tipping point with worsening external conditions, thereby constituting an alternative pathway to evade tipping points. , The concept of tipping points and critical transitions helps inform our understanding of the catastrophic effects that global change may have on ecosystems, Earth system components, and the whole Earth system. The search for early warning indicators is ongoing, and spatial self-organization has been interpreted as one such signal. Here, we review how spatial self-organization can aid complex systems to evade tipping points and can therefore be a signal of resilience instead. Evading tipping points through various pathways of spatial pattern formation may be relevant for many ecosystems and Earth system components that hitherto have been identified as tipping prone, including for the entire Earth system. We propose a systematic analysis that may reveal the broad range of conditions under which tipping is evaded and resilience emerges.}
+      \field{issn}{0036-8075, 1095-9203}
+      \field{journaltitle}{Science}
+      \field{langid}{english}
+      \field{month}{10}
+      \field{number}{6564}
+      \field{title}{Evasion of Tipping in Complex Systems through Spatial Pattern Formation}
+      \field{urlday}{25}
+      \field{urlmonth}{4}
+      \field{urlyear}{2025}
+      \field{volume}{374}
+      \field{year}{2021}
+      \field{urldateera}{ce}
+      \field{pages}{eabj0359}
+      \range{pages}{-1}
+      \verb{doi}
+      \verb 10.1126/science.abj0359
+      \endverb
+      \verb{file}
+      \verb C:\Users\olesc\Zotero\storage\WTXSSP9Z\Rietkerk et al. - 2021 - Evasion of tipping in complex systems through spatial pattern formation.pdf
+      \endverb
+    \endentry
+    \entry{liuPatternFormationMultiple2014}{article}{}{}
+      \name{author}{7}{}{%
+        {{hash=dff1196c99fcfa6d20a7f9193882a272}{%
+           family={Liu},
+           familyi={L\bibinitperiod},
+           given={Quan-Xing},
+           giveni={Q\bibinithyphendelim X\bibinitperiod}}}%
+        {{hash=fce36f9e30304f365e597309924b4406}{%
+           family={Herman},
+           familyi={H\bibinitperiod},
+           given={Peter\bibnamedelimb M.\bibnamedelimi J.},
+           giveni={P\bibinitperiod\bibinitdelim M\bibinitperiod\bibinitdelim J\bibinitperiod}}}%
+        {{hash=527da857b1ac68cbb67350c679072cd9}{%
+           family={Mooij},
+           familyi={M\bibinitperiod},
+           given={Wolf\bibnamedelima M.},
+           giveni={W\bibinitperiod\bibinitdelim M\bibinitperiod}}}%
+        {{hash=9bd6f44f2ca81e9aaaaf2e1c41498ab7}{%
+           family={Huisman},
+           familyi={H\bibinitperiod},
+           given={Jef},
+           giveni={J\bibinitperiod}}}%
+        {{hash=928c6696327fbb9942013ec7d598f6be}{%
+           family={Scheffer},
+           familyi={S\bibinitperiod},
+           given={Marten},
+           giveni={M\bibinitperiod}}}%
+        {{hash=e52a6183f4dba98d106c197d62eae631}{%
+           family={Olff},
+           familyi={O\bibinitperiod},
+           given={Han},
+           giveni={H\bibinitperiod}}}%
+        {{hash=fc9f3368588fe4fbeea0a1d9cebb60ba}{%
+           family={{van de Koppel}},
+           familyi={v\bibinitperiod},
+           given={Johan},
+           giveni={J\bibinitperiod}}}%
+      }
+      \list{publisher}{1}{%
+        {Nature Publishing Group}%
+      }
+      \strng{namehash}{7a2bae5a16faf80a89d40afde646b191}
+      \strng{fullhash}{e8283e3fdec0b9444386c632c46644b8}
+      \strng{fullhashraw}{e8283e3fdec0b9444386c632c46644b8}
+      \strng{bibnamehash}{7a2bae5a16faf80a89d40afde646b191}
+      \strng{authorbibnamehash}{7a2bae5a16faf80a89d40afde646b191}
+      \strng{authornamehash}{7a2bae5a16faf80a89d40afde646b191}
+      \strng{authorfullhash}{e8283e3fdec0b9444386c632c46644b8}
+      \strng{authorfullhashraw}{e8283e3fdec0b9444386c632c46644b8}
+      \field{extraname}{2}
+      \field{sortinit}{3}
+      \field{sortinithash}{ad6fe7482ffbd7b9f99c9e8b5dccd3d7}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{abstract}{Self-organized complexity at multiple spatial scales is a distinctive characteristic of biological systems. Yet, little is known about how different self-organizing processes operating at different spatial scales interact to determine ecosystem functioning. Here we show that the interplay between self-organizing processes at individual and ecosystem level is a key determinant of the functioning and resilience of mussel beds. In mussel beds, self-organization generates spatial patterns at two characteristic spatial scales: small-scale net-shaped patterns due to behavioural aggregation of individuals, and large-scale banded patterns due to the interplay of between-mussel facilitation and resource depletion. Model analysis reveals that the interaction between these behavioural and ecosystem-level mechanisms increases mussel bed resilience, enables persistence under deteriorating conditions and makes them less prone to catastrophic collapse. Our analysis highlights that interactions between different forms of self-organization at multiple spatial scales may enhance the intrinsic ability of ecosystems to withstand both natural and human-induced disturbances.}
+      \field{issn}{2041-1723}
+      \field{journaltitle}{Nature Communications}
+      \field{langid}{english}
+      \field{month}{10}
+      \field{number}{1}
+      \field{title}{Pattern Formation at Multiple Spatial Scales Drives the Resilience of Mussel Bed Ecosystems}
+      \field{urlday}{6}
+      \field{urlmonth}{4}
+      \field{urlyear}{2025}
+      \field{volume}{5}
+      \field{year}{2014}
+      \field{urldateera}{ce}
+      \field{pages}{5234}
+      \range{pages}{1}
+      \verb{doi}
+      \verb 10.1038/ncomms6234
+      \endverb
+      \verb{file}
+      \verb C:\Users\olesc\Zotero\storage\PPMZBS3H\Liu et al. - 2014 - Pattern formation at multiple spatial scales drives the resilience of mussel bed ecosystems.pdf
+      \endverb
+      \keyw{Behavioural ecology}
+    \endentry
+    \entry{turingChemicalBasisMorphogenesis1952}{article}{}{}
+      \name{author}{1}{}{%
+        {{hash=d6d9f41ce7ab57b0d45edbe153331923}{%
+           family={Turing},
+           familyi={T\bibinitperiod},
+           given={Alan},
+           giveni={A\bibinitperiod}}}%
+      }
+      \strng{namehash}{d6d9f41ce7ab57b0d45edbe153331923}
+      \strng{fullhash}{d6d9f41ce7ab57b0d45edbe153331923}
+      \strng{fullhashraw}{d6d9f41ce7ab57b0d45edbe153331923}
+      \strng{bibnamehash}{d6d9f41ce7ab57b0d45edbe153331923}
+      \strng{authorbibnamehash}{d6d9f41ce7ab57b0d45edbe153331923}
+      \strng{authornamehash}{d6d9f41ce7ab57b0d45edbe153331923}
+      \strng{authorfullhash}{d6d9f41ce7ab57b0d45edbe153331923}
+      \strng{authorfullhashraw}{d6d9f41ce7ab57b0d45edbe153331923}
+      \field{sortinit}{6}
+      \field{sortinithash}{b33bc299efb3c36abec520a4c896a66d}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{abstract}{It is suggested that a system of chemical substances, called morphogens, reacting together and diffusing through a tissue, is adequate to account for the main phenomena of morphogenesis. Such a system, although it may originally be quite homogeneous, may later develop a pattern or structure due to an instability of the homogeneous equilibrium, which is triggered off by random disturbances. Such reaction-diffusion systems are considered in some detail in the case of an isolated ring of cells, a mathematically convenient, though biologically unusual system. The investigation is chiefly concerned with the onset of instability. It is found that there are six essentially different forms which this may take. In the most interesting form stationary waves appear on the ring. It is suggested that this might account, for instance, for the tentacle patterns on Hydra and for whorled leaves. A system of reactions and diffusion on a sphere is also considered. Such a system appears to account for gastrulation. Another reaction system in two dimensions gives rise to patterns reminiscent of dappling. It is also suggested that stationary waves in two dimensions could account for the phenomena of phyllotaxis. The purpose of this paper is to discuss a possible mechanism by which the genes of a zygote may determine the anatomical structure of the resulting organism. The theory does not make any new hypotheses; it merely suggests that certain well-known physical laws are sufficient to account for many of the facts. The full understanding of the paper requires a good knowledge of mathematics, some biology, and some elementary chemistry. Since readers cannot be expected to be experts in all of these subjects, a number of elementary facts are explained, which can be found in text-books, but whose omission would make the paper difficult reading.}
+      \field{issn}{2054-0280}
+      \field{journaltitle}{Philosophical Transactions of the Royal Society of London. Series B, Biological Sciences}
+      \field{langid}{english}
+      \field{month}{8}
+      \field{number}{641}
+      \field{title}{The Chemical Basis of Morphogenesis}
+      \field{urlday}{12}
+      \field{urlmonth}{4}
+      \field{urlyear}{2025}
+      \field{volume}{237}
+      \field{year}{1952}
+      \field{urldateera}{ce}
+      \field{pages}{37\bibrangedash 72}
+      \range{pages}{36}
+      \verb{doi}
+      \verb 10.1098/rstb.1952.0012
+      \endverb
+      \verb{file}
+      \verb C:\Users\olesc\Zotero\storage\S5XVZIJ6\1952 - The chemical basis of morphogenesis.pdf
+      \endverb
+    \endentry
+    \entry{rietkerkRegularPatternFormation2008}{article}{}{}
+      \name{author}{2}{}{%
+        {{hash=af88854af2808d409b54c917b495f554}{%
+           family={Rietkerk},
+           familyi={R\bibinitperiod},
+           given={Max},
+           giveni={M\bibinitperiod}}}%
+        {{hash=351b05f28892f6bdcdebcf982048b30a}{%
+           family={Van\bibnamedelimb De\bibnamedelima Koppel},
+           familyi={V\bibinitperiod\bibinitdelim D\bibinitperiod\bibinitdelim K\bibinitperiod},
+           given={Johan},
+           giveni={J\bibinitperiod}}}%
+      }
+      \strng{namehash}{0e6881928fc29e852918d49eabe8f9c6}
+      \strng{fullhash}{0e6881928fc29e852918d49eabe8f9c6}
+      \strng{fullhashraw}{0e6881928fc29e852918d49eabe8f9c6}
+      \strng{bibnamehash}{0e6881928fc29e852918d49eabe8f9c6}
+      \strng{authorbibnamehash}{0e6881928fc29e852918d49eabe8f9c6}
+      \strng{authornamehash}{0e6881928fc29e852918d49eabe8f9c6}
+      \strng{authorfullhash}{0e6881928fc29e852918d49eabe8f9c6}
+      \strng{authorfullhashraw}{0e6881928fc29e852918d49eabe8f9c6}
+      \field{sortinit}{7}
+      \field{sortinithash}{108d0be1b1bee9773a1173443802c0a3}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{issn}{01695347}
+      \field{journaltitle}{Trends in Ecology \& Evolution}
+      \field{langid}{english}
+      \field{month}{3}
+      \field{number}{3}
+      \field{title}{Regular Pattern Formation in Real Ecosystems}
+      \field{urlday}{25}
+      \field{urlmonth}{4}
+      \field{urlyear}{2025}
+      \field{volume}{23}
+      \field{year}{2008}
+      \field{urldateera}{ce}
+      \field{pages}{169\bibrangedash 175}
+      \range{pages}{7}
+      \verb{doi}
+      \verb 10.1016/j.tree.2007.10.013
+      \endverb
+      \verb{file}
+      \verb C:\Users\olesc\Zotero\storage\QLYFKBLG\Rietkerk und Van De Koppel - 2008 - Regular pattern formation in real ecosystems.pdf
+      \endverb
+    \endentry
+    \entry{cahnFreeEnergyNonuniform1958}{article}{}{}
+      \name{author}{2}{}{%
+        {{hash=52dbce452736c579ce3afd0bc41401e2}{%
+           family={Cahn},
+           familyi={C\bibinitperiod},
+           given={John\bibnamedelima W.},
+           giveni={J\bibinitperiod\bibinitdelim W\bibinitperiod}}}%
+        {{hash=615753f3c0be7941ef6c9f7de03513e4}{%
+           family={Hilliard},
+           familyi={H\bibinitperiod},
+           given={John\bibnamedelima E.},
+           giveni={J\bibinitperiod\bibinitdelim E\bibinitperiod}}}%
+      }
+      \strng{namehash}{803d7022f245ce9165424789e4bba28f}
+      \strng{fullhash}{803d7022f245ce9165424789e4bba28f}
+      \strng{fullhashraw}{803d7022f245ce9165424789e4bba28f}
+      \strng{bibnamehash}{803d7022f245ce9165424789e4bba28f}
+      \strng{authorbibnamehash}{803d7022f245ce9165424789e4bba28f}
+      \strng{authornamehash}{803d7022f245ce9165424789e4bba28f}
+      \strng{authorfullhash}{803d7022f245ce9165424789e4bba28f}
+      \strng{authorfullhashraw}{803d7022f245ce9165424789e4bba28f}
+      \field{sortinit}{8}
+      \field{sortinithash}{a231b008ebf0ecbe0b4d96dcc159445f}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{abstract}{It is shown that the free energy of a volume V of an isotropic system of nonuniform composition or density is given by : NV{$\int$}V [f0(c)+{$\kappa$}(▿c)2]dV, where NV is the number of molecules per unit volume, ▿c the composition or density gradient, f0 the free energy per molecule of a homogeneous system, and {$\kappa$} a parameter which, in general, may be dependent on c and temperature, but for a regular solution is a constant which can be evaluated. This expression is used to determine the properties of a flat interface between two coexisting phases. In particular, we find that the thickness of the interface increases with increasing temperature and becomes infinite at the critical temperature Tc, and that at a temperature T just below Tc the interfacial free energy {$\sigma$} is proportional to (Tc-T)32.The predicted interfacial free energy and its temperature dependence are found to be in agreement with existing experimental data. The possibility of using optical measurements of the interface thickness to provide an additional check of our treatment is briefly discussed.}
+      \field{issn}{0021-9606}
+      \field{journaltitle}{The Journal of Chemical Physics}
+      \field{month}{2}
+      \field{number}{2}
+      \field{title}{Free {{Energy}} of a {{Nonuniform System}}. {{I}}. {{Interfacial Free Energy}}}
+      \field{urlday}{25}
+      \field{urlmonth}{4}
+      \field{urlyear}{2025}
+      \field{volume}{28}
+      \field{year}{1958}
+      \field{urldateera}{ce}
+      \field{pages}{258\bibrangedash 267}
+      \range{pages}{10}
+      \verb{doi}
+      \verb 10.1063/1.1744102
+      \endverb
+      \verb{file}
+      \verb C\:\\Users\\olesc\\Zotero\\storage\\QYMFWMZA\\Cahn und Hilliard - 1958 - Free Energy of a Nonuniform System. I. Interfacial Free Energy.pdf;C\:\\Users\\olesc\\Zotero\\storage\\V5RIHE4J\\Free-Energy-of-a-Nonuniform-System-I-Interfacial.html
+      \endverb
+    \endentry
+    \entry{lopezMacroscopicDescriptionParticle2006}{article}{}{}
+      \name{author}{1}{}{%
+        {{hash=d335987adc23332ab63911fd505fabd7}{%
+           family={López},
+           familyi={L\bibinitperiod},
+           given={Cristóbal},
+           giveni={C\bibinitperiod}}}%
+      }
+      \strng{namehash}{d335987adc23332ab63911fd505fabd7}
+      \strng{fullhash}{d335987adc23332ab63911fd505fabd7}
+      \strng{fullhashraw}{d335987adc23332ab63911fd505fabd7}
+      \strng{bibnamehash}{d335987adc23332ab63911fd505fabd7}
+      \strng{authorbibnamehash}{d335987adc23332ab63911fd505fabd7}
+      \strng{authornamehash}{d335987adc23332ab63911fd505fabd7}
+      \strng{authorfullhash}{d335987adc23332ab63911fd505fabd7}
+      \strng{authorfullhashraw}{d335987adc23332ab63911fd505fabd7}
+      \field{sortinit}{1}
+      \field{sortinithash}{4f6aaa89bab872aa0999fec09ff8e98a}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{issn}{1539-3755, 1550-2376}
+      \field{journaltitle}{Physical Review E}
+      \field{langid}{english}
+      \field{month}{7}
+      \field{number}{1}
+      \field{title}{Macroscopic Description of Particle Systems with Nonlocal Density-Dependent Diffusivity}
+      \field{urlday}{16}
+      \field{urlmonth}{4}
+      \field{urlyear}{2025}
+      \field{volume}{74}
+      \field{year}{2006}
+      \field{urldateera}{ce}
+      \field{pages}{012102}
+      \range{pages}{1}
+      \verb{doi}
+      \verb 10.1103/PhysRevE.74.012102
+      \endverb
+      \verb{file}
+      \verb C:\Users\olesc\Zotero\storage\79QNRWN7\López - 2006 - Macroscopic description of particle systems with nonlocal density-dependent diffusivity.pdf
+      \endverb
+    \endentry
     \entry{wiegandRingsCirclesNullmodels2004}{article}{}{}
       \name{author}{2}{}{%
         {{hash=fc6d0b75ef26e66b7a3e177f167815ad}{%
@@ -693,8 +606,8 @@
       \strng{authornamehash}{63b9435d16e4217c40d4b008db95c7a9}
       \strng{authorfullhash}{63b9435d16e4217c40d4b008db95c7a9}
       \strng{authorfullhashraw}{63b9435d16e4217c40d4b008db95c7a9}
-      \field{sortinit}{W}
-      \field{sortinithash}{4315d78024d0cea9b57a0c6f0e35ed0d}
+      \field{sortinit}{1}
+      \field{sortinithash}{4f6aaa89bab872aa0999fec09ff8e98a}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
       \field{abstract}{A large number of methods for the analysis of point pattern data have been developed in a wide range of scientific fields. First-order statistics describe large-scale variation in the intensity of points in a study region, whereas second-order characteristics are summary statistics of all point-to-point distances in a mapped area and offer the potential for detecting both different types and scales of patterns. Second-order analysis based on Ripley's K-function is increasingly used in ecology to characterize spatial patterns and to develop hypothesis on underlying processes; however, the full range of available methods has seldomly been applied by ecologists. The aim of this paper is to provide guidance to ecologists with limited experience in second-order analysis to help in the choice of appropriate methods and to point to practical difficulties and pitfalls. We review (1) methods for analytical and numerical implementation of two complementary second-order statistics, Ripley's K and the O-ring statistic, (2) methods for edge correction, (3) methods to account for first-order effects (i.e. heterogeneity) of univariate patterns, and (4) a variety of useful standard and non-standard null models for univariate and bivariate patterns. For illustrative purpose, we analyze examples that deal with non-homogeneous univariate point patterns. We demonstrate that large-scale heterogeneity of a point-pattern biases Ripley's K-function at smaller scales. This bias is difficult to detect without explicitly testing for homogeneity, but we show that it can be removed when applying methods that account for first-order effects. We synthesize our review in a number of step-by-step recommendations that guide the reader through the selection of appropriate methods and we provide a software program that implements most of the methods reviewed and developed here.}
@@ -716,6 +629,93 @@
       \endverb
       \verb{file}
       \verb C\:\\Users\\olesc\\Zotero\\storage\\PENTY3D9\\Wiegand und A. Moloney - 2004 - Rings, circles, and null-models for point pattern analysis in ecology.pdf;C\:\\Users\\olesc\\Zotero\\storage\\WB73CFI8\\j.0030-1299.2004.12497.html
+      \endverb
+    \endentry
+    \entry{52PairCorrelation}{misc}{}{}
+      \field{sortinit}{1}
+      \field{sortinithash}{4f6aaa89bab872aa0999fec09ff8e98a}
+      \field{labeltitlesource}{title}
+      \field{howpublished}{https://homepage.univie.ac.at/franz.vesely/simsp/dx/node22.html}
+      \field{title}{5.2 {{Pair Correlation Function}}}
+      \field{urlday}{25}
+      \field{urlmonth}{4}
+      \field{urlyear}{2025}
+      \field{urldateera}{ce}
+      \verb{file}
+      \verb C:\Users\olesc\Zotero\storage\B42Z7R6X\node22.html
+      \endverb
+    \endentry
+    \entry{liuPhaseSeparationExplains2013}{article}{}{}
+      \name{author}{7}{}{%
+        {{hash=dff1196c99fcfa6d20a7f9193882a272}{%
+           family={Liu},
+           familyi={L\bibinitperiod},
+           given={Quan-Xing},
+           giveni={Q\bibinithyphendelim X\bibinitperiod}}}%
+        {{hash=6caedbbe59e8f088d679cbfaafc6be70}{%
+           family={Doelman},
+           familyi={D\bibinitperiod},
+           given={Arjen},
+           giveni={A\bibinitperiod}}}%
+        {{hash=79a02ec88cbaaa0364f86339db195a06}{%
+           family={Rottschäfer},
+           familyi={R\bibinitperiod},
+           given={Vivi},
+           giveni={V\bibinitperiod}}}%
+        {{hash=e8dfca4988b13046b84667db95893272}{%
+           family={De\bibnamedelima Jager},
+           familyi={D\bibinitperiod\bibinitdelim J\bibinitperiod},
+           given={Monique},
+           giveni={M\bibinitperiod}}}%
+        {{hash=fce36f9e30304f365e597309924b4406}{%
+           family={Herman},
+           familyi={H\bibinitperiod},
+           given={Peter\bibnamedelimb M.\bibnamedelimi J.},
+           giveni={P\bibinitperiod\bibinitdelim M\bibinitperiod\bibinitdelim J\bibinitperiod}}}%
+        {{hash=af88854af2808d409b54c917b495f554}{%
+           family={Rietkerk},
+           familyi={R\bibinitperiod},
+           given={Max},
+           giveni={M\bibinitperiod}}}%
+        {{hash=351b05f28892f6bdcdebcf982048b30a}{%
+           family={Van\bibnamedelimb De\bibnamedelima Koppel},
+           familyi={V\bibinitperiod\bibinitdelim D\bibinitperiod\bibinitdelim K\bibinitperiod},
+           given={Johan},
+           giveni={J\bibinitperiod}}}%
+      }
+      \strng{namehash}{7a2bae5a16faf80a89d40afde646b191}
+      \strng{fullhash}{ac8634f72e9cfbbcf03833d136df2e50}
+      \strng{fullhashraw}{ac8634f72e9cfbbcf03833d136df2e50}
+      \strng{bibnamehash}{7a2bae5a16faf80a89d40afde646b191}
+      \strng{authorbibnamehash}{7a2bae5a16faf80a89d40afde646b191}
+      \strng{authornamehash}{7a2bae5a16faf80a89d40afde646b191}
+      \strng{authorfullhash}{ac8634f72e9cfbbcf03833d136df2e50}
+      \strng{authorfullhashraw}{ac8634f72e9cfbbcf03833d136df2e50}
+      \field{extraname}{3}
+      \field{sortinit}{1}
+      \field{sortinithash}{4f6aaa89bab872aa0999fec09ff8e98a}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{abstract}{The origin of regular spatial patterns in ecological systems has long fascinated researchers. Turing's activator--inhibitor principle is considered the central paradigm to explain such patterns. According to this principle, local activation combined with long-range inhibition of growth and survival is an essential prerequisite for pattern formation. Here, we show that the physical principle of phase separation, solely based on density-dependent movement by organisms, represents an alternative class of self-organized pattern formation in ecology. Using experiments with self-organizing mussel beds, we derive an empirical relation between the speed of animal movement and local animal density. By incorporating this relation in a partial differential equation, we demonstrate that this model corresponds mathematically to the well-known Cahn--Hilliard equation for phase separation in physics. Finally, we show that the predicted patterns match those found both in field observations and in our experiments. Our results reveal a principle for ecological self-organization, where phase separation rather than activation and inhibition processes drives spatial pattern formation.}
+      \field{issn}{0027-8424, 1091-6490}
+      \field{journaltitle}{Proceedings of the National Academy of Sciences}
+      \field{langid}{english}
+      \field{month}{7}
+      \field{number}{29}
+      \field{title}{Phase Separation Explains a New Class of Self-Organized Spatial Patterns in Ecological Systems}
+      \field{urlday}{12}
+      \field{urlmonth}{4}
+      \field{urlyear}{2025}
+      \field{volume}{110}
+      \field{year}{2013}
+      \field{urldateera}{ce}
+      \field{pages}{11905\bibrangedash 11910}
+      \range{pages}{6}
+      \verb{doi}
+      \verb 10.1073/pnas.1222339110
+      \endverb
+      \verb{file}
+      \verb C:\Users\olesc\Zotero\storage\QCMWUASI\Liu et al. - 2013 - Phase separation explains a new class of self-organized spatial patterns in ecological systems.pdf
       \endverb
     \endentry
   \enddatalist

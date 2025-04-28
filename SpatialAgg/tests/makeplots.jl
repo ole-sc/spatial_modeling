@@ -67,8 +67,8 @@ function viskernel()
 end
 # viskernel()
 
-"load the results from parameter tests and create a heatmap."
-function makeheatmap(filepath)
+"load the results from parameter tests (the exp_heatmap function from runexeriments.jl) and create a heatmap."
+function makeheatmap(filepath, savepath)
     data = JSON.parsefile(filepath)
     mat = reduce(hcat, data["matrix"]) |> Matrix
     f = Figure()
@@ -79,6 +79,6 @@ function makeheatmap(filepath)
     print(hm)
     display(f)
 
-    save("data/heatmaps/hm1.png", f)
+    save(savepath, f)
 end
-makeheatmap("data/heatmaps/matrix10.json")
+# makeheatmap("data/heatmaps/matrix9.json", "plots/heatmap5000.png")

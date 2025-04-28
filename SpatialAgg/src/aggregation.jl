@@ -45,7 +45,7 @@ function simulation(par)
     if !par.hideplots
         # plot an image at the end
         bins, weights = calc_corrfunc(pd, par)
-        update_obs!(plt, r, weights)
+        update_obs!(plt, r, weights, 1)
     end
     # save results
     if par.saveresult

@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.26 (TeX Live 2024) (preloaded format=pdflatex 2024.10.9)  25 APR 2025 17:18
+This is pdfTeX, Version 3.141592653-2.6-1.40.26 (TeX Live 2024) (preloaded format=pdflatex 2024.10.9)  28 APR 2025 13:26
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -553,6 +553,10 @@ Package pdftex.def Info: img/diffusion_rates.png  used on input line 77.
 (pdftex.def)             Requested size: 345.0pt x 114.99614pt.
 
 
+LaTeX Warning: `h' float specifier changed to `ht'.
+
+
+
 [2]
 
 [3 <./img/diffusion_rates.png>]
@@ -568,36 +572,37 @@ Package pdftex.def Info: img/diffusion36.png  used on input line 135.
 [5]
 
 [6]
-<img/rp156_N5000_D01_p4.png, id=136, 1355.0625pt x 677.53125pt>
+<img/rp156_N5000_D01_p4.png, id=140, 1355.0625pt x 677.53125pt>
 File: img/rp156_N5000_D01_p4.png Graphic file (type png)
 <use img/rp156_N5000_D01_p4.png>
-Package pdftex.def Info: img/rp156_N5000_D01_p4.png  used on input line 225.
-(pdftex.def)             Requested size: 310.4979pt x 155.24995pt.
-<img/rp159_N5000_D01_p8.png, id=138, 1355.0625pt x 677.53125pt>
-File: img/rp159_N5000_D01_p8.png Graphic file (type png)
-<use img/rp159_N5000_D01_p8.png>
-Package pdftex.def Info: img/rp159_N5000_D01_p8.png  used on input line 237.
-(pdftex.def)             Requested size: 310.4979pt x 155.24995pt.
+Package pdftex.def Info: img/rp156_N5000_D01_p4.png  used on input line 220.
+(pdftex.def)             Requested size: 276.00105pt x 137.99536pt.
 
 
 [7 <./img/rp156_N5000_D01_p4.png>]
-<img/hm1.png, id=148, 677.53125pt x 508.14844pt>
-File: img/hm1.png Graphic file (type png)
-<use img/hm1.png>
-Package pdftex.def Info: img/hm1.png  used on input line 248.
-(pdftex.def)             Requested size: 310.4979pt x 232.88269pt.
+<img/rp159_N5000_D01_p8.png, id=151, 1355.0625pt x 677.53125pt>
+File: img/rp159_N5000_D01_p8.png Graphic file (type png)
+<use img/rp159_N5000_D01_p8.png>
+Package pdftex.def Info: img/rp159_N5000_D01_p8.png  used on input line 254.
+(pdftex.def)             Requested size: 276.00105pt x 137.99536pt.
 
 
 [8 <./img/rp159_N5000_D01_p8.png>]
-Overfull \hbox (108.16214pt too wide) in paragraph at lines 288--288
-[]\OT1/cmr/m/it/10 5.2 Pair Cor-re-la-tion Func-tion\OT1/cmr/m/n/10 . https://homepage.univie.ac.at/franz.vesely/simsp/dx/node22.html.
- []
-
+<img/hm1.png, id=158, 677.53125pt x 508.14844pt>
+File: img/hm1.png Graphic file (type png)
+<use img/hm1.png>
+Package pdftex.def Info: img/hm1.png  used on input line 269.
+(pdftex.def)             Requested size: 276.00105pt x 207.00856pt.
 
 
 [9 <./img/hm1.png>]
 
 [10]
+Overfull \hbox (108.16214pt too wide) in paragraph at lines 315--315
+[]\OT1/cmr/m/it/10 5.2 Pair Cor-re-la-tion Func-tion\OT1/cmr/m/n/10 . https://homepage.univie.ac.at/franz.vesely/simsp/dx/node22.html.
+ []
+
+
 
 [11] (./aggregation.aux)
  ***********
@@ -611,18 +616,18 @@ Package logreq Info: Writing requests to 'aggregation.run.xml'.
 
  ) 
 Here is how much of TeX's memory you used:
- 18463 strings out of 475445
- 323969 string characters out of 5774555
- 1127727 words of memory out of 5000000
- 40901 multiletter control sequences out of 15000+600000
+ 18469 strings out of 475445
+ 324067 string characters out of 5774555
+ 1130048 words of memory out of 5000000
+ 40904 multiletter control sequences out of 15000+600000
  569196 words of font info for 78 fonts, out of 8000000 for 9000
  36 hyphenation exceptions out of 8191
- 75i,15n,81p,6260b,1726s stack positions out of 10000i,1000n,20000p,200000b,200000s
-<c:/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx10.pfb><c:/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx12.pfb><c:/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/cm/cmcsc10.pfb><c:/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/cm/cmex10.pfb><c:/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/cmextra/cmex7.pfb><c:/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb><c:/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi5.pfb><c:/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi7.pfb><c:/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/cm/cmmib10.pfb><c:/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/cmextra/cmmib7.pfb><c:/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb><c:/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/cm/cmr12.pfb><c:/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/cm/cmr17.pfb><c:/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/cm/cmr5.pfb><c:/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/cm/cmr7.pfb><c:/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb><c:/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy5.pfb><c:/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy7.pfb><c:/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/cm/cmti10.pfb><c:/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/cm/cmtt10.pfb>
-Output written on aggregation.pdf (11 pages, 1083421 bytes).
+ 75i,15n,81p,6261b,1726s stack positions out of 10000i,1000n,20000p,200000b,200000s
+<c:/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/cmextra/cmbsy5.pfb><c:/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/cmextra/cmbsy7.pfb><c:/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx10.pfb><c:/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx12.pfb><c:/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/cm/cmcsc10.pfb><c:/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/cm/cmex10.pfb><c:/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/cmextra/cmex7.pfb><c:/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb><c:/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi5.pfb><c:/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi7.pfb><c:/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/cm/cmmib10.pfb><c:/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/cmextra/cmmib7.pfb><c:/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb><c:/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/cm/cmr12.pfb><c:/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/cm/cmr17.pfb><c:/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/cm/cmr5.pfb><c:/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/cm/cmr7.pfb><c:/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb><c:/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy5.pfb><c:/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy7.pfb><c:/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/cm/cmti10.pfb><c:/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/cm/cmtt10.pfb><c:/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/symbols/msbm7.pfb>
+Output written on aggregation.pdf (11 pages, 1102847 bytes).
 PDF statistics:
- 286 PDF objects out of 1000 (max. 8388607)
- 225 compressed objects within 3 object streams
- 53 named destinations out of 1000 (max. 500000)
+ 306 PDF objects out of 1000 (max. 8388607)
+ 239 compressed objects within 3 object streams
+ 56 named destinations out of 1000 (max. 500000)
  90 words of extra memory for PDF output out of 10000 (max. 10000000)
 
