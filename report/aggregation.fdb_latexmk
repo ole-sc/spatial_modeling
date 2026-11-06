@@ -1,18 +1,18 @@
 # Fdb version 4
-["biber aggregation"] 1745837292.52568 "aggregation.bcf" "aggregation.bbl" "aggregation" 1745839570.75563 0
-  "aggregation.bcf" 1745839570 109636 0ad4bc27b8e7281cad10704053d2e320 "pdflatex"
-  "aggregation.bib" 1745676682 42522 ff67d46d9dfbefb1066a6ee664da1cfd ""
+["biber aggregation"] 1769468765.65842 "aggregation.bcf" "aggregation.bbl" "aggregation" 1769468787.45435 0
+  "aggregation.bcf" 1769468787 109636 0ad4bc27b8e7281cad10704053d2e320 "pdflatex"
+  "aggregation.bib" 1763643798 44262 34e6370de69250fd11291b45a5cccd35 ""
   (generated)
   "aggregation.bbl"
   "aggregation.blg"
   (rewritten before read)
-["pdflatex"] 1745839567.61006 "c:/Users/olesc/Nextcloud/Programme/julia/spatial_modeling/report/aggregation.tex" "aggregation.pdf" "aggregation" 1745839570.75717 0
-  "aggregation.aux" 1745839570 8714 ed0f6a1820cbad9dd8d030cc445f7a41 "pdflatex"
-  "aggregation.bbl" 1745837302 47747 8bf74806a05bf61d4e8f6a51c422d56c "biber aggregation"
-  "aggregation.out" 1745839570 1041 945af158eae6a3c3af51837c55ce064f "pdflatex"
-  "aggregation.run.xml" 1745839570 2355 501675a8036b563386441301c948e2cd "pdflatex"
-  "aggregation.tex" 1745839566 27427 269cc9a4f88c4a765ae83cef51801743 ""
-  "c:/Users/olesc/Nextcloud/Programme/julia/spatial_modeling/report/aggregation.tex" 1745839566 27427 269cc9a4f88c4a765ae83cef51801743 ""
+["pdflatex"] 1769468785.05485 "c:/Users/olesc/Nextcloud/Programme/julia/spatial_modeling/report/aggregation.tex" "aggregation.pdf" "aggregation" 1769468787.45572 0
+  "aggregation.aux" 1769468787 8714 9fccac2aeca3d847cf86251fdc4ae4be "pdflatex"
+  "aggregation.bbl" 1769468775 47835 ec82068816306045d160229460d7d3f9 "biber aggregation"
+  "aggregation.out" 1769468787 1041 945af158eae6a3c3af51837c55ce064f "pdflatex"
+  "aggregation.run.xml" 1769468787 2355 501675a8036b563386441301c948e2cd "pdflatex"
+  "aggregation.tex" 1769468782 27428 ece17071f926d3b0779237a6ab01ddb8 ""
+  "c:/Users/olesc/Nextcloud/Programme/julia/spatial_modeling/report/aggregation.tex" 1769468782 27428 ece17071f926d3b0779237a6ab01ddb8 ""
   "c:/texlive/2024/texmf-dist/fonts/tfm/public/amsfonts/cmextra/cmbsy5.tfm" 1728469327 1120 1e8878807317373affa7f7bba4cf2f6a ""
   "c:/texlive/2024/texmf-dist/fonts/tfm/public/amsfonts/cmextra/cmbsy7.tfm" 1728469327 1120 7f9f170e8aa57527ad6c49feafd45d54 ""
   "c:/texlive/2024/texmf-dist/fonts/tfm/public/amsfonts/cmextra/cmex7.tfm" 1728469327 1004 54797486969f23fa377b128694d548df ""

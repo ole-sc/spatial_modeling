@@ -15,7 +15,10 @@ function simulation(par)
     pd = zeros(par.N*par.N)                                 # pairwise distances for radial correlation function
 
     td(p1, p2) = torusdist(p1, p2, par.lower, par.upper)    # define torus distance function
-    D! = set_diffusion_kernel(par, td)                      # set diffusion kernel
+
+    D! = set_diffusion_kernel(par, td)    
+   
+    # set diffusion kernel
 
     # setup plotting
     if !par.hideplots
@@ -32,6 +35,7 @@ function simulation(par)
         # update positions
         move!(r, d, par.lower, par.upper)
 
+        
         if par.plotlive
             bins, weights = calc_corrfunc(pd, par)
             # update plot
@@ -47,6 +51,7 @@ function simulation(par)
         bins, weights = calc_corrfunc(pd, par)
         update_obs!(plt, r, weights, 1)
     end
+    
     # save results
     if par.saveresult
         plotname = "data/resultplot"
@@ -93,3 +98,6 @@ function diffusion(par)
     save("$(plotname)$(expcounter).png", f)
     return r, d
 end
+
+
+

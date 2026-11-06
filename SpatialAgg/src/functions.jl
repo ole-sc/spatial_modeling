@@ -48,8 +48,45 @@ function set_diffusion_kernel(par, td)
         end
         return nothing
     end
+
     return D!
 end
+
+function set_diffusion_kernel_new(kernel, par, td)
+    function K!(d, pd, r)
+        for i in eachindex(r) 
+            d[i] = kernel(r, i, pd)
+        end
+    end
+end
+
+# # playing around with callable structs
+# struct KernelQuadratic
+#     N
+#     R
+#     p
+#     c₀
+#     pc
+#     D₀
+#     dt
+# end
+# """
+#     This idea won't work...
+# """
+# function (k::KernelQuadratic)(r, i, pd) 
+#     s = k.N*pi*k.R^2
+#     Nr = 0
+#     for j in eachindex(r) 
+#         # maybe more elegant to make td run on the whole array to avoid nested loops
+#         # td(r[i], r) or even td(r,r)
+#         Nr += td(r[i], r[j]) < k.R ? 1 : 0 
+#     end
+#     DN = (Nr/s)^k.p
+#     CN = k.c₀*exp(-Nr*k.pc)
+
+#     # set the diffusion rate
+#     d[i] = sqrt(2 * k.dt * k.D₀*(DN+CN))
+# end
 
 ########### Simulation ##############
 
